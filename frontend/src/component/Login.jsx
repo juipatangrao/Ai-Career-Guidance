@@ -19,8 +19,8 @@ function Login() {
   return;
 }
 
-    const savedUsername = "admin";
-const savedPassword = "12345";
+       const savedUsername = localStorage.getItem("username");
+    const savedPassword = localStorage.getItem("password");
 
     if (username !== savedUsername) {
       alert("Username not found");
