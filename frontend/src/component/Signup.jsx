@@ -25,8 +25,7 @@ if (password.length !== 5) {
     alert("Passwords do not match");
     return;
   }
-    localStorage.setItem("username", username);
-  localStorage.setItem("password", password);
+    
 
   alert("Signup Successful!");
 
