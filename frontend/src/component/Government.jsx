@@ -3,58 +3,80 @@ import { Link } from "react-router-dom";
 import "../style/Government.css";
 import IASIcon from "../assets/IAS-Officer.png";
 import IPSIcon from "../assets/IPS-Officer.png";
+import PoliceIcon from "../assets/Police-Officer.png";
+import ArmyIcon from "../assets/Army-Officer.png";
 import IncomeTaxIcon from "../assets/Income-tax-Officer.png";
 import RailwayIcon from "../assets/Railway-Officer.png";
-import PoliceIcon from "../assets/Police-Officer.png";
-import TeacherIcon from "../assets/Teacher.png";
-import JournalistIcon from "../assets/Journalist.png";
+import ForestIcon from "../assets/Forest-Officer.png";
+import FoodIcon from "../assets/Food-Inspector.png";
+import TalathiIcon from "../assets/Talathi.png";
+
 function Government() {
   const careers = [
-    {
-      id: "ias",
-      title: "IAS Officer",
-      icon: IASIcon,
-      description:
-        "Indian Administrative Service officers manage government policies and public administration.",
-    },
-    {
-      id: "ips",
-      title: "IPS Officer",
-      icon: IPSIcon,
-      description:
-        "Indian Police Service officers maintain law and order and ensure public safety.",
-    },
-    {
-      id: "irs",
-      title: "Income Tax Officer",
-      icon: IncomeTaxIcon,
-      description: "Income Tax officers administer tax laws, investigate tax evasion and collect revenue."
-    },
-    {
-      id: "railway",
-      title: "Railway Officer",
-      icon: RailwayIcon,
-  description: "Railway officers manage railway operations, safety and transportation services across India."
-    },
-    {
-      id: "police",
-      title: "Police Officer",
-      icon: PoliceIcon,
-  description: "Police officers protect citizens, prevent crime and maintain peace and public order."
-    },
-    {
-      id: "teacher",
-      title: "Teacher",
-      icon: TeacherIcon,
-  description: "Government teachers educate students and help build knowledge, skills and future careers."
-    },
-    {
-      id: "journalist",
-      title: "Journalist",
-      icon: JournalistIcon,
-  description: "Journalists gather, verify and report news to keep the public informed and aware."
-    },
-  ];
+  {
+    id: "ias",
+    title: "IAS Officer",
+    icon: IASIcon,
+    description:
+      "IAS officers manage government administration, implement policies, and work for the development of the nation.",
+  },
+  {
+    id: "ips",
+    title: "IPS Officer",
+    icon: IPSIcon,
+    description:
+      "IPS officers maintain law and order, prevent crime, and ensure the safety and security of citizens.",
+  },
+  {
+    id: "police",
+    title: "Police Officer",
+    icon: PoliceIcon,
+    description:
+      "Police officers protect people, investigate crimes, and maintain peace in society.",
+  },
+  {
+    id: "army",
+    title: "Army Officer",
+    icon: ArmyIcon, // Replace with Army image later
+    description:
+      "Army officers defend the country, lead military operations, and protect national security.",
+  },
+  {
+    id: "income-tax",
+    title: "Income Tax Officer",
+    icon: IncomeTaxIcon,
+    description:
+      "Income Tax officers administer tax laws, investigate tax evasion, and collect government revenue.",
+  },
+  {
+    id: "railway",
+    title: "Railway Officer",
+    icon: RailwayIcon,
+    description:
+      "Railway officers manage railway operations, passenger services, and transportation safety across India.",
+  },
+  {
+    id: "forest",
+    title: "Forest Officer",
+    icon: ForestIcon, // Replace with Forest image later
+    description:
+      "Forest officers protect forests, wildlife, and natural resources while enforcing environmental laws.",
+  },
+  {
+    id: "food",
+    title: "Food Inspector",
+    icon: FoodIcon, // Replace with Food Inspector image later
+    description:
+      "Food Inspectors ensure food safety, maintain hygiene standards, and prevent the sale of unsafe food products.",
+  },
+  {
+    id: "talathi",
+    title: "Talathi",
+    icon: TalathiIcon, // Replace with Talathi image later
+    description:
+      "Talathis maintain land records, collect revenue, and assist in village-level administrative work.",
+  },
+];
 
   return (
     <div className="government-page">
