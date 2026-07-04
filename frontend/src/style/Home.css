@@ -25,11 +25,13 @@ body {
   margin: 0;
 
 }
-
 .home {
   background: #4c0000ee;
   color: white;
   padding: 0 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
@@ -115,7 +117,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0px;
+  flex: 1;             /* fills remaining space after navbar */
+  min-height: calc(100vh - 120px);  /* adjust 120px to your navbar's actual height */
 }
 
 /* Left */
@@ -172,6 +175,81 @@ body {
     margin-left:200px;
     width:700px;
 }
+
+/* ================= CAREER CATEGORIES ================= */
+
+.career-card-wrapper {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 35px;
+  margin: 50px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  color: #222;
+}
+
+.career-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.career-card-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+}
+
+.view-all {
+  color: #6B1126;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px 15px;
+}
+
+.career-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  gap: 10px;
+  transition: 0.2s;
+}
+
+.career-item:hover {
+  transform: translateY(-4px);
+}
+
+.career-icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.career-item span {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
 /* Tablet */
 @media (max-width: 768px) {
 

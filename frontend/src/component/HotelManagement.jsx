@@ -41,7 +41,7 @@ function HotelManagement() {
   return (
     <div className="hotel-page">
       <header className="hotel-page-header">
-        <button className="hotel-back-btn">Back</button>
+        <button className="back-btn"><a href="/home">Back</a></button>
         <h2>Hotel Management</h2>
         <button className="hotel-wishlist-btn">Wishlist ❤️</button>
       </header>
