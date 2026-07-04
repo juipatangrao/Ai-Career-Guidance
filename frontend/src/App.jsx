@@ -3,6 +3,9 @@ import Signup from "./component/Signup";
 import Login from "./component/Login";
 import Home from "./component/Home";
 import Government from "./component/Government";
+import BankingANDFinance from "./component/BankingANDFinance";
+import Law from "./component/Law";
+import Aviation from "./component/Aviation";
 import "./App.css";
 
 function App() {
@@ -13,6 +16,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/government" element={<Government />} />
+        <Route path="/banking-and-finance" element={<BankingANDFinance />} />
+        <Route path="/law" element={<Law />} />
+        <Route path="/aviation" element={<Aviation />} />
       </Routes>
     </BrowserRouter>
   );
