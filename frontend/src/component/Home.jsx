@@ -98,8 +98,8 @@ function Home() {
               Merchant Navy
             </Link>
 
-            <Link to="/architect" className="career-card">
-              Architect
+            <Link to="/IT" className="career-card">
+              IT
             </Link>
           </div>
         </section>
