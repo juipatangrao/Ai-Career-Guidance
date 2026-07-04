@@ -102,6 +102,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
+
   color: white;
   font-size: 20px;
   font-weight: 500;
@@ -179,7 +180,7 @@ body {
 /* ================= CAREER CATEGORIES ================= */
 
 .career-card-wrapper {
-  background: #ffffff;
+  background: #f6e3e3db;
   border-radius: 20px;
   padding: 30px 35px;
   margin: 50px 0;
@@ -197,7 +198,7 @@ body {
 .career-card-header h2 {
   font-size: 22px;
   font-weight: 700;
-  color: #222;
+  color: #0d0d0d;
 }
 
 .view-all {
@@ -251,7 +252,7 @@ body {
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
   .home {
     padding: 20px;

@@ -32,6 +32,8 @@ function Home() {
     { to: "/aviation", label: "Aviation", icon: <FaPlane />, bg: "#E94E77" },
     { to: "/merchant-navy", label: "Merchant Navy", icon: <FaShip />, bg: "#00ACC1" },
     { to: "/IT", label: "IT", icon: <FaLaptopCode />, bg: "#8E24AA" },
+    { to: "/government", label: "Government", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+
   ];
 
   return (
