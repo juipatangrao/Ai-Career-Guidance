@@ -6,32 +6,45 @@
 }
 
 body {
-  background: #6B1126;
-  overflow-x: hidden;
+  background: #4c0000ee;
+}
+.welcome {
+  margin-bottom: 25px;
+}
+
+.welcome h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.welcome p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  margin: 0;
+
 }
 
 .home {
-  min-height: 100vh;
-  background: #6B1126;
+  background: #4c0000ee;
   color: white;
-  padding: 10px 40px;
+  padding: 0 40px;
 }
 
-/* ================= NAVBAR ================= */
-
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .logo {
   display: flex;
   align-items: center;
 }
 
 .logo img {
-  width: 160px;
+  width: 150px;
   height: auto;
 }
 
@@ -78,13 +91,31 @@ body {
   color: #FFD54F;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FFD54F;
+}
 /* ================= HERO ================= */
 
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 /* Left */
@@ -137,9 +168,9 @@ body {
     gap:40px;
 }
 
-img{
-    max-width:100%;
-    display:block;
+.right img{
+    margin-left:200px;
+    width:700px;
 }
 /* Tablet */
 @media (max-width: 768px) {

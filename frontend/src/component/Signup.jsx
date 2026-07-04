@@ -26,11 +26,12 @@ if (password.length !== 5) {
     alert("Passwords do not match");
     return;
   }
-    localStorage.setItem("username", username);
-  localStorage.setItem("password", password);
+ localStorage.setItem("username", username);
+localStorage.setItem("password", password);
+localStorage.setItem("loggedInUser", username);
 
-  alert("Signup Successful!");
-  navigate("/home");
+alert("Signup Successful!");
+navigate("/home")
   setUsername("");
   setEmail("");
   setPassword("");

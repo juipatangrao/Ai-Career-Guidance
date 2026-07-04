@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../style/Law.css";
+import lawHero from "../assets/law-hero.png";
 import CLIcon from "../assets/CL.png";
 import CorporateIcon from "../assets/Corporate.png";
 import FLIcon from "../assets/FL.png";
@@ -53,7 +53,7 @@ function Law() {
   return (
     <div className="law-page">
       <header className="law-page-header">
-        <button className="back-btn">Back</button>
+        <button className="back-btn"><a href="/home">Back</a></button>
         <h2>Law</h2>
         <button className="wishlist-btn">Wishlist ❤️</button>
       </header>
@@ -71,7 +71,9 @@ function Law() {
           <button>Start Exploring</button>
         </div>
 
-        <div className="hero-right"></div>
+        <div className="hero-right">
+            <img src={lawHero} alt="Law" />
+        </div>
       </section>
 
       

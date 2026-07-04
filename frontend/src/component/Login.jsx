@@ -34,10 +34,13 @@ function Login() {
     }
 
     alert("Login Successful!");
-    navigate("/home");
 
-    setUsername("");
-    setPassword("");
+localStorage.setItem("loggedInUser", username);
+
+navigate("/home");
+
+setUsername("");
+setPassword("");
   };
 
   return (
