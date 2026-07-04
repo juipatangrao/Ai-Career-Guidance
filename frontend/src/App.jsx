@@ -11,6 +11,7 @@ import HotelManagement from "./component/HotelManagement";
 import MerchantNavy from "./component/MerchantNavy";
 import Engineering from "./component/Engineering";
 import Doctor from "./component/Doctor";
+import MediaJournalism from "./component/MediaJournalism";
 import "./App.css";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/merchant-navy" element={<MerchantNavy />} />
         <Route path="/engineering" element={<Engineering />} />
         <Route path="/doctor" element={<Doctor />} />
+        <Route path="/media-journalism" element={<MediaJournalism />} />
       </Routes>
     </BrowserRouter>
   );
