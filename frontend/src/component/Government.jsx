@@ -46,48 +46,42 @@ function Government() {
       id: "income-tax",
       title: "Income Tax Officer",
       icon: IncomeTaxIcon,
-      description:
-        "They handle tax collection and prevent tax evasion.",
+      description: "They handle tax collection and prevent tax evasion.",
     },
     {
       id: "railway",
       title: "Railway Officer",
       icon: RailwayIcon,
-      description:
-        "They manage railway operations and passenger safety.",
+      description: "They manage railway operations and passenger safety.",
     },
     {
       id: "forest",
       title: "Forest Officer",
       icon: ForestIcon,
-      description:
-        "They protect forests and wildlife.",
+      description: "They protect forests and wildlife.",
     },
     {
       id: "food",
       title: "Food Inspector",
       icon: FoodIcon,
-      description:
-        "They ensure food safety and hygiene standards.",
+      description: "They ensure food safety and hygiene standards.",
     },
     {
       id: "talathi",
       title: "Talathi",
       icon: TalathiIcon,
-      description:
-        "They maintain land records and village administration.",
+      description: "They maintain land records and village administration.",
     },
   ];
 
   return (
     <div className="gov-page">
-
       {/* HEADER */}
       <header className="gov-header">
-<button className="av-back-btn">
+        <button className="av-back-btn">
           <Link to="/home">Back</Link>
         </button>
-                <h2 className="gov-title">Government Services</h2>
+        <h2 className="gov-title">Government Services</h2>
         <button className="gov-wishlist-btn">Wishlist ❤️</button>
       </header>
 
@@ -168,7 +162,6 @@ function Government() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }
