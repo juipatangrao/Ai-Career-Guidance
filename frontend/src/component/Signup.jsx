@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../style/Signup.css";
 
 function Signup() {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,7 +30,7 @@ if (password.length !== 5) {
   localStorage.setItem("password", password);
 
   alert("Signup Successful!");
-
+  navigate("/home");
   setUsername("");
   setEmail("");
   setPassword("");
