@@ -6,7 +6,7 @@ import MarineEngineer from "../assets/Marine-Engineer.png";
 import ETO from "../assets/ETO.png";
 import Captain from "../assets/Captain.png";
 import PortManager from "../assets/Port-Manager.png";
-
+import merchantnavyhero from "../assets/merchant-hero.png";
 function MerchantNavy() {
   const careers = [
     {
@@ -70,7 +70,9 @@ function MerchantNavy() {
 
         </div>
 
-        <div className="hero-right"></div>
+        <div className="hero-right">
+                     <img src={merchantnavyhero} alt="Merchant Navy" />         
+        </div>
       </section>
 
       <section className="career-section">
