@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "../style/Home.css";
 import { Link } from "react-router-dom";
-import { FaBars, FaSearch, FaBell, FaUserCircle } from "react-icons/fa";
+import { FaSearch, FaBell, FaUserCircle, FaCogs } from "react-icons/fa";
+import {
+  FaUserDoctor,
+  FaScaleBalanced,
+  FaHotel,
+  FaBuildingColumns,
+  FaPlane,
+  FaShip,
+  FaLaptopCode,
+} from "react-icons/fa6";
 import student from "../assets/student.jpeg";
 import logo from "../assets/logo.jpeg";
-
 function Home() {
   const [username, setUsername] = useState("");
 
@@ -14,6 +22,20 @@ function Home() {
       setUsername(user);
     }
   }, []);
+
+  const categories = [
+    { to: "/engineering", label: "Engineering", icon: <FaCogs />, bg: "#4A90E2" },
+    { to: "/doctor", label: "Doctor", icon: <FaUserDoctor />, bg: "#F5B301" },
+    { to: "/law", label: "Lawyer", icon: <FaScaleBalanced />, bg: "#F5A623" },
+    { to: "/hotel-management", label: "Hotel Mgmt", icon: <FaHotel />, bg: "#2E7D32" },
+    { to: "/banking-and-finance", label: "Banking", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/aviation", label: "Aviation", icon: <FaPlane />, bg: "#E94E77" },
+    { to: "/merchant-navy", label: "Merchant Navy", icon: <FaShip />, bg: "#00ACC1" },
+    { to: "/IT", label: "IT", icon: <FaLaptopCode />, bg: "#8E24AA" },
+    { to: "/government", label: "Government", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+
+  ];
+
   return (
     <>
       <div className="home">
@@ -70,37 +92,21 @@ function Home() {
         </section>
 
         {/* Career Categories */}
-        <section id="career-categories" className="career-section">
-          <h2>Explore Top Career Categories</h2>
+        <section id="career-categories" className="career-card-wrapper">
+          <div className="career-card-header">
+            <h2>Explore Top Career Categories</h2>
+            <p className="view-all">View All</p>
+          </div>
 
           <div className="career-grid">
-            <Link to="/engineering" className="career-card">
-              Engineering
-            </Link>
-
-            <Link to="/doctor" className="career-card">
-              Doctor
-            </Link>
-
-            <Link to="/law" className="career-card">
-              Law
-            </Link>
-
-            <Link to="/banking-and-finance" className="career-card">
-              Banking & Finance
-            </Link>
-
-            <Link to="/aviation" className="career-card">
-              Aviation
-            </Link>
-
-            <Link to="/Merchant-Navy" className="career-card">
-              Merchant Navy
-            </Link>
-
-            <Link to="/architect" className="career-card">
-              Architect
-            </Link>
+            {categories.map((cat) => (
+              <Link to={cat.to} className="career-item" key={cat.to}>
+                <div className="career-icon-circle" style={{ background: cat.bg }}>
+                  {cat.icon}
+                </div>
+                <span>{cat.label}</span>
+              </Link>
+            ))}
           </div>
         </section>
       </div>

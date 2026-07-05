@@ -13,6 +13,7 @@ import MerchantNavy from "./component/MerchantNavy";
 import Engineering from "./component/Engineering";
 import Doctor from "./component/Doctor";
 
+
 import IAS from "./component/pages/IAS";
 import IPS from "./component/pages/IPS";
 import Police from "./component/pages/Police";
@@ -33,6 +34,7 @@ import CyberSecurity from "./component/pages/CyberSecurity";
 import DataAnalyst from "./component/pages/DataAnalyst";
 import GameDeveloper from "./component/pages/GameDeveloper";
 
+import MediaJournalism from "./component/MediaJournalism";
 import "./App.css";
 
 function App() {
@@ -54,6 +56,7 @@ function App() {
         <Route path="/merchant-navy" element={<MerchantNavy />} />
         <Route path="/engineering" element={<Engineering />} />
         <Route path="/doctor" element={<Doctor />} />
+
         <Route path="/ias" element={<IAS />} />
         <Route path="/ips" element={<IPS />} />
         <Route path="/police" element={<Police />} />
@@ -74,6 +77,8 @@ function App() {
         <Route path="/it/data-analyst" element={<DataAnalyst />} />
         <Route path="/it/game-developer" element={<GameDeveloper />} />
         
+
+        <Route path="/media-journalism" element={<MediaJournalism />} />
       </Routes>
     </BrowserRouter>
   );
