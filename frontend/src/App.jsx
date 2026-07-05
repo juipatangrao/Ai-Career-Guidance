@@ -12,7 +12,10 @@ import HotelManagement from "./component/HotelManagement";
 import MerchantNavy from "./component/MerchantNavy";
 import Engineering from "./component/Engineering";
 import Doctor from "./component/Doctor";
-
+import ScienceResearch from "./component/ScienceResearch";
+import SpaceAstronomy from "./component/SpaceAstronomy";
+import Environmental from "./component/Environmental";
+import MediaJournalism from "./component/MediaJournalism";
 
 import IAS from "./component/pages/IAS";
 import IPS from "./component/pages/IPS";
@@ -34,7 +37,38 @@ import CyberSecurity from "./component/pages/CyberSecurity";
 import DataAnalyst from "./component/pages/DataAnalyst";
 import GameDeveloper from "./component/pages/GameDeveloper";
 
-import MediaJournalism from "./component/MediaJournalism";
+
+//Banking and Finance pages
+import CharteredAccountant from "./component/pages/Charted-Accountant";
+import CompanySecretary from "./component/pages/CompanySecretary";
+import TaxConsultant from "./component/pages/TaxConsultant";
+import InvestmentBanker from "./component/pages/InvestmentBanker";
+import CreditAnalyst from "./component/pages/CreditAnalyst";
+import BankManager from "./component/pages/BankManager";
+
+//Law pages
+import CriminalLawyer from "./component/pages/CriminalLawyer";  
+import CorporateLawyer from "./component/pages/CorporateLawyer";
+import FamilyLawyer from "./component/pages/FamilyLawyer";
+import CyberLawyer from "./component/pages/CyberLawyer";
+import TaxLawyer from "./component/pages/TaxLawyer";
+import Judge from "./component/pages/Judge";
+
+//Aviation pages
+import CommercialPilot from "./component/pages/CommercialPilot";
+import AirForcePilot from "./component/pages/AirForcePilot";
+import CabinCrew from "./component/pages/CabinCrew";
+import FlightInstructor from "./component/pages/FlightInstructor";
+import AirportManager from "./component/pages/AirportManager";
+import AirTrafficController from "./component/pages/AirTrafficController";
+
+//Science and Research pages
+import Scientist from "./component/pages/Scientist";
+import Physicist from "./component/pages/Physicist";
+import Chemist from "./component/pages/Chemist";
+import Biologist from "./component/pages/Biologist";
+import Microbiologist from "./component/pages/Microbiologist";
+import Biotechnologist from "./component/pages/Biotechnologist";
 import "./App.css";
 
 function App() {
@@ -46,17 +80,14 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/government" element={<Government />} />
         <Route path="/it" element={<IT />} />
-        <Route
-          path="/banking-and-finance"
-          element={<BankingANDFinance />}
-        />
+        <Route path="/banking-and-finance" element={<BankingANDFinance />} />
         <Route path="/law" element={<Law />} />
         <Route path="/aviation" element={<Aviation />} />
         <Route path="/hotel-management" element={<HotelManagement />} />
         <Route path="/merchant-navy" element={<MerchantNavy />} />
         <Route path="/engineering" element={<Engineering />} />
         <Route path="/doctor" element={<Doctor />} />
-
+        <Route path="/science-research" element={<ScienceResearch />} />
         <Route path="/ias" element={<IAS />} />
         <Route path="/ips" element={<IPS />} />
         <Route path="/police" element={<Police />} />
@@ -66,9 +97,12 @@ function App() {
         <Route path="/forest" element={<Forest />} />
         <Route path="/food" element={<Food />} />
         <Route path="/talathi" element={<Talathi />} />
+        <Route path="/media-and-journalism" element={<MediaJournalism />} />
+        <Route path="/space-astronomy" element={<SpaceAstronomy />} />
+        <Route path="/environmental" element={<Environmental />} />
 
         <Route path="/it/web-developer" element={<WebDeveloper />} />
-        <Route path="/it/mobile-app" element={<MobileAppDeveloper />} />  
+        <Route path="/it/mobile-app" element={<MobileAppDeveloper />} />
         <Route path="/it/frontend" element={<FrontendDeveloper />} />
         <Route path="/it/backend" element={<BackendDeveloper />} />
         <Route path="/it/full-stack" element={<FullStackDeveloper />} />
@@ -76,9 +110,39 @@ function App() {
         <Route path="/it/cyber-security" element={<CyberSecurity />} />
         <Route path="/it/data-analyst" element={<DataAnalyst />} />
         <Route path="/it/game-developer" element={<GameDeveloper />} />
-        
 
-        <Route path="/media-journalism" element={<MediaJournalism />} />
+        /*Banking and Finance routes*/
+        <Route path="/banking-finance/ca" element={<CharteredAccountant />} />
+        <Route path="/banking-finance/cs" element={<CompanySecretary />} />
+        <Route path="/banking-finance/tax" element={<TaxConsultant />} />
+        <Route path="/banking-finance/ib" element={<InvestmentBanker />} />
+        <Route path="/banking-finance/credit-analyst" element={<CreditAnalyst />} />
+        <Route path="/banking-finance/bm" element={<BankManager />} />
+
+        /*law*/
+        <Route path="/law/criminal-lawyer" element={<CriminalLawyer />} />
+        <Route path="/law/corporate-lawyer" element={<CorporateLawyer />} />
+        <Route path="/law/family-lawyer" element={<FamilyLawyer />} />
+        <Route path="/law/cyber-lawyer" element={<CyberLawyer />} />
+        <Route path="/law/tax-lawyer" element={<TaxLawyer />} />
+        <Route path="/law/judge" element={<Judge />} />
+
+        /*aviation*/
+        <Route path="/aviation/cp" element={<CommercialPilot />} />
+        <Route path="/aviation/afp" element={<AirForcePilot />} />
+        <Route path="/aviation/cc" element={<CabinCrew />} />
+        <Route path="/aviation/fi" element={<FlightInstructor />} />
+        <Route path="/aviation/am" element={<AirportManager />} />
+        <Route path="/aviation/atc" element={<AirTrafficController />} />
+
+        /*Science and Research*/
+        <Route path="/science-research/scientist" element={<Scientist />} />
+        <Route path="/science-research/physicist" element={<Physicist />} />
+        <Route path="/science-research/chemist" element={<Chemist />} />
+        <Route path="/science-research/biologist" element={<Biologist />} />
+        <Route path="/science-research/microbiologist" element={<Microbiologist />} />
+        <Route path="/science-research/biotechnologist" element={<Biotechnologist />} />
+
       </Routes>
     </BrowserRouter>
   );
