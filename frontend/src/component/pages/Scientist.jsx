@@ -12,9 +12,7 @@ const Scientist = () => {
       logo={ScientistLogo}
       banner={ScientistBanner}
       overview="A Scientist conducts research, performs experiments, and develops innovative solutions to improve technology, healthcare, agriculture, and society."
-
       education="Complete 10th and 12th with Science. Pursue a Bachelor's degree followed by a Master's or Ph.D. in your chosen scientific field."
-
       skills={[
         "Research",
         "Critical Thinking",
@@ -27,21 +25,11 @@ const Scientist = () => {
         "Creativity",
         "Teamwork",
         "Technical Knowledge",
-        "Scientific Writing"
+        "Scientific Writing",
       ]}
-
-      exams={[
-        "JEE",
-        "NEET (Life Sciences)",
-        "CSIR NET",
-        "GATE",
-        "UGC NET"
-      ]}
-
+      exams={["JEE", "NEET (Life Sciences)", "CSIR NET", "GATE", "UGC NET"]}
       scope="Scientists work in research institutes, ISRO, DRDO, CSIR, universities, pharmaceutical companies, biotechnology firms, and private R&D organizations."
-
       salary="₹5–10 LPA (Initial) | ₹15–30 LPA (Experienced)"
-
       dayToDayWork={[
         "Conduct scientific research.",
         "Perform laboratory experiments.",
@@ -50,7 +38,7 @@ const Scientist = () => {
         "Develop innovative technologies.",
         "Collaborate with research teams.",
         "Present findings.",
-        "Maintain laboratory records."
+        "Maintain laboratory records.",
       ]}
     />
   );
