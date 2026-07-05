@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../style/Law.css";
 import lawHero from "../assets/law-hero.png";
 import CLIcon from "../assets/CL.png";
-import CorporateIcon from "../assets/Corporate.png";
+import CorporateIcon from "../assets/corporate.png";
 import FLIcon from "../assets/FL.png";
 import CyberIcon from "../assets/Cyber.png";
 import TaxIcon from "../assets/Tax-lawyer.png";
