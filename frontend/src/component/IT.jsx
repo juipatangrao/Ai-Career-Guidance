@@ -119,7 +119,9 @@ function IT() {
 
           <p>{career.description}</p>
 
-          <button>Explore Career →</button>
+          <Link to={`/it/${career.id}`}>
+  <button>Explore Career →</button>
+</Link>
         </div>
       ))}
     </div>

@@ -88,8 +88,8 @@ function Government() {
 
      
 
-      <section className="hero-section">
-        <div className="hero-left">
+      <section className="govhero-section">
+        <div className="govhero-left">
           <h1>Government Services</h1>
 
           <p>
@@ -101,7 +101,7 @@ function Government() {
           <button>Start Exploring</button>
         </div>
 
-        <div className="hero-right"></div>
+        <div className="govhero-right"></div>
       </section>
 
       
@@ -120,7 +120,9 @@ function Government() {
               <p>{career.description}</p>
 
               
-                <button>Explore Career →</button>
+                <Link to={`/${career.id}`}>
+  <button>Explore Career →</button>
+</Link>
               
             </div>
           ))}
