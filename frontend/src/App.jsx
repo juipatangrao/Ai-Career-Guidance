@@ -27,7 +27,7 @@ import Talathi from "./component/pages/Talathi";
 import WebDeveloper from "./component/pages/WebDeveloper";
 import MobileAppDeveloper from "./component/pages/MobileAppDeveloper";
 import FrontendDeveloper from "./component/pages/FrontendDeveloper";
-// import BackendDeveloper from "./component/BackendDeveloper";
+import BackendDeveloper from "./component/pages/BackendDeveloper";
 import FullStackDeveloper from "./component/pages/FullStackDeveloper";
 import UIUXDesigner from "./component/pages/UIUXDesigner";
 import CyberSecurity from "./component/pages/CyberSecurity";
@@ -70,7 +70,7 @@ function App() {
         <Route path="/it/web-developer" element={<WebDeveloper />} />
         <Route path="/it/mobile-app" element={<MobileAppDeveloper />} />  
         <Route path="/it/frontend" element={<FrontendDeveloper />} />
-        {/* <Route path="/it/backend" element={<BackendDeveloper />} /> */}
+        <Route path="/it/backend" element={<BackendDeveloper />} />
         <Route path="/it/full-stack" element={<FullStackDeveloper />} />
         <Route path="/it/uiux" element={<UIUXDesigner />} />
         <Route path="/it/cyber-security" element={<CyberSecurity />} />

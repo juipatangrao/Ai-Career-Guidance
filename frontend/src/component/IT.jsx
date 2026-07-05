@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import "../style/IT.css";
 import WebIcon from "../assets/web-Developer.png";
-import MobileAppIcon from "../assets/Mobile-App-Developer.png";
-import FrontendIcon from "../assets/FRontend-Developer.png";
+import MobileAppIcon from "../assets/MobileApp-Developer.png";
+import FrontendIcon from "../assets/Frontend-Developer.png";
 import BackendIcon from "../assets/Backend-Developer.png";
-import FullStackIcon from "../assets/Full-Stack-Developer.png";
+import FullStackIcon from "../assets/FullStack-Developer.png";
 import UIUXIcon from "../assets/UKUV-Designer.png";
 import CyberSecurityIcon from "../assets/Cyber-Security.png";
 import DataAnalystIcon from "../assets/Data-Anlyst.png";
-import GameDeveloperIcon from "../assets/Game-Developer.png";
+import GameDeveloperIcon from "../assets/GameDeveloper.png";
 
 function IT() {
   const careers = [
@@ -119,7 +119,9 @@ function IT() {
 
               <p>{career.description}</p>
 
-              <button>Explore Career →</button>
+              <Link to={`/it/${career.id}`}>
+  <button>Explore Career →</button>
+</Link>
             </div>
           ))}
         </div>
@@ -148,9 +150,7 @@ function IT() {
           </div>
 
 
-          <Link to={`/it/${career.id}`}>
-  <button>Explore Career →</button>
-</Link>
+          
 
           <div className="it-why-card">
             <span>🌍</span>

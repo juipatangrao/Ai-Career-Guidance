@@ -4,12 +4,12 @@ import "../style/Government.css";
 
 import IASIcon from "../assets/IAS-Officer.png";
 import IPSIcon from "../assets/IPS-Officer.png";
-import PoliceIcon from "../assets/Police-Officer.png";
+import PoliceIcon from "../assets/PoliceOfficer.png";
 import ArmyIcon from "../assets/Army-Officer.png";
 import IncomeTaxIcon from "../assets/Income-tax-Officer.png";
 import RailwayIcon from "../assets/Railway-Officer.png";
-import ForestIcon from "../assets/Forest-Officer.png";
-import FoodIcon from "../assets/Food-Inspector.png";
+import ForestIcon from "../assets/ForestOfficer.png";
+import FoodIcon from "../assets/FoodInspector.png";
 import TalathiIcon from "../assets/Talathi.png";
 
 function Government() {
