@@ -13,7 +13,6 @@ import MerchantNavy from "./component/MerchantNavy";
 import Engineering from "./component/Engineering";
 import Doctor from "./component/Doctor";
 
-
 import ScienceResearch from "./component/ScienceResearch";
 import SpaceAstronomy from "./component/SpaceAstronomy";
 import Environmental from "./component/Environmental";
@@ -40,7 +39,6 @@ import CyberSecurity from "./pages/CyberSecurity";
 import DataAnalyst from "./pages/DataAnalyst";
 import GameDeveloper from "./pages/GameDeveloper";
 
-
 //Banking and Finance pages
 import CharteredAccountant from "./pages/Charted-Accountant";
 import CompanySecretary from "./pages/CompanySecretary";
@@ -50,7 +48,7 @@ import CreditAnalyst from "./pages/CreditAnalyst";
 import BankManager from "./pages/BankManager";
 
 //Law pages
-import CriminalLawyer from "./pages/CriminalLawyer";  
+import CriminalLawyer from "./pages/CriminalLawyer";
 import CorporateLawyer from "./pages/CorporateLawyer";
 import FamilyLawyer from "./pages/FamilyLawyer";
 import CyberLawyer from "./pages/CyberLawyer";
@@ -88,6 +86,24 @@ import HotelManager from "./pages/HotelManager";
 import Chef from "./pages/Chef";
 import EventManager from "./pages/EventManager";
 import CafeteriaManager from "./pages/CateringManager";
+
+//environmental
+import EnvironmentalScientist from "./pages/EnvironmentalScientist";
+import WildlifeBiologist from "./pages/WildlifeBiologist";
+import ForestOfficer from "./pages/ForestOfficer";
+
+//navy
+import DeckOfficer from "./pages/DeckOfficer";
+import MarineEngineer from "./pages/MarineEngineer";
+import ElectroTechnicalOfficer from "./pages/ElectroTechnicalOfficer";
+import Captain from "./pages/Captain";
+import PortManager from "./pages/PortManager";
+
+//Designer
+import GraphicDesigner from "./pages/GraphicDesigner";
+import InteriorDesigner from "./pages/InteriorDesigner";
+import FashionDesigner from "./pages/FashionDesigner";
+import ProductDesigner from "./pages/ProductDesigner";
 import "./App.css";
 
 function App() {
@@ -120,7 +136,6 @@ function App() {
         <Route path="/space-astronomy" element={<SpaceAstronomy />} />
         <Route path="/environmental" element={<Environmental />} />
         <Route path="/design" element={<Design />} />
-
         <Route path="/it/web-developer" element={<WebDeveloper />} />
         <Route path="/it/mobile-app" element={<MobileAppDeveloper />} />
         <Route path="/it/frontend" element={<FrontendDeveloper />} />
@@ -130,56 +145,105 @@ function App() {
         <Route path="/it/cyber-security" element={<CyberSecurity />} />
         <Route path="/it/data-analyst" element={<DataAnalyst />} />
         <Route path="/it/game-developer" element={<GameDeveloper />} />
-        
         <Route path="/computer" element={<Computer />} />
-
-{/* Banking and Finance routes */}
+        {/* Banking and Finance routes */}
         <Route path="/banking-finance/ca" element={<CharteredAccountant />} />
         <Route path="/banking-finance/cs" element={<CompanySecretary />} />
         <Route path="/banking-finance/tax" element={<TaxConsultant />} />
         <Route path="/banking-finance/ib" element={<InvestmentBanker />} />
-        <Route path="/banking-finance/credit-analyst" element={<CreditAnalyst />} />
+        <Route
+          path="/banking-finance/credit-analyst"
+          element={<CreditAnalyst />}
+        />
         <Route path="/banking-finance/bm" element={<BankManager />} />
-
-{/* Law */}
+        {/* Law */}
         <Route path="/law/criminal-lawyer" element={<CriminalLawyer />} />
         <Route path="/law/corporate-lawyer" element={<CorporateLawyer />} />
         <Route path="/law/family-lawyer" element={<FamilyLawyer />} />
         <Route path="/law/cyber-lawyer" element={<CyberLawyer />} />
         <Route path="/law/tax-lawyer" element={<TaxLawyer />} />
         <Route path="/law/judge" element={<Judge />} />
-
-{/* Aviation */}
+        {/* Aviation */}
         <Route path="/aviation/cp" element={<CommercialPilot />} />
         <Route path="/aviation/afp" element={<AirForcePilot />} />
         <Route path="/aviation/cc" element={<CabinCrew />} />
         <Route path="/aviation/fi" element={<FlightInstructor />} />
         <Route path="/aviation/am" element={<AirportManager />} />
         <Route path="/aviation/atc" element={<AirTrafficController />} />
-
-{/* Science and Research */}
+        {/* Science and Research */}
         <Route path="/science-research/scientist" element={<Scientist />} />
         <Route path="/science-research/physicist" element={<Physicist />} />
         <Route path="/science-research/chemist" element={<Chemist />} />
         <Route path="/science-research/biologist" element={<Biologist />} />
-        <Route path="/science-research/microbiologist" element={<Microbiologist />} />
-        <Route path="/science-research/biotechnologist" element={<Biotechnologist />} />
-
-{/* Engineering */}
+        <Route
+          path="/science-research/microbiologist"
+          element={<Microbiologist />}
+        />
+        <Route
+          path="/science-research/biotechnologist"
+          element={<Biotechnologist />}
+        />
+        {/* Engineering */}
         <Route path="/engineering/civil" element={<CivilEngineer />} />
-        <Route path="/engineering/mechanical" element={<MechanicalEngineer />} />
+        <Route
+          path="/engineering/mechanical"
+          element={<MechanicalEngineer />}
+        />
         <Route path="/engineering/computer" element={<Computer />} />
-        <Route path="/engineering/electrical" element={<ElectricalEngineer />} />
+        <Route
+          path="/engineering/electrical"
+          element={<ElectricalEngineer />}
+        />
         <Route path="/engineering/chemical" element={<ChemicalEngineer />} />
         <Route path="/engineering/aerospace" element={<AerospaceEngineer />} />
-        <Route path="/engineering/automobile" element={<AutomobileEngineer />} />
+        <Route
+          path="/engineering/automobile"
+          element={<AutomobileEngineer />}
+        />
         <Route path="/engineering/robotics" element={<RoboticsEngineer />} />
+        {/* Hotel Management */}
+        <Route
+          path="/hotel-management/hotel-manager"
+          element={<HotelManager />}
+        />
+        <Route path="/hotel-management/chef" element={<Chef />} />
+        <Route
+          path="/hotel-management/event-manager"
+          element={<EventManager />}
+        />
+        <Route
+          path="/hotel-management/cafeteria-manager"
+          element={<CafeteriaManager />}
+        />
+        {/*Environment*/}
+        <Route
+          path="/environmental/environmentalscientist"
+          element={<EnvironmentalScientist />}
+        />
+        <Route
+          path="/environmental/wildlifebiologist"
+          element={<WildlifeBiologist />}
+        />
+        <Route
+          path="/environmental/forestofficer"
+          element={<ForestOfficer />}
+        />
+        {/* Merchant Navy */}
+        <Route path="/merchant-navy/deck-officer" element={<DeckOfficer />} />
+        <Route path="/merchant-navy/marine-engineer" element={<MarineEngineer />}/>
+        <Route path="/merchant-navy/electro-technical-officer" element={<ElectroTechnicalOfficer />}/>
+        <Route path="/merchant-navy/captain" element={<Captain />} />
+        <Route path="/merchant-navy/port-manager" element={<PortManager />} />
 
-{/* Hotel Management */}
-<Route path="/hotel-management/hotel-manager" element={<HotelManager />} />
-<Route path="/hotel-management/chef" element={<Chef />} />
-<Route path="/hotel-management/event-manager" element={<EventManager />} />
-<Route path="/hotel-management/cafeteria-manager" element={<CafeteriaManager />} />
+        {/*Design */}
+        <Route path="/Design/graphic-designer" element={<GraphicDesigner/>}>
+        </Route>
+        <Route path="/Design/fashion-designer" element={<FashionDesigner/>}>
+        </Route>
+        <Route path="/Design/interior-designer" element={<InteriorDesigner/>}>
+        </Route>
+        <Route path="/Design/product-designer" element={<ProductDesigner/>}>
+        </Route>
       </Routes>
     </BrowserRouter>
   );

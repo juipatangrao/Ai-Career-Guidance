@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/MerchantNavy.css";
-
+import { Link } from "react-router-dom";
 import DeckOfficer from "../assets/Deck-Officer.png";
 import MarineEngineer from "../assets/Marine-Engineer.png";
 import ETO from "../assets/ETO.png";
@@ -24,7 +24,7 @@ function MerchantNavy() {
         "Marine engineers maintain ship engines, machinery and technical systems onboard.",
     },
     {
-      id: "eto",
+    id: "electro-technical-officer",
       title: "Electro-Technical Officer (ETO)",
       icon: ETO,
       description:
@@ -96,7 +96,9 @@ function MerchantNavy() {
 
               <p>{career.description}</p>
 
-              <button>Explore Career →</button>
+              <Link to={`/merchant-navy/${career.id}`}>
+  <button>Explore Career →</button>
+</Link>
 
             </div>
           ))}

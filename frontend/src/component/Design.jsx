@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/Design.css";
-
+import { Link } from "react-router-dom";
 import GraphicDesigner from "../assets/Graphic-Designer.jpeg";
 import InteriorDesigner from "../assets/Interior-Designer.jpg";
 import FashionDesigner from "../assets/Fashion-Designer.jpg";
@@ -94,8 +94,9 @@ function Design() {
 
               <p>{career.description}</p>
 
-              <button>Explore Career →</button>
-
+ <Link to={`/Design/${career.id}`}>
+  <button>Explore Career →</button>
+</Link>
             </div>
 
           ))}

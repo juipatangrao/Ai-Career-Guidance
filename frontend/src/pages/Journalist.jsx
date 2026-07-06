@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import JournalistLogo from "../assets/Journalist.png";
-import JournalistBanner from "../assets/Journalist.png";
+import JournalistBanner from "../assets/Journalist-banner.png";
 
 const Journalist = () => {
   return (
