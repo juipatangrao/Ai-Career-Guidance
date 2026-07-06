@@ -37,6 +37,7 @@ function Home() {
     { to: "/media-and-journalism", label: "Media & Journalism", icon: <FaBuildingColumns />, bg: "#7B61FF" },
     { to: "/space-astronomy", label: "Space & Astronomy", icon: <FaBuildingColumns />, bg: "#7B61FF" },
     { to: "/environmental", label: "Environmental", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/design", label: "Design", icon: <FaBuildingColumns />, bg: "#7B61FF" },
 
   ];
 

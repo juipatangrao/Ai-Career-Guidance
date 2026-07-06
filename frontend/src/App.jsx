@@ -16,6 +16,7 @@ import ScienceResearch from "./component/ScienceResearch";
 import SpaceAstronomy from "./component/SpaceAstronomy";
 import Environmental from "./component/Environmental";
 import MediaJournalism from "./component/MediaJournalism";
+import Design from "./component/Design";
 
 import IAS from "./component/pages/IAS";
 import IPS from "./component/pages/IPS";
@@ -100,6 +101,7 @@ function App() {
         <Route path="/media-and-journalism" element={<MediaJournalism />} />
         <Route path="/space-astronomy" element={<SpaceAstronomy />} />
         <Route path="/environmental" element={<Environmental />} />
+        <Route path="/design" element={<Design />} />
 
         <Route path="/it/web-developer" element={<WebDeveloper />} />
         <Route path="/it/mobile-app" element={<MobileAppDeveloper />} />

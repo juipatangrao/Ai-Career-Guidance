@@ -173,8 +173,10 @@ body {
 }
 
 .right img{
-    margin-left:200px;
-    width:700px;
+  width: 100%;
+  max-width: 500px;   /* pick whatever looks good, but drop the fixed 700px */
+  height: auto;
+  margin-left:150px;
 }
 
 /* ================= CAREER CATEGORIES ================= */
