@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../style/Engineering.css";
-import ComputerEngineerIcon from "../assets/computer.jpeg";
+import ComputerEngineerIcon from "../assets/computer.png";
 import CivilEngineerIcon from "../assets/civil.jpeg";
 import MechanicalEngineerIcon from "../assets/mechanical.jpeg";
 import ElectricalEngineerIcon from "../assets/electrical.jpeg";
@@ -113,8 +113,9 @@ function Engineering() {
               <h3>{career.title}</h3>
 
               <p>{career.description}</p>
-
-              <button>Explore Career →</button>
+              <Link to={`/${career.id}`}>
+                <button>Explore Career →</button>
+              </Link>
             </div>
           ))}
         </div>

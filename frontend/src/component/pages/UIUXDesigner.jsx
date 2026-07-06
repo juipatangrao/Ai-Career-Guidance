@@ -56,6 +56,33 @@ const UIUXDesigner = () => {
         "Maintain design systems.",
         "Test and improve product usability."
       ]}
+
+      careerTest={[
+  "Do you enjoy designing user-friendly interfaces?",
+  "Are you creative?",
+  "Do you like understanding user behavior?",
+  "Can you use design tools like Figma?",
+  "Do you enjoy improving user experience?"
+]}
+
+roadmap={[
+  "Complete 10th and 12th",
+  "Learn UI & UX Principles",
+  "Learn Figma",
+  "Build Design Portfolio",
+  "Work on Real Projects",
+  "Learn Prototyping",
+  "Apply for UI/UX Jobs"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐",
+  "Competition": "Moderate",
+  "Job Security": "Very Good",
+  "Creativity": "Essential",
+  "Remote Work": "Available",
+  "Salary Growth": "Very Good"
+}}
     />
   );
 };

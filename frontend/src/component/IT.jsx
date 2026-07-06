@@ -121,7 +121,7 @@ function IT() {
 
               <Link to={`/it/${career.id}`}>
   <button>Explore Career →</button>
-</Link>
+</Link> 
             </div>
           ))}
         </div>

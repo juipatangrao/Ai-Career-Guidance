@@ -47,6 +47,35 @@ const IPS = () => {
         "Manage Security Arrangements",
         "Coordinate with Agencies"
       ]}
+
+      careerTest={[
+  "Do you enjoy maintaining law and order?",
+  "Can you stay calm in dangerous situations?",
+  "Do you have strong leadership skills?",
+  "Are you physically and mentally fit?",
+  "Can you make quick decisions during emergencies?"
+]}
+
+roadmap={[
+  "Complete 10th",
+  "Complete 12th",
+  "Graduate in any stream",
+  "Prepare for UPSC Civil Services Examination",
+  "Clear UPSC Prelims",
+  "Clear UPSC Mains",
+  "Clear Personality Test",
+  "Complete Police Training",
+  "Become an IPS Officer"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐⭐⭐",
+  "Competition": "Very High",
+  "Job Security": "Excellent",
+  "Transfers": "Frequent",
+  "Public Responsibility": "Very High",
+  "Physical Fitness": "Essential"
+}}
     />
   );
 };

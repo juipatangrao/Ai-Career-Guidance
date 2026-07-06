@@ -47,6 +47,36 @@ const IAS = () => {
         "Coordinate with Different Departments",
         "Serve the Public"
       ]}
+
+      careerTest={[
+    "Do you enjoy solving public problems?",
+    "Can you work under pressure?",
+    "Do you like leadership roles?",
+    "Do you want to serve society?",
+    "Can you make quick decisions?"
+  ]}
+
+  roadmap={[
+    "Complete 10th",
+    "Complete 12th",
+    "Graduate in any stream",
+    "Prepare for UPSC",
+    "Clear Prelims",
+    "Clear Mains",
+    "Clear Interview",
+    "Training",
+    "Become an IAS Officer"
+  ]}
+
+  realityCheck={{
+    "Work Pressure": "⭐⭐⭐⭐⭐",
+    "Competition": "Very High",
+    "Job Security": "Excellent",
+    "Transfers": "Frequent",
+    "Public Responsibility": "Very High",
+    "Work-Life Balance": "Moderate"
+  }}
+
     />
   );
 };

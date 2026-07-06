@@ -57,6 +57,33 @@ const BackendDeveloper = () => {
         "Deploy applications to cloud platforms.",
         "Maintain and update backend systems."
       ]}
+
+      careerTest={[
+  "Do you enjoy solving logical problems?",
+  "Are you interested in databases?",
+  "Can you build APIs?",
+  "Do you enjoy server-side programming?",
+  "Are you comfortable debugging code?"
+]}
+
+roadmap={[
+  "Complete 10th and 12th",
+  "Learn Java/Python/Node.js",
+  "Learn SQL & Databases",
+  "Build REST APIs",
+  "Learn Authentication",
+  "Deploy Backend Projects",
+  "Apply for Backend Jobs"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Excellent",
+  "Problem Solving": "Essential",
+  "Remote Work": "Available",
+  "Salary Growth": "Excellent"
+}}
     />
   );
 };

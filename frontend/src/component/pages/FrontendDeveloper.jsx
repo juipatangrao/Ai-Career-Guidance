@@ -56,6 +56,34 @@ const FrontendDeveloper = () => {
         "Collaborate with backend developers and designers.",
         "Maintain and update existing frontend features."
       ]}
+
+      careerTest={[
+  "Do you enjoy designing beautiful user interfaces?",
+  "Do you like working with colors and layouts?",
+  "Are you interested in React or Angular?",
+  "Can you solve UI problems creatively?",
+  "Do you enjoy improving user experience?"
+]}
+
+roadmap={[
+  "Complete 10th and 12th",
+  "Learn HTML & CSS",
+  "Master JavaScript",
+  "Learn React.js",
+  "Build Responsive Projects",
+  "Create Portfolio",
+  "Apply for Frontend Jobs"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Excellent",
+  "Creativity": "Very Important",
+  "Remote Work": "Available",
+  "Salary Growth": "Very Good"
+}}
+
     />
   );
 };

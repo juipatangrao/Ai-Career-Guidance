@@ -33,6 +33,8 @@ import UIUXDesigner from "./component/pages/UIUXDesigner";
 import CyberSecurity from "./component/pages/CyberSecurity";
 import DataAnalyst from "./component/pages/DataAnalyst";
 import GameDeveloper from "./component/pages/GameDeveloper";
+import Computer from "./component/pages/Computer";
+
 
 import MediaJournalism from "./component/MediaJournalism";
 import "./App.css";
@@ -61,7 +63,7 @@ function App() {
         <Route path="/ips" element={<IPS />} />
         <Route path="/police" element={<Police />} />
         <Route path="/army" element={<Army />} />
-        <Route path="/income" element={<Income />} />
+        <Route path="/income-tax" element={<Income />} />
         <Route path="/railway" element={<Railway />} />
         <Route path="/forest" element={<Forest />} />
         <Route path="/food" element={<Food />} />
@@ -77,6 +79,7 @@ function App() {
         <Route path="/it/data-analyst" element={<DataAnalyst />} />
         <Route path="/it/game-developer" element={<GameDeveloper />} />
         
+        <Route path="/computer" element={<Computer />} />
 
         <Route path="/media-journalism" element={<MediaJournalism />} />
       </Routes>

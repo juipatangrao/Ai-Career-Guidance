@@ -56,6 +56,33 @@ const CyberSecurity = () => {
         "Conduct vulnerability testing.",
         "Respond to cyber attacks."
       ]}
+
+      careerTest={[
+  "Do you enjoy solving security challenges?",
+  "Are you interested in ethical hacking?",
+  "Can you think analytically?",
+  "Do you enjoy protecting systems?",
+  "Are you willing to learn continuously?"
+]}
+
+roadmap={[
+  "Complete 10th and 12th",
+  "Learn Networking",
+  "Learn Linux",
+  "Study Cyber Security",
+  "Earn Security Certifications",
+  "Practice Ethical Hacking",
+  "Apply for Cyber Security Jobs"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Excellent",
+  "Continuous Learning": "Essential",
+  "Remote Work": "Available",
+  "Salary Growth": "Excellent"
+}}
     />
   );
 };

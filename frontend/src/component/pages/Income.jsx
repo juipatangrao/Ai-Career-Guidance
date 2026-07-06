@@ -46,6 +46,32 @@ const IncomeTax = () => {
         "Audit financial documents",
         "Ensure tax compliance"
       ]}
+
+      careerTest={[
+  "Do you enjoy working with numbers?",
+  "Can you maintain confidentiality?",
+  "Do you have analytical thinking?",
+  "Can you investigate financial records?",
+  "Do you enjoy solving financial cases?"
+]}
+
+roadmap={[
+  "Complete Graduation",
+  "Prepare for SSC CGL Examination",
+  "Clear SSC CGL",
+  "Document Verification",
+  "Department Training",
+  "Become an Income Tax Officer"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Excellent",
+  "Transfers": "Possible",
+  "Public Responsibility": "High",
+  "Analytical Skills": "Very Important"
+}}
     />
   );
 };

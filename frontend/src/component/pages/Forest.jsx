@@ -46,6 +46,33 @@ const Forest = () => {
         "Environmental conservation work",
         "Awareness programs"
       ]}
+
+      careerTest={[
+  "Do you enjoy working in nature and forests?",
+  "Are you passionate about wildlife conservation?",
+  "Can you work in remote locations?",
+  "Do you enjoy solving environmental problems?",
+  "Are you physically fit for outdoor duties?"
+]}
+
+roadmap={[
+  "Complete 12th (Science preferred)",
+  "Complete Graduation in Forestry, Agriculture, Environmental Science or related field",
+  "Apply for Forest Department Recruitment or UPSC/State PSC",
+  "Clear Written Examination",
+  "Pass Physical Test",
+  "Complete Forest Training",
+  "Become a Forest Officer"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Excellent",
+  "Outdoor Work": "Very High",
+  "Transfers": "Possible",
+  "Wildlife Responsibility": "Very High"
+}}
     />
   );
 };

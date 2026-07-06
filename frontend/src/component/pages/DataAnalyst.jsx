@@ -56,6 +56,33 @@ const DataAnalyst = () => {
         "Collaborate with business teams.",
         "Present findings to stakeholders."
       ]}
+
+      careerTest={[
+  "Do you enjoy working with data?",
+  "Are you comfortable with numbers?",
+  "Do you like finding patterns?",
+  "Can you solve business problems using data?",
+  "Do you enjoy creating charts and reports?"
+]}
+
+roadmap={[
+  "Complete 10th and 12th",
+  "Learn Excel",
+  "Learn SQL",
+  "Learn Python",
+  "Learn Power BI or Tableau",
+  "Build Data Projects",
+  "Apply for Data Analyst Jobs"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Excellent",
+  "Analytical Thinking": "Essential",
+  "Remote Work": "Available",
+  "Salary Growth": "Excellent"
+}}
     />
   );
 };

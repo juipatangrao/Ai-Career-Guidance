@@ -47,6 +47,33 @@ const Railway = () => {
         "Maintain railway systems",
         "Solve travel issues"
       ]}
+
+      careerTest={[
+  "Do you enjoy managing operations?",
+  "Can you work with responsibility?",
+  "Do you like problem-solving?",
+  "Can you coordinate with large teams?",
+  "Are you interested in public services?"
+]}
+
+roadmap={[
+  "Complete 12th",
+  "Complete Graduation",
+  "Apply for RRB Recruitment",
+  "Clear Written Examination",
+  "Pass Document Verification",
+  "Complete Training",
+  "Become a Railway Officer"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Excellent",
+  "Transfers": "Possible",
+  "Work-Life Balance": "Good",
+  "Public Responsibility": "High"
+}}
     />
   );
 };

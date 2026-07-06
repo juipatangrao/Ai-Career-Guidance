@@ -46,6 +46,33 @@ const Food = () => {
         "Take legal action if needed",
         "Monitor food safety rules"
       ]}
+
+      careerTest={[
+  "Are you interested in food safety and quality?",
+  "Do you pay attention to small details?",
+  "Can you inspect and enforce rules fairly?",
+  "Do you enjoy working with science and health?",
+  "Are you comfortable conducting field inspections?"
+]}
+
+roadmap={[
+  "Complete 12th (Science)",
+  "Complete Graduation in Food Technology, Microbiology, Biotechnology, Chemistry or related field",
+  "Apply for Food Inspector Recruitment",
+  "Clear Written Examination",
+  "Complete Interview and Document Verification",
+  "Receive Department Training",
+  "Become a Food Inspector"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Excellent",
+  "Field Inspections": "Regular",
+  "Public Responsibility": "High",
+  "Attention to Detail": "Very Important"
+}}
     />
   );
 };

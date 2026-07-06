@@ -56,6 +56,33 @@ const WebDeveloper = () => {
         "Collaborate with designers and developers.",
         "Update and maintain existing websites."
       ]}
+
+      careerTest={[
+  "Do you enjoy building websites?",
+  "Are you interested in HTML, CSS, and JavaScript?",
+  "Do you like solving coding problems?",
+  "Can you learn new technologies regularly?",
+  "Do you enjoy creating user-friendly websites?"
+]}
+
+roadmap={[
+  "Complete 10th and 12th",
+  "Learn HTML, CSS, and JavaScript",
+  "Learn React.js",
+  "Build Real Projects",
+  "Learn Git & GitHub",
+  "Create a Portfolio",
+  "Apply for Web Developer Jobs"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Excellent",
+  "Remote Work": "Available",
+  "Continuous Learning": "Very Important",
+  "Salary Growth": "Excellent"
+}}
     />
   );
 };

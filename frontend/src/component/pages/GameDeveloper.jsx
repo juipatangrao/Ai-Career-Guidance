@@ -55,6 +55,33 @@ const GameDeveloper = () => {
         "Collaborate with artists and designers.",
         "Maintain and update games."
       ]}
+
+      careerTest={[
+  "Do you enjoy playing and creating games?",
+  "Are you interested in programming?",
+  "Can you solve logical problems?",
+  "Do you enjoy creativity and storytelling?",
+  "Are you willing to learn game engines like Unity or Unreal?"
+]}
+
+roadmap={[
+  "Complete 10th and 12th",
+  "Learn C# or C++",
+  "Learn Unity or Unreal Engine",
+  "Build Small Games",
+  "Create Game Portfolio",
+  "Publish Projects",
+  "Apply for Game Developer Jobs"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Good",
+  "Creativity": "Very Important",
+  "Continuous Learning": "Essential",
+  "Salary Growth": "Very Good"
+}}
     />
   );
 };

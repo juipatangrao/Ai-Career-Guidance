@@ -57,6 +57,33 @@ const FullStackDeveloper = () => {
         "Collaborate with designers, developers, and clients.",
         "Maintain and upgrade existing web applications."
       ]}
+
+      careerTest={[
+  "Do you enjoy both frontend and backend development?",
+  "Can you learn multiple technologies?",
+  "Do you like building complete applications?",
+  "Can you solve full project problems?",
+  "Do you enjoy continuous learning?"
+]}
+
+roadmap={[
+  "Complete 10th and 12th",
+  "Learn HTML, CSS & JavaScript",
+  "Learn React.js",
+  "Learn Node.js & Express",
+  "Learn Databases",
+  "Build Full Stack Projects",
+  "Apply for Full Stack Jobs"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐⭐",
+  "Competition": "Very High",
+  "Job Security": "Excellent",
+  "Learning Curve": "High",
+  "Remote Work": "Available",
+  "Salary Growth": "Excellent"
+}}
     />
   );
 };

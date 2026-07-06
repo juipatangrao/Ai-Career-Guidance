@@ -56,6 +56,33 @@ const MobileAppDeveloper = () => {
         "Collaborate with designers and backend developers.",
         "Maintain and update existing mobile applications."
       ]}
+
+      careerTest={[
+  "Do you enjoy building mobile apps?",
+  "Are you interested in Android or iOS development?",
+  "Can you solve technical problems?",
+  "Do you enjoy learning Flutter or React Native?",
+  "Do you like improving app performance?"
+]}
+
+roadmap={[
+  "Complete 10th and 12th",
+  "Learn Dart or Java/Kotlin",
+  "Learn Flutter or React Native",
+  "Build Mobile Apps",
+  "Publish Apps",
+  "Create Portfolio",
+  "Apply for Mobile Developer Jobs"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Excellent",
+  "Continuous Learning": "Important",
+  "Remote Work": "Available",
+  "Salary Growth": "Very Good"
+}}
     />
   );
 };

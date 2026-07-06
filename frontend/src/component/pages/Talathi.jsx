@@ -46,6 +46,33 @@ const Talathi = () => {
         "Survey land",
         "Support revenue officers"
       ]}
+
+      careerTest={[
+  "Do you enjoy administrative work?",
+  "Can you manage land and revenue records?",
+  "Do you like interacting with villagers?",
+  "Can you work with accuracy?",
+  "Are you interested in government administration?"
+]}
+
+roadmap={[
+  "Complete 12th",
+  "Complete Graduation (if required by recruitment)",
+  "Apply for Talathi Recruitment",
+  "Clear Written Examination",
+  "Document Verification",
+  "Complete Training",
+  "Become a Talathi"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐",
+  "Competition": "Moderate",
+  "Job Security": "Excellent",
+  "Public Interaction": "High",
+  "Field Work": "Moderate",
+  "Work-Life Balance": "Good"
+}}
     />
   );
 };

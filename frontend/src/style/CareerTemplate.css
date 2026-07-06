@@ -306,3 +306,325 @@ body {
   }
 
 }
+
+/* ========================= */
+/* New Sidebar */
+/* ========================= */
+
+.career-sidebar-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+}
+
+.career-overview-dropdown {
+  margin-left: 18px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.career-overview-dropdown li {
+  font-size: 14px;
+  padding: 10px !important;
+  margin-bottom: 6px !important;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.career-overview-dropdown li:hover {
+  background: #f8dfe8;
+}
+
+/* ========================= */
+/* About Header */
+/* ========================= */
+
+.career-template-about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.career-heart-btn {
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.career-heart-btn:hover {
+  transform: scale(1.15);
+}
+
+/* ========================= */
+/* Information Table */
+/* ========================= */
+
+.career-info-table {
+  margin-top: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+}
+
+.career-info-row {
+  display: flex;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.career-info-row:last-child {
+  border-bottom: none;
+}
+
+.career-info-row span:first-child {
+  width: 240px;
+  background: #7b1e3d;
+  color: white;
+  padding: 18px;
+  font-weight: 600;
+}
+
+.career-info-row span:last-child {
+  flex: 1;
+  padding: 18px;
+  background: white;
+  color: #444;
+  line-height: 1.7;
+}
+
+
+/* ================= Roadmap ================= */
+
+.roadmap-page{
+    max-width:900px;
+    margin:auto;
+}
+
+.roadmap-container{
+    margin-top:35px;
+    position:relative;
+}
+
+.roadmap-container::before{
+    content:"";
+    position:absolute;
+    left:25px;
+    top:0;
+    width:4px;
+    height:100%;
+    background:#4f46e5;
+}
+
+.roadmap-step{
+    display:flex;
+    gap:20px;
+    margin-bottom:35px;
+    position:relative;
+}
+
+.roadmap-circle{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#4f46e5;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    z-index:2;
+}
+
+.roadmap-content{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    width:100%;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.roadmap-content h3{
+    color:#4f46e5;
+    margin-bottom:8px;
+}
+
+/* ================= Career Test ================= */
+
+.career-test-page{
+max-width:900px;
+margin:auto;
+}
+
+.career-test-subtitle{
+margin-bottom:25px;
+color:#666;
+}
+
+.career-question-card{
+
+background:white;
+
+padding:25px;
+
+margin-bottom:20px;
+
+border-radius:15px;
+
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.career-question-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.career-question-card h3{
+
+margin-bottom:20px;
+
+color:#222;
+
+}
+
+.career-answer-buttons{
+
+display:flex;
+
+gap:15px;
+
+}
+
+.answer-btn{
+
+padding:10px 28px;
+
+border:none;
+
+border-radius:30px;
+
+cursor:pointer;
+
+font-weight:600;
+
+background:#eef2ff;
+
+color:#4f46e5;
+
+transition:.3s;
+
+}
+
+.answer-btn:hover{
+
+background:#4f46e5;
+
+color:white;
+
+}
+
+.active-answer{
+
+background:#4f46e5;
+
+color:white;
+
+}
+
+.submit-test-btn{
+
+margin-top:30px;
+
+padding:14px 40px;
+
+background:#4f46e5;
+
+color:white;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.submit-test-btn:hover{
+
+transform:scale(1.05);
+
+}
+
+/* ================= Test Result ================= */
+
+.career-result-card{
+
+margin-top:40px;
+
+padding:30px;
+
+background:white;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.career-progress{
+
+width:100%;
+
+height:20px;
+
+background:#ececec;
+
+border-radius:20px;
+
+overflow:hidden;
+
+margin:25px 0;
+
+}
+
+.career-progress-fill{
+
+height:100%;
+
+background:linear-gradient(90deg,#4f46e5,#7c3aed);
+
+transition:1s;
+
+}
+
+.career-result-card h1{
+
+font-size:45px;
+
+color:#4f46e5;
+
+margin-bottom:10px;
+
+}
+
+.career-result-card p{
+
+font-size:18px;
+
+color:#555;
+
+}

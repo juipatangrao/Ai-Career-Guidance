@@ -47,6 +47,33 @@ const Army = () => {
         "Coordinate Defense Strategies",
         "Participate in Field Operations"
       ]}
+
+      careerTest={[
+  "Do you enjoy teamwork?",
+  "Can you work under extreme pressure?",
+  "Are you willing to serve the nation?",
+  "Do you enjoy physical activities?",
+  "Can you make decisions quickly?"
+]}
+
+roadmap={[
+  "Complete 12th or Graduation",
+  "Apply through NDA/CDS/Technical Entry",
+  "Clear Written Examination",
+  "Pass SSB Interview",
+  "Complete Medical Examination",
+  "Complete Military Training",
+  "Become an Army Officer"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Excellent",
+  "Transfers": "Frequent",
+  "Physical Fitness": "Very High",
+  "Risk Level": "High"
+}}
     />
   );
 };

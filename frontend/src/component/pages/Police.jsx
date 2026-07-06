@@ -47,6 +47,33 @@ const Police = () => {
         "Arresting suspects",
         "Supporting law enforcement"
       ]}
+
+      careerTest={[
+  "Do you enjoy helping people?",
+  "Can you work in shifts?",
+  "Are you physically active?",
+  "Can you handle stressful situations?",
+  "Do you believe in discipline?"
+]}
+
+roadmap={[
+  "Complete 10th or 12th",
+  "Meet eligibility criteria",
+  "Apply for Police Recruitment",
+  "Clear Written Exam",
+  "Pass Physical Test",
+  "Complete Police Training",
+  "Become a Police Officer"
+]}
+
+realityCheck={{
+  "Work Pressure": "⭐⭐⭐⭐",
+  "Competition": "High",
+  "Job Security": "Excellent",
+  "Night Duty": "Frequent",
+  "Public Interaction": "High",
+  "Physical Fitness": "Required"
+}}
     />
   );
 };
