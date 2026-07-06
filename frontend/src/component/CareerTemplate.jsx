@@ -2,6 +2,20 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../style/CareerTemplate.css";
 
+import {
+  FaBookOpen,
+  FaGraduationCap,
+  FaLaptopCode,
+  FaClipboardCheck,
+  FaTrophy,
+  FaMicrophone,
+  FaRocket,
+  FaCertificate,
+  FaBriefcase,
+} from "react-icons/fa";
+
+
+
 const CareerTemplate = ({
   title,
   subtitle,
@@ -97,6 +111,20 @@ const handleSubmitTest = () => {
   setScore(percentage);
 
 };
+
+const roadmapIcons = [
+  <FaBookOpen />,
+  <FaGraduationCap />,
+  <FaGraduationCap />,
+  <FaLaptopCode />,
+  <FaClipboardCheck />,
+  <FaTrophy />,
+  <FaMicrophone />,
+  <FaCertificate />,
+  <FaRocket />,
+  <FaBriefcase />,
+];
+
 
   return (
     <div className="career-template-page">
@@ -481,31 +509,58 @@ style={{width:`${score}%`}}
 
         {/* ================= Roadmap ================= */}
 
+{/* ================= Roadmap ================= */}
+
 {activePage === "Roadmap" && (
-<div className="roadmap-page">
 
-    <h2>Career Roadmap</h2>
+<div className="career-roadmap-page">
 
-    <div className="roadmap-container">
+<div className="roadmap-heading">
 
-        {roadmap.map((step,index)=>(
-            <div className="roadmap-step" key={index}>
+<h2>Career Roadmap</h2>
 
-                <div className="roadmap-circle">
-                    {index+1}
-                </div>
-
-                <div className="roadmap-content">
-                    <h3>Step {index+1}</h3>
-                    <p>{step}</p>
-                </div>
-
-            </div>
-        ))}
-
-    </div>
+<p>
+Your journey to become a <strong>{title}</strong>
+</p>
 
 </div>
+
+<div className="roadmap-timeline">
+
+{roadmap.map((step,index)=>(
+
+<div className="roadmap-item" key={index}>
+
+<div className="roadmap-left">
+
+<div className="roadmap-icon">
+
+{roadmapIcons[index] || <FaRocket />}
+
+</div>
+
+{index !== roadmap.length-1 && (
+<div className="roadmap-line"></div>
+)}
+
+</div>
+
+<div className="roadmap-card">
+
+<h3>Stage {index+1}</h3>
+
+<p>{step}</p>
+
+</div>
+
+</div>
+
+))}
+
+</div>
+
+</div>
+
 )}
 
         {/* ================= Reality Check ================= */}
