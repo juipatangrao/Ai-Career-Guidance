@@ -113,9 +113,10 @@ function Engineering() {
               <h3>{career.title}</h3>
 
               <p>{career.description}</p>
-              <Link to={`/${career.id}`}>
-                <button>Explore Career →</button>
-              </Link>
+
+            <Link to={`/engineering/${career.id}`} className="explore-link">
+              <button>Explore Career →</button>
+            </Link>
             </div>
           ))}
         </div>

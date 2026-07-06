@@ -2,9 +2,9 @@ import React from "react";
 import "../style/Design.css";
 
 import GraphicDesigner from "../assets/Graphic-Designer.jpeg";
-// import InteriorDesigner from "../assets/Interior-Designer.png";
-// import FashionDesigner from "../assets/Fashion-Designer.png";
-// import ProductDesigner from "../assets/Product-Designer.png";
+import InteriorDesigner from "../assets/Interior-Designer.jpg";
+import FashionDesigner from "../assets/Fashion-Designer.jpg";
+import ProductDesigner from "../assets/Product-Designer.jpg";
 
 function Design() {
 

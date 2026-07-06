@@ -95,6 +95,16 @@ import Chemist from "./pages/Chemist";
 import Biologist from "./pages/Biologist";
 import Microbiologist from "./pages/Microbiologist";
 import Biotechnologist from "./pages/Biotechnologist";
+
+//Engineering pages
+import CivilEngineer from "./pages/Civil";
+import MechanicalEngineer from "./pages/Mechanical";
+import Computer from "./pages/Computer";
+import ElectricalEngineer from "./pages/Electrical";
+import ChemicalEngineer from "./pages/Chemical";
+import AerospaceEngineer from "./pages/Aerospace";
+import AutomobileEngineer from "./pages/Automobile";
+import RoboticsEngineer from "./pages/Robotics";
 import "./App.css";
 
 function App() {
@@ -171,6 +181,16 @@ function App() {
         <Route path="/science-research/biologist" element={<Biologist />} />
         <Route path="/science-research/microbiologist" element={<Microbiologist />} />
         <Route path="/science-research/biotechnologist" element={<Biotechnologist />} />
+
+        /*Engineering*/
+        <Route path="/engineering/civil" element={<CivilEngineer />} />
+        <Route path="/engineering/mechanical" element={<MechanicalEngineer />} />
+        <Route path="/engineering/computer" element={<Computer />} />
+        <Route path="/engineering/electrical" element={<ElectricalEngineer />} />
+        <Route path="/engineering/chemical" element={<ChemicalEngineer />} />
+        <Route path="/engineering/aerospace" element={<AerospaceEngineer />} />
+        <Route path="/engineering/automobile" element={<AutomobileEngineer />} />
+        <Route path="/engineering/robotics" element={<RoboticsEngineer />} />
 
       </Routes>
     </BrowserRouter>
