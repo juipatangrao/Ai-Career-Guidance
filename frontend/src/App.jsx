@@ -14,29 +14,6 @@ import Engineering from "./component/Engineering";
 import Doctor from "./component/Doctor";
 
 
-import IAS from "./component/pages/IAS";
-import IPS from "./component/pages/IPS";
-import Police from "./component/pages/Police";
-import Army from "./component/pages/Army";
-import Income from "./component/pages/Income";
-import Railway from "./component/pages/Railway";
-import Forest from "./component/pages/Forest";
-import Food from "./component/pages/Food";
-import Talathi from "./component/pages/Talathi";
-
-import WebDeveloper from "./component/pages/WebDeveloper";
-import MobileAppDeveloper from "./component/pages/MobileAppDeveloper";
-import FrontendDeveloper from "./component/pages/FrontendDeveloper";
-import BackendDeveloper from "./component/pages/BackendDeveloper";
-import FullStackDeveloper from "./component/pages/FullStackDeveloper";
-import UIUXDesigner from "./component/pages/UIUXDesigner";
-import CyberSecurity from "./component/pages/CyberSecurity";
-import DataAnalyst from "./component/pages/DataAnalyst";
-import GameDeveloper from "./component/pages/GameDeveloper";
-import Computer from "./component/pages/Computer";
-
-
-
 import ScienceResearch from "./component/ScienceResearch";
 import SpaceAstronomy from "./component/SpaceAstronomy";
 import Environmental from "./component/Environmental";
