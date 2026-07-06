@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import GraphicDesigner from "../assets/Graphic-Designer.jpeg";
 import InteriorDesigner from "../assets/Interior-Designer.jpg";
 import FashionDesigner from "../assets/Fashion-Designer.jpg";
-import ProductDesigner from "../assets/Product-Designer.jpg";
+import ProductDesigner from "../assets/Product-Designer.png";
 import DesignBanner from "../assets/Design-banner.png";
 
 function Design() {
@@ -43,19 +43,19 @@ function Design() {
   return (
     <div className="design-page">
 
-      <header className="page-header">
-        <button className="back-btn">Back</button>
+      <header className="design-page-header">
+        <button className="back-btn"><a href="/home">Back</a></button>
 
         <h2>Design</h2>
 
-        <button className="wishlist-btn">
+        <button className="design-wishlist-btn">
           Wishlist ❤️
         </button>
       </header>
 
-      <section className="hero-section">
+      <section className="design-hero-section">
 
-        <div className="hero-left">
+        <div className="design-hero-left">
 
           <h1>Design</h1>
 
@@ -69,13 +69,13 @@ function Design() {
 
         </div>
 
-        <div className="hero-right">
+        <div className="design-hero-right">
            <img src={DesignBanner} alt="Design" />         
         </div>
 
       </section>
 
-      <section className="career-section">
+      <section className="design-career-section">
 
         <h2>Explore Design Careers</h2>
 
@@ -83,13 +83,13 @@ function Design() {
           Click on any field to view complete details about that career.
         </p>
 
-        <div className="career-grid">
+        <div className="design-career-grid">
 
           {careers.map((career) => (
 
-            <div className="career-card" key={career.id}>
+            <div className="design-career-card" key={career.id}>
 
-              <div className="career-icon">
+              <div className="design-career-icon">
                 <img src={career.icon} alt={career.title} />
               </div>
 
@@ -108,37 +108,37 @@ function Design() {
 
       </section>
 
-      <section className="why-section">
+      <section className="design-why-section">
 
         <h2>Why Choose Design?</h2>
 
-        <div className="why-grid">
+        <div className="design-why-grid">
 
-          <div className="why-card">
+          <div className="design-why-card">
             <span>🎨</span>
             <h3>Creativity</h3>
             <p>Express your ideas through unique and innovative designs.</p>
           </div>
 
-          <div className="why-card">
+          <div className="design-why-card">
             <span>💼</span>
             <h3>Career Growth</h3>
             <p>Excellent opportunities across different industries.</p>
           </div>
 
-          <div className="why-card">
+          <div className="design-why-card">
             <span>🌍</span>
             <h3>Global Demand</h3>
             <p>Design professionals are needed worldwide.</p>
           </div>
 
-          <div className="why-card">
+          <div className="design-why-card">
             <span>🚀</span>
             <h3>Freelancing</h3>
             <p>Build your own brand or work independently.</p>
           </div>
 
-          <div className="why-card">
+          <div className="design-why-card">
             <span>💡</span>
             <h3>Innovation</h3>
             <p>Create products and experiences that improve everyday life.</p>

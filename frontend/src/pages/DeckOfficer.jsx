@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import DeckOfficerLogo from "../assets/Deck-Officer.png";
-import DeckOfficerBanner from "../assets/Deck-Officer.png";
+import DeckOfficerBanner from "../assets/Deck-Officer-banner.jpg";
 
 const DeckOfficer = () => {
   return (

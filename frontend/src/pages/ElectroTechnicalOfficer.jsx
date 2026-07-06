@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import ETOLogo from "../assets/ETO.png";
-import ETOBanner from "../assets/ETO.png";
+import ETOBanner from "../assets/ETO-banner.jpg";
 
 const ElectroTechnicalOfficer = () => {
   return (

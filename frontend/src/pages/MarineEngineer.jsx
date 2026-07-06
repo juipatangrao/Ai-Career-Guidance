@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import MarineEngineerLogo from "../assets/Marine-Engineer.png";
-import MarineEngineerBanner from "../assets/Marine-Engineer.png";
+import MarineEngineerBanner from "../assets/Marine-Engineer-banner.jpg";
 
 const MarineEngineer = () => {
   return (

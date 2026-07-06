@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
-import ProductDesignerLogo from "../assets/Product-Designer.jpg";
+import ProductDesignerLogo from "../assets/Product-Designer.png";
 import ProductDesignerBanner from "../assets/Product-Designer-banner.jpg";
 
 const ProductDesigner = () => {

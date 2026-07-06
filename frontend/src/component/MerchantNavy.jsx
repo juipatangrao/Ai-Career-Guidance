@@ -49,14 +49,14 @@ function MerchantNavy() {
   return (
     <div className="merchant-page">
 
-      <header className="page-header">
-        <button className="back-btn"><a href="/home">Back</a></button>
+      <header className="merchant-page-header">
+        <button className="merchant-back-btn"><a href="/home">Back</a></button>
         <h2>Merchant Navy</h2>
-        <button className="wishlist-btn">Wishlist ❤️</button>
+        <button className="merchant-wishlist-btn">Wishlist ❤️</button>
       </header>
 
-      <section className="hero-section">
-        <div className="hero-left">
+      <section className="merchant-hero-section">
+        <div className="merchant-hero-left">
 
           <h1>Merchant Navy</h1>
 
@@ -70,12 +70,12 @@ function MerchantNavy() {
 
         </div>
 
-        <div className="hero-right">
+        <div className="merchant-hero-right">
                      <img src={merchantnavyhero} alt="Merchant Navy" />         
         </div>
       </section>
 
-      <section className="career-section">
+      <section className="merchant-career-section">
 
         <h2>Explore Merchant Navy Careers</h2>
 
@@ -83,12 +83,12 @@ function MerchantNavy() {
           Click on any field to view complete details about that career.
         </p>
 
-        <div className="career-grid">
+        <div className="merchant-career-grid">
 
           {careers.map((career) => (
-            <div className="career-card" key={career.id}>
+            <div className="merchant-career-card" key={career.id}>
 
-              <div className="career-icon">
+              <div className="merchant-career-icon">
                 <img src={career.icon} alt={career.title} />
               </div>
 
@@ -107,37 +107,37 @@ function MerchantNavy() {
 
       </section>
 
-      <section className="why-section">
+      <section className="merchant-why-section">
 
         <h2>Why Choose Merchant Navy?</h2>
 
-        <div className="why-grid">
+        <div className="merchant-why-grid">
 
-          <div className="why-card">
+          <div className="merchant-why-card">
             <span>🌍</span>
             <h3>Travel the World</h3>
             <p>Visit different countries while working on international ships.</p>
           </div>
 
-          <div className="why-card">
+          <div className="merchant-why-card">
             <span>💰</span>
             <h3>High Salary</h3>
             <p>Earn attractive salaries with additional onboard benefits.</p>
           </div>
 
-          <div className="why-card">
+          <div className="merchant-why-card">
             <span>🚢</span>
             <h3>Modern Ships</h3>
             <p>Work with advanced maritime technology and equipment.</p>
           </div>
 
-          <div className="why-card">
+          <div className="merchant-why-card">
             <span>📈</span>
             <h3>Career Growth</h3>
             <p>Excellent promotion opportunities from officer to captain.</p>
           </div>
 
-          <div className="why-card">
+          <div className="merchant-why-card">
             <span>⚓</span>
             <h3>Adventure</h3>
             <p>Experience an exciting career while exploring the oceans.</p>

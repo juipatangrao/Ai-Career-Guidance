@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import PortManagerLogo from "../assets/Port-Manager.png";
-import PortManagerBanner from "../assets/Port-Manager.png";
+import PortManagerBanner from "../assets/Port-Manager-banner.jpg";
 
 const PortManager = () => {
   return (

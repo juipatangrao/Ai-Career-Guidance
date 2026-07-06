@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import CaptainLogo from "../assets/Captain.png";
-import CaptainBanner from "../assets/Captain.png";
+import CaptainBanner from "../assets/Captain-banner.jpg";
 
 const Captain = () => {
   return (

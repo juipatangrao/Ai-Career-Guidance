@@ -11,7 +11,7 @@ body{
 
 /* ================= HEADER ================= */
 
-.page-header{
+.design-page-header{
     display:grid;
     grid-template-columns:1fr auto 1fr;
     align-items:center;
@@ -19,7 +19,7 @@ body{
     margin-bottom:10px;
 }
 
-.back-btn{
+.design-back-btn{
     justify-self:start;
     display:flex;
     align-items:center;
@@ -30,13 +30,13 @@ body{
     font-size:16px;
 }
 
-.page-header h2{
+.design-page-header h2{
     justify-self:center;
     font-size:28px;
     color:#222;
 }
 
-.wishlist-btn{
+.design-wishlist-btn{
     justify-self:end;
     display:flex;
     align-items:center;
@@ -56,7 +56,7 @@ body{
 
 /* ================= HERO ================= */
 
-.hero-section{
+.design-hero-section{
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -67,24 +67,24 @@ body{
     margin-bottom:60px;
 }
 
-.hero-left{
+.design-hero-left{
     width:50%;
 }
 
-.hero-left h1{
+.design-hero-left h1{
     font-size:48px;
     color:#222;
     margin-bottom:20px;
 }
 
-.hero-left p{
+.design-hero-left p{
     font-size:17px;
     color:#555;
     line-height:1.8;
     margin-bottom:30px;
 }
 
-.hero-left button{
+.design-hero-left button{
     padding:14px 28px;
     background:#6C63FF;
     color:#fff;
@@ -95,44 +95,49 @@ body{
     transition:.3s;
 }
 
-.hero-left button:hover{
+.design-hero-left button:hover{
     background:#5147e5;
 }
 
-.hero-right{
+.design-hero-right{
     flex:1;
     height:280px;
-    background-image:url("../assets/design-hero.png");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
     border-radius:20px;
+    overflow:hidden;
+}
+
+.design-hero-right img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:20px;
+    display:block;
 }
 
 /* ================= CAREERS ================= */
 
-.career-section{
+.design-career-section{
     margin:50px 0;
 }
 
-.career-section h2{
+.design-career-section h2{
     font-size:36px;
     color:#222;
 }
 
-.career-section p{
+.design-career-section p{
     font-size:18px;
     color:#444;
     margin-bottom:30px;
 }
 
-.career-grid{
+.design-career-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(4,1fr);
     gap:25px;
 }
 
-.career-card{
+.design-career-card{
     background:#fff;
     border-radius:18px;
     padding:25px;
@@ -141,11 +146,11 @@ body{
     transition:.3s;
 }
 
-.career-card:hover{
+.design-career-card:hover{
     transform:translateY(-8px);
 }
 
-.career-icon{
+.design-career-icon{
     width:180px;
     height:180px;
     margin:0 auto 20px;
@@ -154,24 +159,24 @@ body{
     align-items:center;
 }
 
-.career-icon img{
+.design-career-icon img{
     width:100%;
     height:100%;
     object-fit:contain;
 }
 
-.career-card h3{
+.design-career-card h3{
     margin-bottom:12px;
     color:#222;
 }
 
-.career-card p{
+.design-career-card p{
     color:#666;
     line-height:1.6;
     font-size:15px;
 }
 
-.career-card button{
+.design-career-card button{
     padding:14px 20px;
     background:#6C63FF;
     color:#fff;
@@ -181,31 +186,31 @@ body{
     transition:.3s;
 }
 
-.career-card button:hover{
+.design-career-card button:hover{
     background:#5147e5;
 }
 
 /* ================= WHY SECTION ================= */
 
-.why-section{
+.design-why-section{
     margin-top:70px;
     min-height:45vh;
 }
 
-.why-section h2{
+.design-why-section h2{
     text-align:center;
     font-size:36px;
     margin-bottom:35px;
     color:#222;
 }
 
-.why-grid{
+.design-why-grid{
     display:grid;
     grid-template-columns:repeat(5,1fr);
     gap:20px;
 }
 
-.why-card{
+.design-why-card{
     background:#fff;
     padding:25px;
     border-radius:15px;
@@ -214,20 +219,20 @@ body{
     transition:.3s;
 }
 
-.why-card:hover{
+.design-why-card:hover{
     transform:translateY(-6px);
 }
 
-.why-card span{
+.design-why-card span{
     font-size:40px;
 }
 
-.why-card h3{
+.design-why-card h3{
     margin:18px 0;
     color:#6C63FF;
 }
 
-.why-card p{
+.design-why-card p{
     color:#666;
     line-height:1.6;
 }
@@ -236,21 +241,21 @@ body{
 
 @media(max-width:1200px){
 
-.hero-section{
+.design-hero-section{
     flex-direction:column;
     gap:30px;
 }
 
-.hero-left,
-.hero-right{
+.design-hero-left,
+.design-hero-right{
     width:100%;
 }
 
-.career-grid{
+.design-career-grid{
     grid-template-columns:repeat(2,1fr);
 }
 
-.why-grid{
+.design-why-grid{
     grid-template-columns:repeat(2,1fr);
 }
 
@@ -262,28 +267,28 @@ body{
     padding:20px;
 }
 
-.hero-left h1{
+.design-hero-left h1{
     font-size:35px;
 }
 
-.hero-left p{
+.design-hero-left p{
     font-size:15px;
 }
 
-.career-grid{
+.design-career-grid{
     grid-template-columns:1fr;
 }
 
-.why-grid{
+.design-why-grid{
     grid-template-columns:1fr;
 }
 
-.career-section h2,
-.why-section h2{
+.design-career-section h2,
+.design-why-section h2{
     font-size:28px;
 }
 
-.hero-right{
+.design-hero-right{
     height:220px;
 }
 
