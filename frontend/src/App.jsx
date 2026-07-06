@@ -82,6 +82,12 @@ import ChemicalEngineer from "./pages/Chemical";
 import AerospaceEngineer from "./pages/Aerospace";
 import AutomobileEngineer from "./pages/Automobile";
 import RoboticsEngineer from "./pages/Robotics";
+
+//Hotel Management pages
+import HotelManager from "./pages/HotelManager";
+import Chef from "./pages/Chef";
+import EventManager from "./pages/EventManager";
+import CafeteriaManager from "./pages/CateringManager";
 import "./App.css";
 
 function App() {
@@ -127,7 +133,7 @@ function App() {
         
         <Route path="/computer" element={<Computer />} />
 
-        /*Banking and Finance routes*/
+{/* Banking and Finance routes */}
         <Route path="/banking-finance/ca" element={<CharteredAccountant />} />
         <Route path="/banking-finance/cs" element={<CompanySecretary />} />
         <Route path="/banking-finance/tax" element={<TaxConsultant />} />
@@ -135,7 +141,7 @@ function App() {
         <Route path="/banking-finance/credit-analyst" element={<CreditAnalyst />} />
         <Route path="/banking-finance/bm" element={<BankManager />} />
 
-        /*law*/
+{/* Law */}
         <Route path="/law/criminal-lawyer" element={<CriminalLawyer />} />
         <Route path="/law/corporate-lawyer" element={<CorporateLawyer />} />
         <Route path="/law/family-lawyer" element={<FamilyLawyer />} />
@@ -143,7 +149,7 @@ function App() {
         <Route path="/law/tax-lawyer" element={<TaxLawyer />} />
         <Route path="/law/judge" element={<Judge />} />
 
-        /*aviation*/
+{/* Aviation */}
         <Route path="/aviation/cp" element={<CommercialPilot />} />
         <Route path="/aviation/afp" element={<AirForcePilot />} />
         <Route path="/aviation/cc" element={<CabinCrew />} />
@@ -151,7 +157,7 @@ function App() {
         <Route path="/aviation/am" element={<AirportManager />} />
         <Route path="/aviation/atc" element={<AirTrafficController />} />
 
-        /*Science and Research*/
+{/* Science and Research */}
         <Route path="/science-research/scientist" element={<Scientist />} />
         <Route path="/science-research/physicist" element={<Physicist />} />
         <Route path="/science-research/chemist" element={<Chemist />} />
@@ -159,7 +165,7 @@ function App() {
         <Route path="/science-research/microbiologist" element={<Microbiologist />} />
         <Route path="/science-research/biotechnologist" element={<Biotechnologist />} />
 
-        /*Engineering*/
+{/* Engineering */}
         <Route path="/engineering/civil" element={<CivilEngineer />} />
         <Route path="/engineering/mechanical" element={<MechanicalEngineer />} />
         <Route path="/engineering/computer" element={<Computer />} />
@@ -169,6 +175,11 @@ function App() {
         <Route path="/engineering/automobile" element={<AutomobileEngineer />} />
         <Route path="/engineering/robotics" element={<RoboticsEngineer />} />
 
+{/* Hotel Management */}
+<Route path="/hotel-management/hotel-manager" element={<HotelManager />} />
+<Route path="/hotel-management/chef" element={<Chef />} />
+<Route path="/hotel-management/event-manager" element={<EventManager />} />
+<Route path="/hotel-management/cafeteria-manager" element={<CafeteriaManager />} />
       </Routes>
     </BrowserRouter>
   );

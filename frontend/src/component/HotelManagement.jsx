@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../style/HotelManagement.css";
 
 import HotelManager from "../assets/Hotel-Manager.png";
@@ -78,8 +79,9 @@ function HotelManagement() {
               <h3>{career.title}</h3>
 
               <p>{career.description}</p>
-
-              <button>Explore Career →</button>
+           <Link to={`/hotel-management/${career.id}`}>
+  <button>Explore Career →</button>
+</Link>
             </div>
           ))}
         </div>
