@@ -1,59 +1,127 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../style/Home.css";
-import { Link } from "react-router-dom";
 import { FaSearch, FaBell, FaUserCircle, FaCogs } from "react-icons/fa";
-import {
-  FaUserDoctor,
-  FaScaleBalanced,
-  FaHotel,
-  FaBuildingColumns,
-  FaPlane,
-  FaShip,
-  FaLaptopCode,
-} from "react-icons/fa6";
-import student from "../assets/student.jpeg";
-import logo from "../assets/logo.jpeg";
+import { useNavigate } from "react-router-dom";
+import logo from "../assets/logo.png";
+import hero from "../assets/home-hero.jpg";
+import about from "../assets/about.jpg";
+
+import engineering from "../assets/engineering.jpg";
+import medical from "../assets/medical.jpg";
+import it from "../assets/it.png";
+import government from "../assets/government.png";
+import banking from "../assets/banking-and-finance.png";
+import law from "../assets/law.png";
+import aviation from "../assets/Aviation.png";
+import science from "../assets/science-and-research.png";
+import design from "../assets/Design.png";
+import media from "../assets/Journalism.png";
+import hotel from "../assets/HotelManager.png";
+import space from "../assets/Space-astronomy.png";
+import environment from "../assets/Environmental.png";
+import navy from "../assets/Merchant-navy.png";
+
 function Home() {
-  const [username, setUsername] = useState("");
 
-  useEffect(() => {
-    const user = localStorage.getItem("loggedInUser");
-    if (user) {
-      setUsername(user);
-    }
-  }, []);
+const [showMore,setShowMore]=useState(false);
+const navigate = useNavigate();
+const careers = [
+  {
+    name: "Engineering",
+    image: engineering,
+    path: "/engineering",
+  },
+  {
+    name: "Medical",
+    image: medical,
+    path: "/doctor",
+  },
+  {
+    name: "Information Technology",
+    image: it,
+    path: "/it",
+  },
+  {
+    name: "Government Jobs",
+    image: government,
+    path: "/government",
+  },
+  {
+    name: "Banking & Finance",
+    image: banking,
+    path: "/banking-and-finance",
+  },
+  {
+    name: "Law",
+    image: law,
+    path: "/law",
+  },
+  {
+    name: "Aviation",
+    image: aviation,
+    path: "/aviation",
+  },
+  {
+    name: "Science & Research",
+    image: science,
+    path: "/science-research",
+  },
+  {
+    name: "Design",
+    image: design,
+    path: "/design",
+  },
+  {
+    name: "Media & Journalism",
+    image: media,
+    path: "/media-and-journalism",
+  },
+  {
+    name: "Hotel Management",
+    image: hotel,
+    path: "/hotel-management",
+  },
+  {
+    name: "Space & Astronomy",
+    image: space,
+    path: "/space-astronomy",
+  },
+  {
+    name: "Environmental",
+    image: environment,
+    path: "/environmental",
+  },
+  {
+    name: "Merchant Navy",
+    image: navy,
+    path: "/merchant-navy",
+  },
+];
 
-  const categories = [
-    { to: "/engineering", label: "Engineering", icon: <FaCogs />, bg: "#4A90E2" },
-    { to: "/doctor", label: "Doctor", icon: <FaUserDoctor />, bg: "#F5B301" },
-    { to: "/law", label: "Lawyer", icon: <FaScaleBalanced />, bg: "#F5A623" },
-    { to: "/hotel-management", label: "Hotel Mgmt", icon: <FaHotel />, bg: "#2E7D32" },
-    { to: "/banking-and-finance", label: "Banking", icon: <FaBuildingColumns />, bg: "#7B61FF" },
-    { to: "/aviation", label: "Aviation", icon: <FaPlane />, bg: "#E94E77" },
-    { to: "/merchant-navy", label: "Merchant Navy", icon: <FaShip />, bg: "#00ACC1" },
-    { to: "/IT", label: "IT", icon: <FaLaptopCode />, bg: "#8E24AA" },
-    { to: "/government", label: "Government", icon: <FaBuildingColumns />, bg: "#7B61FF" },
-    { to: "/science-research", label: "Science Research", icon: <FaBuildingColumns />, bg: "#7B61FF" },
-    { to: "/media-and-journalism", label: "Media & Journalism", icon: <FaBuildingColumns />, bg: "#7B61FF" },
-    { to: "/space-astronomy", label: "Space & Astronomy", icon: <FaBuildingColumns />, bg: "#7B61FF" },
-    { to: "/environmental", label: "Environmental", icon: <FaBuildingColumns />, bg: "#7B61FF" },
-    { to: "/design", label: "Design", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+const visibleCareers=showMore?careers:careers.slice(0,9);
 
-  ];
+return(
 
-  return (
-    <>
-      <div className="home">
-        <nav className="navbar">
-          <div className="logo">
-            <img src={logo} alt="" />
-          </div>
+<div className="home">
+
+{/* ================= NAVBAR ================= */}
+
+<header className="navbar">
+
+<div className="logo">
+
+<img src={logo} alt="logo"/>
+
+</div>
+<div className="list">
+<nav className="navbar">
+          
 
           <div className="nav-icons">
             <div className="nav-links">
-              <a href="#career-categories">Career</a>
-              <a href="#career-test">Career Test</a>
-              <a href="#roadmap">Roadmap</a>
+              <a href="#career-categories" className="list">Career</a>
+              <a href="#career-test" className="list">Tests</a>
+              <a href="#roadmap" className="list">Roadmap</a>
             </div>
 
             <div className="nav-search">
@@ -65,58 +133,169 @@ function Home() {
             <FaUserCircle className="nav-icon profile-icon" />
           </div>
         </nav>
+</div>
+</header>
 
-        <section className="hero">
-          <div className="left">
-            <div className="welcome">
-              <br />
-              <br />
-              <h3>Hello, {username}</h3>
+{/* ================= HERO ================= */}
+
+<section className="hero">
+
+<div className="hero-left">
+<br/>
+<br/>
+<h1>
+
+Explore Today, <br/>
+
+<span>Succeed Tommorow.</span>
+
+</h1>
+
+<p>
+
+Explore careers, compare professions and make better career decisions with AI guidance.
+
+</p>
+
+<div className="features">
+
+<p>✔ 250+ Career Options</p>
+
+<p>✔ AI Career Guidance</p>
+
+<p>✔ Career Simulation</p>
+
+<p>✔ Roadmaps</p>
+
+</div>
+
+</div>
+
+<div className="home-hero">
+
+<img src={hero} alt="hero"/>
+
+</div>
+
+</section>
+
+{/* ================= ABOUT ================= */}
+
+
+      {/* ================= CAREER SECTION ================= */}
+
+      <section className="career-section">
+
+        <div className="career-heading">
+
+          <h2>Explore Top Career Categories</h2>
+
+        {showMore ?(<button
+              className="view-btn"
+              onClick={() => setShowMore(false)}
+            >{showMore?"Show Less":"Show Less"}
+            </button>):null}
+            
+        </div>
+
+        <div className="career-grid">
+
+          {visibleCareers.map((career, index) => (
+
+<div
+  className="career-card"
+  key={index}
+  onClick={() => navigate(career.path)}
+>
+              <div className="career-image">
+
+                <img
+                  src={career.image}
+                  alt={career.name}
+                />
+
+              </div>
+
+              <p>{career.name}</p>
+
             </div>
 
-            <h1>
-              Explore Today <br />
-              <span>Succeed Tomorrow</span>
-            </h1>
+          ))}
 
-            <p>
-              Explore, Learn and Experience before choosing your career path.
-            </p>
+          {!showMore && (
 
-            <div className="features">
-              <p>✔ 250+ Career Options</p>
-              <p>✔ AI Career Guidance</p>
-              <p>✔ Reality Check</p>
-              <p>✔ Career Simulation</p>
+            <div
+              className="career-card more-card"
+              onClick={() => setShowMore(true)}
+            >
+
+              <div className="career-image more-circle">
+
+                <span>•••</span>
+
+              </div>
+
+              <p>More</p>
+
             </div>
-          </div>
 
-          <div className="right">
-            <img src={student} alt="" />
-          </div>
-        </section>
+          )}
 
-        {/* Career Categories */}
-        <section id="career-categories" className="career-card-wrapper">
-          <div className="career-card-header">
-            <h2>Explore Top Career Categories</h2>
-            <p className="view-all">View All</p>
-          </div>
+        </div>
 
-          <div className="career-grid">
-            {categories.map((cat) => (
-              <Link to={cat.to} className="career-item" key={cat.to}>
-                <div className="career-icon-circle" style={{ background: cat.bg }}>
-                  {cat.icon}
-                </div>
-                <span>{cat.label}</span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      </div>
-    </>
+      </section>
+      <section className="about">
+
+<div className="about-left">
+
+<h2><b>About Us</b></h2>
+
+<p>
+
+Career Expert helps students discover the perfect career path based on
+their interests, skills and goals.
+
+Our platform provides AI guidance, career simulations,
+learning roadmaps and complete information about <br></br>every career.
+
+Choose your future with confidence.
+
+</p>
+
+</div>
+
+<div className="about-right">
+
+<img src={about} alt="about"/>
+
+</div>
+
+</section>
+{/* ================= COPYRIGHT ================= */}
+
+<footer className="footer">
+
+  <div className="footer-content">
+
+    <h3>Career Expert</h3>
+
+    <p>
+      Empowering students to choose the right career with AI-powered guidance,
+      career roadmaps, simulations, and expert insights.
+    </p>
+
+    <hr />
+
+    <p className="copyright">
+      © 2026 Career Xpert. All Rights Reserved.
+    </p>
+
+  </div>
+
+</footer>
+</div>
   );
+
 }
 
 export default Home;
