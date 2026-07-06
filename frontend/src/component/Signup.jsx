@@ -1,54 +1,42 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import "../style/Signup.css";
 
 function Signup() {
   const navigate = useNavigate();
-
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = (e) => {
+  e.preventDefault();
 
-    if (!username || !email || !password || !confirmPassword) {
-      alert("Please fill in all fields");
-      return;
-    }
+  if (!username || !email || !password || !confirmPassword) {
+    alert("Please fill in all fields");
+    return;
+  }
 
-    if (password.length !== 5) {
-      alert("Password must be exactly 5 characters");
-      return;
-    }
+if (password.length !== 5) {
+  alert("Password must be exactly 5 characters");
+  return;
+}
 
-    if (password !== confirmPassword) {
-      alert("Passwords do not match");
-      return;
-    }
+  if (password !== confirmPassword) {
+    alert("Passwords do not match");
+    return;
+  }
+ localStorage.setItem("username", username);
+localStorage.setItem("password", password);
+localStorage.setItem("loggedInUser", username);
 
-    try {
-      const res = await axios.post(
-        "http://localhost:5000/api/auth/signup",
-        {
-          name: username,
-          email,
-          password,
-        }
-      );
-
-      localStorage.setItem("userId", res.data.user._id);
-      localStorage.setItem("loggedInUser", res.data.user.name);
-
-      alert("Signup Successful!");
-
-      navigate("/home");
-    } catch (err) {
-      alert(err.response?.data?.message || "Signup Failed");
-    }
-  };
+alert("Signup Successful!");
+navigate("/home")
+  setUsername("");
+  setEmail("");
+  setPassword("");
+  setConfirmPassword("");
+};
 
   return (
     <div className="main">
@@ -78,6 +66,7 @@ function Signup() {
             className="input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+           
           />
 
           <input

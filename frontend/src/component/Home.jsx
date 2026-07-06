@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../style/Home.css";
 import { FaSearch, FaBell, FaUserCircle, FaCogs } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import hero from "../assets/home-hero.jpg";
 import about from "../assets/about.jpg";
-import axios from "axios";
-import ProfileSidebar from "../component/ProfileSidebar";
+
 import engineering from "../assets/engineering.jpg";
 import medical from "../assets/medical.jpg";
-import it from "../assets/IT.png";
+import it from "../assets/it.png";
 import government from "../assets/government.png";
 import banking from "../assets/banking-and-finance.png";
 import law from "../assets/law.png";
@@ -26,20 +25,6 @@ function Home() {
 
 const [showMore,setShowMore]=useState(false);
 const navigate = useNavigate();
-const [username, setUsername] = useState("");
-const [open, setOpen] = useState(false);
-const [profileImage, setProfileImage] = useState("");
-
-const userId = localStorage.getItem("userId");
-useEffect(() => {
-  const user = localStorage.getItem("loggedInUser");
-
-  if (user) {
-    setUsername(user);
-  }
-
-  getProfile();
-}, []);
 const careers = [
   {
     name: "Engineering",
@@ -112,46 +97,7 @@ const careers = [
     path: "/merchant-navy",
   },
 ];
-const getProfile = async () => {
-  try {
-    const res = await axios.get(
-      `http://localhost:5000/api/profile/${userId}`
-    );
 
-    if (res.data.profileImage) {
-      setProfileImage(
-        `http://localhost:5000${res.data.profileImage}`
-      );
-    }
-  } catch (err) {
-    console.log(err);
-  }
-};
-
-const handleImageUpload = async (e) => {
-  const file = e.target.files[0];
-
-  if (!file) return;
-
-  const formData = new FormData();
-
-  formData.append("image", file);
-
-  formData.append("userId", userId);
-
-  try {
-    const res = await axios.post(
-      "http://localhost:5000/api/profile/upload",
-      formData
-    );
-
-    setProfileImage(
-      `http://localhost:5000${res.data.profileImage}`
-    );
-  } catch (err) {
-    console.log(err);
-  }
-};
 const visibleCareers=showMore?careers:careers.slice(0,9);
 
 return(
@@ -184,20 +130,7 @@ return(
             </div>
 
             <FaBell className="nav-icon" />
-<div
-  className="profile-icon"
-  onClick={() => setOpen(true)}
->
-  {profileImage ? (
-    <img
-      src={profileImage}
-      alt="Profile"
-      className="navbar-profile-image"
-    />
-  ) : (
-    <FaUserCircle className="nav-icon" />
-  )}
-</div>
+            <FaUserCircle className="nav-icon profile-icon" />
           </div>
         </nav>
 </div>
@@ -210,7 +143,6 @@ return(
 <div className="hero-left">
 <br/>
 <br/>
-
 <h1>
 
 Explore Today, <br/>
@@ -361,12 +293,6 @@ Choose your future with confidence.
   </div>
 
 </footer>
-<ProfileSidebar
-  open={open}
-  setOpen={setOpen}
-  profileImage={profileImage}
-  handleImageUpload={handleImageUpload}
-/>  
 </div>
   );
 
