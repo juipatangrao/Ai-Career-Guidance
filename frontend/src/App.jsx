@@ -104,6 +104,13 @@ import GraphicDesigner from "./pages/GraphicDesigner";
 import InteriorDesigner from "./pages/InteriorDesigner";
 import FashionDesigner from "./pages/FashionDesigner";
 import ProductDesigner from "./pages/ProductDesigner";
+
+//Space
+import Astrophysicist from "./pages/Astrophysicist";
+import SpaceScientist from "./pages/SpaceScientist";
+import Astronaut from "./pages/Astronaut";
+import SatelliteEngineer from "./pages/SatelliteEngineer";
+
 import "./App.css";
 
 function App() {
@@ -244,6 +251,13 @@ function App() {
         </Route>
         <Route path="/Design/product-designer" element={<ProductDesigner/>}>
         </Route>
+
+        {/*Space*/}
+        <Route path="/space-astronomy/astronaut" element={<Astronaut/>}/>
+        <Route path="/space-astronomy/space-scientist" element={<SpaceScientist/>}/>
+        <Route path="/space-astronomy/astrophysicist" element={<Astrophysicist/>}/>
+        <Route path="/space-astronomy/satellite-engineer" element={<SatelliteEngineer/>}/>
+
       </Routes>
     </BrowserRouter>
   );

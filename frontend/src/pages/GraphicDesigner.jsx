@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import GraphicDesignerLogo from "../assets/Graphic-Designer.jpeg";
-import GraphicDesignerBanner from "../assets/Graphic-Designer.jpeg";
+import GraphicDesignerBanner from "../assets/Graphic-Designer-banner.jpg";
 
 const GraphicDesigner = () => {
   return (

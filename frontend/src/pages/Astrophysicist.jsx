@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import AstrophysicistLogo from "../assets/Astrophysicist.jpeg";
-import AstrophysicistBanner from "../assets/Astrophysicist.jpeg";
+import AstrophysicistBanner from "../assets/Astrophysicist-banner.jpg";
 
 const Astrophysicist = () => {
   return (

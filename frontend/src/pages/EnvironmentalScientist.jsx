@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import EnvironmentalScientistLogo from "../assets/Environmental-Scientist.png";
-import EnvironmentalScientistBanner from "../assets/Environmental-Scientist.png";
+import EnvironmentalScientistBanner from "../assets/Environmental-Scientist-banner.jpg";
 
 const EnvironmentalScientist = () => {
   return (

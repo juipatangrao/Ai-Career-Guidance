@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import EventManagerLogo from "../assets/Event-Manager.png";
-import EventManagerBanner from "../assets/Event-Manager.png";
+import EventManagerBanner from "../assets/Event-Manager-banner.jpg";
 
 const EventManager = () => {
   return (

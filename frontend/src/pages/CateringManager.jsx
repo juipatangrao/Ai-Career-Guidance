@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import CateringManagerLogo from "../assets/Catering-Manager.png";
-import CateringManagerBanner from "../assets/Catering-Manager.png";
+import CateringManagerBanner from "../assets/Catering-Manager-banner.jpg";
 
 const CateringManager = () => {
   return (

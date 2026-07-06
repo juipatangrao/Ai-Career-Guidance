@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import SatelliteEngineerLogo from "../assets/Satellite-Engineer.jpeg";
-import SatelliteEngineerBanner from "../assets/Satellite-Engineer.jpeg";
+import SatelliteEngineerBanner from "../assets/satellite-Engineer-banner.png";
 
 const SatelliteEngineer = () => {
   return (

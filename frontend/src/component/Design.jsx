@@ -5,6 +5,7 @@ import GraphicDesigner from "../assets/Graphic-Designer.jpeg";
 import InteriorDesigner from "../assets/Interior-Designer.jpg";
 import FashionDesigner from "../assets/Fashion-Designer.jpg";
 import ProductDesigner from "../assets/Product-Designer.jpg";
+import DesignBanner from "../assets/Design-banner.png";
 
 function Design() {
 
@@ -68,7 +69,9 @@ function Design() {
 
         </div>
 
-        <div className="hero-right"></div>
+        <div className="hero-right">
+           <img src={DesignBanner} alt="Design" />         
+        </div>
 
       </section>
 

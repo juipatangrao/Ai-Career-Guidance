@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import WildlifeBiologistLogo from "../assets/Wildlife-Biologist.png";
-import WildlifeBiologistBanner from "../assets/Wildlife-Biologist.png";
+import WildlifeBiologistBanner from "../assets/Wildlife-Biologist-bannee.jpg";
 
 const WildlifeBiologist = () => {
   return (

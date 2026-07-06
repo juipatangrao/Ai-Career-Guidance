@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import HotelManagerLogo from "../assets/Hotel-Manager.png";
-import HotelManagerBanner from "../assets/Hotel-Manager.png";
+import HotelManagerBanner from "../assets/Hotel-Manager-banner.jpg";
 
 const HotelManager = () => {
   return (

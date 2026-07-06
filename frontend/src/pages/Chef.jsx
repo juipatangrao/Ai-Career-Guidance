@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import ChefLogo from "../assets/Chef.png";
-import ChefBanner from "../assets/Chef.png";
+import ChefBanner from "../assets/Chef-banner.jpg";
 
 const Chef = () => {
   return (

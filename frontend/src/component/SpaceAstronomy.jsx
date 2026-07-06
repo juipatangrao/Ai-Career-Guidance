@@ -6,7 +6,7 @@ import Astronaut from "../assets/Astronaut.jpeg";
 import SpaceScientist from "../assets/Space-Scientist.jpeg";
 import Astrophysicist from "../assets/Astrophysicist.jpeg";
 import SatelliteEngineer from "../assets/Satellite-Engineer.jpeg";
-
+import spacehero from "../assets/space-hero.png";
 function SpaceAstronomy() {
   const careers = [
     {
@@ -69,7 +69,9 @@ function SpaceAstronomy() {
 
         </div>
 
-        <div className="space-hero-right"></div>
+        <div className="space-hero-right">
+              <img src={spacehero} alt="space and astronomy" />
+        </div>
 
       </section>
 
