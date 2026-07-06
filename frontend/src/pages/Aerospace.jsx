@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
-import AerospaceLogo from "../assets/aerospace.jpeg";
+import AerospaceLogo from "../assets/Aerospace.jpeg";
 import AerospaceBanner from "../assets/aerospace-banner.jpg";
 
 const Aerospace = () => {
