@@ -93,7 +93,9 @@ function Aviation() {
               </div>
               <h3>{career.title}</h3>
               <p>{career.description}</p>
+              <Link to={`/aviation/${career.id}`}>
               <button>Explore Career →</button>
+              </Link>
             </div>
           ))}
         </div>

@@ -94,7 +94,9 @@ function BankingANDFinance() {
               </div>
               <h3>{career.title}</h3>
               <p>{career.description}</p>
-              <button>Explore Career →</button>
+              <Link to={`/banking-finance/${career.id}`}>
+                <button>Explore Career →</button>
+              </Link>
             </div>
           ))}
         </div>

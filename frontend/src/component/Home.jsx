@@ -33,6 +33,11 @@ function Home() {
     { to: "/merchant-navy", label: "Merchant Navy", icon: <FaShip />, bg: "#00ACC1" },
     { to: "/IT", label: "IT", icon: <FaLaptopCode />, bg: "#8E24AA" },
     { to: "/government", label: "Government", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/science-research", label: "Science Research", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/media-and-journalism", label: "Media & Journalism", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/space-astronomy", label: "Space & Astronomy", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/environmental", label: "Environmental", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/design", label: "Design", icon: <FaBuildingColumns />, bg: "#7B61FF" },
 
   ];
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import "../style/IT.css";
 import WebIcon from "../assets/web-Developer.png";
-import MobileAppIcon from "../assets/MobileApp-Developer.png";
+import MobileAppIcon from "../assets/Mobile-App-Developer.png";
 import FrontendIcon from "../assets/Frontend-Developer.png";
 import BackendIcon from "../assets/Backend-Developer.png";
 import FullStackIcon from "../assets/FullStack-Developer.png";
