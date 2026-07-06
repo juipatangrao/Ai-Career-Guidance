@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import BiologistLogo from "../../assets/Biologist.png";
-import BiologistBanner from "../../assets/sciencereasearch-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import BiologistLogo from "../assets/Biologist.png";
+import BiologistBanner from "../assets/sciencereasearch-hero.png";
 
 const Biologist = () => {
   return (

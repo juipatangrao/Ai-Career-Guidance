@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import BackendLogo from "../../assets/Backend-Developer.png";
-import BackendBanner from "../../assets/Backend-Developer.png";
+import CareerTemplate from "../component/CareerTemplate";
+import BackendLogo from "../assets/Backend-Developer.png";
+import BackendBanner from "../assets/Backend-Developer.png";
 
 const BackendDeveloper = () => {
   return (

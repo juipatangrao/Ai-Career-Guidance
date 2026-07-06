@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import IPSLogo from "../../assets/IPS-Officer.png";
-import IPSBanner from "../../assets/IPS-Officer.png";
+import CareerTemplate from "../component/CareerTemplate";
+import IPSLogo from "../assets/IPS-Officer.png";
+import IPSBanner from "../assets/IPS-Officer.png";
 
 const IPS = () => {
   return (

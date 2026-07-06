@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import FamilyLogo from "../../assets/FL.png";
-import FamilyBanner from "../../assets/law-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import FamilyLogo from "../assets/FL.png";
+import FamilyBanner from "../assets/law-hero.png";
 
 const FamilyLawyer = () => {
   return (

@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import CSLogo from "../../assets/CS.png";
-import CSBanner from "../../assets/bankingfinancehero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import CSLogo from "../assets/CS.png";
+import CSBanner from "../assets/bankingfinancehero.png";
 
 const CentralSecretariatOfficer = () => {
   return (

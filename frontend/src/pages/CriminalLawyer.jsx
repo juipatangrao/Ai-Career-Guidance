@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import CriminalLogo from "../../assets/CL.png";
-import CriminalBanner from "../../assets/law-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import CriminalLogo from "../assets/CL.png";
+import CriminalBanner from "../assets/law-hero.png";
 
 const CriminalLawyer = () => {
   return (

@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import JudgeLogo from "../../assets/judge.png";
-import JudgeBanner from "../../assets/law-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import JudgeLogo from "../assets/judge.png";
+import JudgeBanner from "../assets/law-hero.png";
 
 const Judge = () => {
   return (

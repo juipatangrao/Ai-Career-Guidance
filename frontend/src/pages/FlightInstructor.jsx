@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import InstructorLogo from "../../assets/FI.png";
-import InstructorBanner from "../../assets/aviation-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import InstructorLogo from "../assets/FI.png";
+import InstructorBanner from "../assets/aviation-hero.png";
 
 const FlightInstructor = () => {
   return (

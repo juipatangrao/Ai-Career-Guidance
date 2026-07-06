@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import PhysicistLogo from "../../assets/Physicist.png";
-import PhysicistBanner from "../../assets/sciencereasearch-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import PhysicistLogo from "../assets/Physicist.png";
+import PhysicistBanner from "../assets/sciencereasearch-hero.png";
 
 const Physicist = () => {
   return (

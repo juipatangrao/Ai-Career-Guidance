@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import CabinLogo from "../../assets/CC.png";
-import CabinBanner from "../../assets/aviation-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import CabinLogo from "../assets/CC.png";
+import CabinBanner from "../assets/aviation-hero.png";
 
 const CabinCrew = () => {
   return (

@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import AirForceLogo from "../../assets/AFP.png";
-import AirForceBanner from "../../assets/aviation-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import AirForceLogo from "../assets/AFP.png";
+import AirForceBanner from "../assets/aviation-hero.png";
 
 const AirForcePilot = () => {
   return (

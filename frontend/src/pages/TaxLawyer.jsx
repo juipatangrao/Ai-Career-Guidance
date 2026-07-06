@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import TaxLogo from "../../assets/Tax-lawyer.png";
-import TaxBanner from "../../assets/law-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import TaxLogo from "../assets/Tax-lawyer.png";
+import TaxBanner from "../assets/law-hero.png";
 
 const TaxLawyer = () => {
   return (

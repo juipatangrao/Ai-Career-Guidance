@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import ChemistLogo from "../../assets/Chemist.png";
-import ChemistBanner from "../../assets/sciencereasearch-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import ChemistLogo from "../assets/Chemist.png";
+import ChemistBanner from "../assets/sciencereasearch-hero.png";
 
 const Chemist = () => {
   return (

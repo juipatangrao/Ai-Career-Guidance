@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import CreditLogo from "../../assets/Credit-Analyst.png";
-import CreditBanner from "../../assets/bankingfinancehero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import CreditLogo from "../assets/Credit-Analyst.png";
+import CreditBanner from "../assets/bankingfinancehero.png";
 
 const CreditAnalyst = () => {
   return (

@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import MicrobiologistLogo from "../../assets/Microbiologist.png";
-import MicrobiologistBanner from "../../assets/sciencereasearch-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import MicrobiologistLogo from "../assets/Microbiologist.png";
+import MicrobiologistBanner from "../assets/sciencereasearch-hero.png";
 
 const Microbiologist = () => {
   return (

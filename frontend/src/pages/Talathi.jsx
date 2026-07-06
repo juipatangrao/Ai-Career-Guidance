@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import TalathiLogo from "../../assets/Talathi.png";
-import TalathiBanner from "../../assets/Talathi.png";
+import CareerTemplate from "../component/CareerTemplate";
+import TalathiLogo from "../assets/Talathi.png";
+import TalathiBanner from "../assets/Talathi.png";
 
 const Talathi = () => {
   return (

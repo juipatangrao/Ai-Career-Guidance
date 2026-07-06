@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import MobileLogo from "../../assets/Mobile-App-Developer.png";
-import MobileBanner from "../../assets/Mobile-App-Developer.png";
+import CareerTemplate from "../component/CareerTemplate";
+import MobileLogo from "../assets/Mobile-App-Developer.png";
+import MobileBanner from "../assets/Mobile-App-Developer.png";
 
 const MobileAppDeveloper = () => {
   return (

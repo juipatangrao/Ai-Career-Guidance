@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import ManagerLogo from "../../assets/AM.png";
-import ManagerBanner from "../../assets/aviation-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import ManagerLogo from "../assets/AM.png";
+import ManagerBanner from "../assets/aviation-hero.png";
 
 const AirportManager = () => {
   return (

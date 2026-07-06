@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import ForestLogo from "../../assets/ForestOfficer.png";
-import ForestBanner from "../../assets/ForestOfficer.png";
+import CareerTemplate from "../component/CareerTemplate";
+import ForestLogo from "../assets/ForestOfficer.png";
+import ForestBanner from "../assets/ForestOfficer.png";
 
 const Forest = () => {
   return (

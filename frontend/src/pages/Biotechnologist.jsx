@@ -1,8 +1,8 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
+import CareerTemplate from "../component/CareerTemplate";
 
-import BiotechnologistLogo from "../../assets/Biotechnologist.png";
-import BiotechnologistBanner from "../../assets/sciencereasearch-hero.png";
+import BiotechnologistLogo from "../assets/Biotechnologist.png";
+import BiotechnologistBanner from "../assets/sciencereasearch-hero.png";
 
 const Biotechnologist = () => {
   return (

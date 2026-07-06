@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import CALogo from "../../assets/CA.png";
-import CABanner from "../../assets/bankingfinancehero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import CALogo from "../assets/CA.png";
+import CABanner from "../assets/bankingfinancehero.png";
 
 const CharteredAccountant = () => {
   return (

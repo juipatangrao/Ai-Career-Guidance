@@ -18,58 +18,58 @@ import Environmental from "./component/Environmental";
 import MediaJournalism from "./component/MediaJournalism";
 import Design from "./component/Design";
 
-import IAS from "./component/pages/IAS";
-import IPS from "./component/pages/IPS";
-import Police from "./component/pages/Police";
-import Army from "./component/pages/Army";
-import Income from "./component/pages/Income";
-import Railway from "./component/pages/Railway";
-import Forest from "./component/pages/Forest";
-import Food from "./component/pages/Food";
-import Talathi from "./component/pages/Talathi";
+import IAS from "./pages/IAS";
+import IPS from "./pages/IPS";
+import Police from "./pages/Police";
+import Army from "./pages/Army";
+import Income from "./pages/Income";
+import Railway from "./pages/Railway";
+import Forest from "./pages/Forest";
+import Food from "./pages/Food";
+import Talathi from "./pages/Talathi";
 
-import WebDeveloper from "./component/pages/WebDeveloper";
-import MobileAppDeveloper from "./component/pages/MobileAppDeveloper";
-import FrontendDeveloper from "./component/pages/FrontendDeveloper";
-import BackendDeveloper from "./component/pages/BackendDeveloper";
-import FullStackDeveloper from "./component/pages/FullStackDeveloper";
-import UIUXDesigner from "./component/pages/UIUXDesigner";
-import CyberSecurity from "./component/pages/CyberSecurity";
-import DataAnalyst from "./component/pages/DataAnalyst";
-import GameDeveloper from "./component/pages/GameDeveloper";
+import WebDeveloper from "./pages/WebDeveloper";
+import MobileAppDeveloper from "./pages/MobileAppDeveloper";
+import FrontendDeveloper from "./pages/FrontendDeveloper";
+import BackendDeveloper from "./pages/BackendDeveloper";
+import FullStackDeveloper from "./pages/FullStackDeveloper";
+import UIUXDesigner from "./pages/UIUXDesigner";
+import CyberSecurity from "./pages/CyberSecurity";
+import DataAnalyst from "./pages/DataAnalyst";
+import GameDeveloper from "./pages/GameDeveloper";
 
 
 //Banking and Finance pages
-import CharteredAccountant from "./component/pages/Charted-Accountant";
-import CompanySecretary from "./component/pages/CompanySecretary";
-import TaxConsultant from "./component/pages/TaxConsultant";
-import InvestmentBanker from "./component/pages/InvestmentBanker";
-import CreditAnalyst from "./component/pages/CreditAnalyst";
-import BankManager from "./component/pages/BankManager";
+import CharteredAccountant from "./pages/Charted-Accountant";
+import CompanySecretary from "./pages/CompanySecretary";
+import TaxConsultant from "./pages/TaxConsultant";
+import InvestmentBanker from "./pages/InvestmentBanker";
+import CreditAnalyst from "./pages/CreditAnalyst";
+import BankManager from "./pages/BankManager";
 
 //Law pages
-import CriminalLawyer from "./component/pages/CriminalLawyer";  
-import CorporateLawyer from "./component/pages/CorporateLawyer";
-import FamilyLawyer from "./component/pages/FamilyLawyer";
-import CyberLawyer from "./component/pages/CyberLawyer";
-import TaxLawyer from "./component/pages/TaxLawyer";
-import Judge from "./component/pages/Judge";
+import CriminalLawyer from "./pages/CriminalLawyer";  
+import CorporateLawyer from "./pages/CorporateLawyer";
+import FamilyLawyer from "./pages/FamilyLawyer";
+import CyberLawyer from "./pages/CyberLawyer";
+import TaxLawyer from "./pages/TaxLawyer";
+import Judge from "./pages/Judge";
 
 //Aviation pages
-import CommercialPilot from "./component/pages/CommercialPilot";
-import AirForcePilot from "./component/pages/AirForcePilot";
-import CabinCrew from "./component/pages/CabinCrew";
-import FlightInstructor from "./component/pages/FlightInstructor";
-import AirportManager from "./component/pages/AirportManager";
-import AirTrafficController from "./component/pages/AirTrafficController";
+import CommercialPilot from "./pages/CommercialPilot";
+import AirForcePilot from "./pages/AirForcePilot";
+import CabinCrew from "./pages/CabinCrew";
+import FlightInstructor from "./pages/FlightInstructor";
+import AirportManager from "./pages/AirportManager";
+import AirTrafficController from "./pages/AirTrafficController";
 
 //Science and Research pages
-import Scientist from "./component/pages/Scientist";
-import Physicist from "./component/pages/Physicist";
-import Chemist from "./component/pages/Chemist";
-import Biologist from "./component/pages/Biologist";
-import Microbiologist from "./component/pages/Microbiologist";
-import Biotechnologist from "./component/pages/Biotechnologist";
+import Scientist from "./pages/Scientist";
+import Physicist from "./pages/Physicist";
+import Chemist from "./pages/Chemist";
+import Biologist from "./pages/Biologist";
+import Microbiologist from "./pages/Microbiologist";
+import Biotechnologist from "./pages/Biotechnologist";
 import "./App.css";
 
 function App() {

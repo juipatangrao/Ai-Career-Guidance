@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import PoliceLogo from "../../assets/PoliceOfficer.png";
-import PoliceBanner from "../../assets/PoliceOfficer.png";
+import CareerTemplate from "../component/CareerTemplate";
+import PoliceLogo from "../assets/PoliceOfficer.png";
+import PoliceBanner from "../assets/PoliceOfficer.png";
 
 const Police = () => {
   return (

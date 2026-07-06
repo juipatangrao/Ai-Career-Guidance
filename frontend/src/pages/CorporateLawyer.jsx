@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import CorporateLogo from "../../assets/corporate.png";
-import CorporateBanner from "../../assets/law-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import CorporateLogo from "../assets/corporate.png";
+import CorporateBanner from "../assets/law-hero.png";
 
 const CorporateLawyer = () => {
   return (

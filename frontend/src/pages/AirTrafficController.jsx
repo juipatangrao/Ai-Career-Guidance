@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import ATCLogo from "../../assets/ATC.png";
-import ATCBanner from "../../assets/aviation-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import ATCLogo from "../assets/ATC.png";
+import ATCBanner from "../assets/aviation-hero.png";
 
 const AirTrafficController = () => {
   return (

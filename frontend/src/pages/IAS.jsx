@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import IASLogo from "../../assets/IAS-Officer.png";
-import IASBanner from "../../assets/IAS-Officer.png";
+import CareerTemplate from "../component/CareerTemplate";
+import IASLogo from "../assets/IAS-Officer.png";
+import IASBanner from "../assets/IAS-Officer.png";
 
 const IAS = () => {
   return (

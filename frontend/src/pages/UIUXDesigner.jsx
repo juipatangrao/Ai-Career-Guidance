@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import UIUXLogo from "../../assets/UKUV-Designer.png";
-import UIUXBanner from "../../assets/UKUV-Designer.png";
+import CareerTemplate from "../component/CareerTemplate";
+import UIUXLogo from "../assets/UKUV-Designer.png";
+import UIUXBanner from "../assets/UKUV-Designer.png";
 
 const UIUXDesigner = () => {
   return (

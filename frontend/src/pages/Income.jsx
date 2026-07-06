@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import IncomeTaxLogo from "../../assets/Income-tax-Officer.png";
-import IncomeTaxBanner from "../../assets/Income-tax-Officer.png";
+import CareerTemplate from "../component/CareerTemplate";
+import IncomeTaxLogo from "../assets/Income-tax-Officer.png";
+import IncomeTaxBanner from "../assets/Income-tax-Officer.png";
 
 const IncomeTax = () => {
   return (

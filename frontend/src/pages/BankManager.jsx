@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import BMLogo from "../../assets/BM.png";
-import BMBanner from "../../assets/bankingfinancehero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import BMLogo from "../assets/BM.png";
+import BMBanner from "../assets/bankingfinancehero.png";
 
 const BankManager = () => {
   return (

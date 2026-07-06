@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import PilotLogo from "../../assets/CP.png";
-import PilotBanner from "../../assets/aviation-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import PilotLogo from "../assets/CP.png";
+import PilotBanner from "../assets/aviation-hero.png";
 
 const CommercialPilot = () => {
   return (

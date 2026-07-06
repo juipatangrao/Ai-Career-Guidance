@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import CyberLogo from "../../assets/Cyber.png";
-import CyberBanner from "../../assets/law-hero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import CyberLogo from "../assets/Cyber.png";
+import CyberBanner from "../assets/law-hero.png";
 
 const CyberLawyer = () => {
   return (

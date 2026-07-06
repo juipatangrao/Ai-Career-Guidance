@@ -1,8 +1,7 @@
 import React from "react";
-import CareerTemplate from "../CareerTemplate";
-
-import IBLogo from "../../assets/IB.png";
-import IBBanner from "../../assets/bankingfinancehero.png";
+import CareerTemplate from "../component/CareerTemplate";
+import IBLogo from "../assets/IB.png";
+import IBBanner from "../assets/bankingfinancehero.png";
 
 const InvestmentBanker = () => {
   return (
