@@ -1,7 +1,7 @@
 import React from "react";
 import "../style/MediaJournalism.css";
 
-import Journalist from "../assets/Journalist.png";
+import Journalist from "../assets/Journalists.png";
 import NewsReporter from "../assets/News-Reporter.png";
 import NewsAnchor from "../assets/News-Anchor.png";
 import RadioJockey from "../assets/Radio-Jockey.png";
@@ -63,7 +63,9 @@ function MediaJournalism() {
 
         </div>
 
-        <div className="hero-right"></div>
+        <div className="hero-right">
+          
+        </div>
 
       </section>
 
