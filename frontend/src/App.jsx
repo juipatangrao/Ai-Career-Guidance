@@ -112,12 +112,14 @@ import Astronaut from "./pages/Astronaut";
 import SatelliteEngineer from "./pages/SatelliteEngineer";
 
 import "./App.css";
+import GetStarted from "./component/GetStarted";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Signup />} />
+        <Route path="/" element={<GetStarted />} />
+          <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/government" element={<Government />} />
