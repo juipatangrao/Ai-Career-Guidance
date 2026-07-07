@@ -1,4 +1,7 @@
+
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../style/Signup.css";
 import {
   FaUser,
@@ -10,12 +13,12 @@ import {
   FaGithub,
   FaUserPlus,
 } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const navigate = useNavigate();
 
   const [fullName, setFullName] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -23,10 +26,11 @@ const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
 
-  const handleSubmit = (e) => {
+  
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!fullName || !email || !password || !confirmPassword) {
+    if (!username || !email || !password || !confirmPassword) {
       alert("Please fill in all fields");
       return;
     }
@@ -54,6 +58,26 @@ const Signup = () => {
     setConfirmPassword("");
 
     navigate("/home");
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/auth/signup",
+        {
+          name: username,
+          email,
+          password,
+        }
+      );
+
+      localStorage.setItem("userId", res.data.user._id);
+      localStorage.setItem("loggedInUser", res.data.user.name);
+
+      alert("Signup Successful!");
+
+      navigate("/home");
+    } catch (err) {
+      alert(err.response?.data?.message || "Signup Failed");
+    }
+  
   };
 
   return (
@@ -90,6 +114,13 @@ const Signup = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
+          <input
+            type="password"
+            placeholder="Password"
+            className="input"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
           <label>Password</label>
           <div className="input-box">

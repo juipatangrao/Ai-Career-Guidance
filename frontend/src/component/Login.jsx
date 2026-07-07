@@ -1,4 +1,9 @@
+
 import React, { useState } from "react";
+
+
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../style/Login.css";
 import {
   FaUser,
@@ -9,10 +14,46 @@ import {
   FaGoogle,
   FaGithub,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!email || !password) {
+      alert("Please fill in all fields");
+      return;
+    }
+
+    if (password.length !== 5) {
+      alert("Password must be exactly 5 characters");
+      return;
+    }
+
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/auth/login",
+        {
+          email,
+          password,
+        }
+      );
+
+      localStorage.setItem("userId", res.data.user._id);
+      localStorage.setItem("loggedInUser", res.data.user.name);
+
+      alert("Login Successful!");
+
+      navigate("/home");
+    } catch (err) {
+      alert(err.response?.data?.message || "Login Failed");
+    }
+  };
 
   return (
     <div className="auth-container">
@@ -25,7 +66,23 @@ const Login = () => {
         <h1>Welcome Back!</h1>
         <p>Login to continue your journey</p>
 
-        <form>
+        
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            className="input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <input
+            type="password"
+            placeholder="Password"
+            className="input"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
           <label>Email Address</label>
           <div className="input-box">

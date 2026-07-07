@@ -41,6 +41,16 @@ margin-left: -400px;
  margin-top: 70px;
   border-radius: 50%;
 }
+.profile-icon {
+  cursor: pointer;
+}
+.navbar-profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
 
 .logo h2 {
   color: white;

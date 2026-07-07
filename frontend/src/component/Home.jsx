@@ -1,6 +1,25 @@
+import React, { useEffect, useState } from "react";
+
 import React, { useState } from "react";
+
 import "../style/Home.css";
 import { FaSearch, FaBell, FaUserCircle, FaCogs } from "react-icons/fa";
+import axios from "axios";
+
+import {
+  FaUserDoctor,
+  FaScaleBalanced,
+  FaHotel,
+  FaBuildingColumns,
+  FaPlane,
+  FaShip,
+  FaLaptopCode,
+} from "react-icons/fa6";
+
+import student from "../assets/student.jpeg";
+import logo from "../assets/logo.jpeg";
+import ProfileSidebar from "../component/ProfileSidebar";
+
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import hero from "../assets/home-hero.jpg";
@@ -22,6 +41,88 @@ import environment from "../assets/Environmental.png";
 import navy from "../assets/Merchant-navy.png";
 
 function Home() {
+
+
+  const [open, setOpen] = useState(false);
+  const [profileImage, setProfileImage] = useState("");
+
+  // Temporary User ID
+const userId = localStorage.getItem("userId");
+
+  useEffect(() => {
+    const user = localStorage.getItem("loggedInUser");
+
+    if (user) {
+      setUsername(user);
+    }
+
+    getProfile();
+  }, []);
+
+  // Get profile image from backend
+  const getProfile = async () => {
+    try {
+      const res = await axios.get(
+        `http://localhost:5000/api/profile/${userId}`
+      );
+
+      if (res.data.profileImage) {
+        setProfileImage(
+          `http://localhost:5000${res.data.profileImage}`
+        );
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // Upload profile image
+  const handleImageUpload = async (e) => {
+    const file = e.target.files[0];
+
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append("image", file);
+    formData.append("userId", userId);
+
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/profile/upload",
+        formData
+      );
+
+      setProfileImage(
+        `http://localhost:5000${res.data.profileImage}`
+      );
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const categories = [    { to: "/engineering", label: "Engineering", icon: <FaCogs />, bg: "#4A90E2" },
+    { to: "/doctor", label: "Doctor", icon: <FaUserDoctor />, bg: "#F5B301" },
+    { to: "/law", label: "Lawyer", icon: <FaScaleBalanced />, bg: "#F5A623" },
+    { to: "/hotel-management", label: "Hotel Mgmt", icon: <FaHotel />, bg: "#2E7D32" },
+    { to: "/banking-and-finance", label: "Banking", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/aviation", label: "Aviation", icon: <FaPlane />, bg: "#E94E77" },
+    { to: "/merchant-navy", label: "Merchant Navy", icon: <FaShip />, bg: "#00ACC1" },
+    { to: "/IT", label: "IT", icon: <FaLaptopCode />, bg: "#8E24AA" },
+    { to: "/government", label: "Government", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/science-research", label: "Science Research", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/media-and-journalism", label: "Media & Journalism", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/space-astronomy", label: "Space & Astronomy", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/environmental", label: "Environmental", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+    { to: "/design", label: "Design", icon: <FaBuildingColumns />, bg: "#7B61FF" },
+  ];
+
+  // return (
+  //   <>
+  //     <div className="home">
+  //       <nav className="navbar">
+  //         <div className="logo">
+  //           <img src={logo} alt="Logo" />
+  //         </div>
 
 const [showMore,setShowMore]=useState(false);
 const navigate = useNavigate();
@@ -130,7 +231,21 @@ return(
             </div>
 
             <FaBell className="nav-icon" />
-            <FaUserCircle className="nav-icon profile-icon" />
+
+            <div
+              className="profile-icon"
+              onClick={() => setOpen(true)}
+            >
+              {profileImage ? (
+                <img
+                  src={profileImage}
+                  alt="Profile"
+                  className="navbar-profile-image"
+                />
+              ) : (
+                <FaUserCircle className="nav-icon" />
+              )}
+            </div>
           </div>
         </nav>
 </div>
@@ -199,50 +314,31 @@ Explore careers, compare professions and make better career decisions with AI gu
         </div>
 
         <div className="career-grid">
+  {visibleCareers.map((career, index) => (
+    <div
+      className="career-card"
+      key={index}
+      onClick={() => navigate(career.path)}
+    >
+      <div className="career-image">
+        <img src={career.image} alt={career.name} />
+      </div>
+      <p>{career.name}</p>
+    </div>
+  ))}
 
-          {visibleCareers.map((career, index) => (
-
-<div
-  className="career-card"
-  key={index}
-  onClick={() => navigate(career.path)}
->
-              <div className="career-image">
-
-                <img
-                  src={career.image}
-                  alt={career.name}
-                />
-
-              </div>
-
-              <p>{career.name}</p>
-
-            </div>
-
-          ))}
-
-          {!showMore && (
-
-            <div
-              className="career-card more-card"
-              onClick={() => setShowMore(true)}
-            >
-
-              <div className="career-image more-circle">
-
-                <span>•••</span>
-
-              </div>
-
-              <p>More</p>
-
-            </div>
-
-          )}
-
-        </div>
-
+  {!showMore && (
+    <div
+      className="career-card more-card"
+      onClick={() => setShowMore(true)}
+    >
+      <div className="career-image more-circle">
+        <span>•••</span>
+      </div>
+      <p>More</p>
+    </div>
+  )}
+</div>
       </section>
       <section className="about">
 
