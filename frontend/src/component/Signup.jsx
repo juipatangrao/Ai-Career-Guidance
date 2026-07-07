@@ -114,13 +114,13 @@ const Signup = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <input
+          {/* <input
             type="password"
             placeholder="Password"
             className="input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-          />
+          /> */}
 
           <label>Password</label>
           <div className="input-box">
