@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import RadiologistLogo from "../assets/Radiologist.jpeg";
-import RadiologistBanner from "../assets/radiologist-banner.jpeg";
+import RadiologistBanner from "../assets/radiologist-banner.jpg";
 
 const Radiologist = () => {
   return (

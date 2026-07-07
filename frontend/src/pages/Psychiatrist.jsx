@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import PsychiatristLogo from "../assets/Psychiatrist.jpeg";
-import PsychiatristBanner from "../assets/psychiatrist-banner.jpeg";
+import PsychiatristBanner from "../assets/psychiatrist-banner.jpg";
 
 const Psychiatrist = () => {
   return (

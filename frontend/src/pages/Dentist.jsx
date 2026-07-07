@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import DentistLogo from "../assets/Dentist.jpeg";
-import DentistBanner from "../assets/dentist-banner.jpeg";
+import DentistBanner from "../assets/dentist-banner.jpg";
 
 const Dentist = () => {
   return (

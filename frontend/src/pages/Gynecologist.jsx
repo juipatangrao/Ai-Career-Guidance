@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import GynecologistLogo from "../assets/gynecologist.jpeg";
-import GynecologistBanner from "../assets/gynecologist-banner.jpeg";
+import GynecologistBanner from "../assets/gynecologist-banner.jpg";
 
 const Gynecologist = () => {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import UrologistLogo from "../assets/Urologist.jpeg";
-import UrologistBanner from "../assets/urologist-banner.jpeg";
+import UrologistBanner from "../assets/urologist-banner.jpg";
 
 const Urologist = () => {
   return (

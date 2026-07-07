@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import CardiologistLogo from "../assets/cardiologist.jpeg";
-import CardiologistBanner from "../assets/cardiologist-banner.jpeg";
+import CardiologistBanner from "../assets/cardiologist-banner.jpg";
 
 const Cardiologist = () => {
   return (

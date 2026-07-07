@@ -12,13 +12,13 @@ import HotelManagement from "./component/HotelManagement";
 import MerchantNavy from "./component/MerchantNavy";
 import Engineering from "./component/Engineering";
 import Doctor from "./component/Doctor";
-
+//Science & Research
 import ScienceResearch from "./component/ScienceResearch";
 import SpaceAstronomy from "./component/SpaceAstronomy";
 import Environmental from "./component/Environmental";
 import MediaJournalism from "./component/MediaJournalism";
 import Design from "./component/Design";
-
+//Government
 import IAS from "./pages/IAS";
 import IPS from "./pages/IPS";
 import Police from "./pages/Police";
@@ -28,7 +28,7 @@ import Railway from "./pages/Railway";
 import Forest from "./pages/Forest";
 import Food from "./pages/Food";
 import Talathi from "./pages/Talathi";
-
+//IT
 import WebDeveloper from "./pages/WebDeveloper";
 import MobileAppDeveloper from "./pages/MobileAppDeveloper";
 import FrontendDeveloper from "./pages/FrontendDeveloper";
@@ -38,6 +38,16 @@ import UIUXDesigner from "./pages/UIUXDesigner";
 import CyberSecurity from "./pages/CyberSecurity";
 import DataAnalyst from "./pages/DataAnalyst";
 import GameDeveloper from "./pages/GameDeveloper";
+
+import Neurolologist from "./pages/Neurologist";
+import Cardiologist from "./pages/Cardiologist";
+import MBBS from "./pages/Mbbs";
+import Gynecologist from "./pages/Gynecologist";
+import Dermatologist from "./pages/Dermatologist";
+import Psychiatrist from "./pages/Psychiatrist";
+import Dentist from "./pages/Dentist";
+import Urologist from "./pages/Urologist";
+import Radiologist from "./pages/Radiologist";
 
 //Banking and Finance pages
 import CharteredAccountant from "./pages/Charted-Accountant";
@@ -113,6 +123,7 @@ import SatelliteEngineer from "./pages/SatelliteEngineer";
 
 import "./App.css";
 import GetStarted from "./component/GetStarted";
+import Mbbs from "./pages/Mbbs";
 
 function App() {
   return (
@@ -259,6 +270,16 @@ function App() {
         <Route path="/space-astronomy/space-scientist" element={<SpaceScientist/>}/>
         <Route path="/space-astronomy/astrophysicist" element={<Astrophysicist/>}/>
         <Route path="/space-astronomy/satellite-engineer" element={<SatelliteEngineer/>}/>
+        {/*Doctor*/}
+        <Route path="/Doctor/Neurologist" element={<Neurolologist></Neurolologist>}></Route>
+        <Route path="/Doctor/Cardiologist" element={<Cardiologist/>}></Route>
+        <Route path="/Doctor/Mbbs" element={<Mbbs/>}></Route>
+        <Route path="/Doctor/Gynecologist" element={<Gynecologist/>}></Route>
+        <Route path="/Doctor/Dermatologist" element={<Dermatologist/>}></Route>
+        <Route path="/Doctor/Psychiatrist" element={<Psychiatrist/>}></Route>
+        <Route path="/Doctor/Urologist" element={<Urologist/>}></Route>
+        <Route path="/Doctor/Dentist" element={<Dentist/>}></Route>
+        <Route path="/Doctor/Radiologist" element={<Radiologist/>}></Route>
 
       </Routes>
     </BrowserRouter>

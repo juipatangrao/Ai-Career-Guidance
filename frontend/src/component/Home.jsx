@@ -43,7 +43,7 @@ function Home() {
 
   const [open, setOpen] = useState(false);
   const [profileImage, setProfileImage] = useState("");
-
+const [username, setUsername] = useState("");
   // Temporary User ID
 const userId = localStorage.getItem("userId");
 

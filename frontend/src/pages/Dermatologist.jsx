@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import DermatologistLogo from "../assets/Dermatologist.jpeg";
-import DermatologistBanner from "../assets/dermatologist-banner.jpeg";
+import DermatologistBanner from "../assets/dermatologist-banner.jpg";
 
 const Dermatologist = () => {
   return (

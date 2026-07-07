@@ -2,7 +2,7 @@ import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
 import MbbsLogo from "../assets/MBBS-Doctor.jpeg";
-import MbbsBanner from "../assets/mbbs-doctor-banner.jpeg";
+import MbbsBanner from "../assets/mbbs-doctor-banner.jpg";
 
 const Mbbs = () => {
   return (
