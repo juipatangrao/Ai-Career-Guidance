@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
-import ChemicalLogo from "../assets/Chemical.jpeg";
+import ChemicalLogo from "../assets/chemical.jpeg";
 import ChemicalBanner from "../assets/chemical-banner.jpg";
 
 const Chemical = () => {

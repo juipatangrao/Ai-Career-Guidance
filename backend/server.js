@@ -16,8 +16,10 @@ app.use("/api/auth", require("./routes/authRoutes"));
 // Image folder public
 app.use("/uploads", express.static("uploads"));
 
+
 // Routes
 app.use("/api/profile", require("./routes/profileRoutes"));
+
 
 // MongoDB Connection
 mongoose
