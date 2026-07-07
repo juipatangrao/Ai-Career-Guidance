@@ -30,10 +30,10 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!username || !email || !password || !confirmPassword) {
-      alert("Please fill in all fields");
-      return;
-    }
+    // if (!username || !email || !password || !confirmPassword) {
+    //   alert("Please fill in all fields");
+    //   return;
+    // }
 
     if (password.length !== 5) {
       alert("Password must be exactly 5 characters");
@@ -114,13 +114,7 @@ const Signup = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          {/* <input
-            type="password"
-            placeholder="Password"
-            className="input"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          /> */}
+          
 
           <label>Password</label>
           <div className="input-box">
@@ -167,9 +161,10 @@ const Signup = () => {
             </span>
           </div>
 
-          <button type="submit" className="main-btn">
-            Create Account
-          </button>
+          
+            
+        
+          <button type="submit" className="main-btn"><Link to="/home"> Create Account</Link></button>
 
           <div className="divider">
             <span>OR</span>
