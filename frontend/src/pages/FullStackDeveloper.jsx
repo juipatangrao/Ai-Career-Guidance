@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 import FullStackLogo from "../assets/FullStack-Developer.png";
-import FullStackBanner from "../assets/FullStack-Developer.png";
+import FullStackBanner from "../assets/FullStackbanner.png";
 
 const FullStackDeveloper = () => {
   return (

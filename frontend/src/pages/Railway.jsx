@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 import RailwayLogo from "../assets/Railway-Officer.png";
-import RailwayBanner from "../assets/Railway-Officer.png";
+import RailwayBanner from "../assets/Railwaybanner.png";
 
 const Railway = () => {
   return (

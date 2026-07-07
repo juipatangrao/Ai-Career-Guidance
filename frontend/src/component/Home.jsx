@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import React, { useState } from "react";
 
 import "../style/Home.css";
 import { FaSearch, FaBell, FaUserCircle, FaCogs } from "react-icons/fa";
@@ -17,7 +16,6 @@ import {
 } from "react-icons/fa6";
 
 import student from "../assets/student.jpeg";
-import logo from "../assets/logo.jpeg";
 import ProfileSidebar from "../component/ProfileSidebar";
 
 import { useNavigate } from "react-router-dom";

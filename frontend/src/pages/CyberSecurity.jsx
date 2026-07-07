@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 import CyberLogo from "../assets/Cyber-Security.png";
-import CyberBanner from "../assets/Cyber-Security.png";
+import CyberBanner from "../assets/Cyberbanner.png";
 
 const CyberSecurity = () => {
   return (
