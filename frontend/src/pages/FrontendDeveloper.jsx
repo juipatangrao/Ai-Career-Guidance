@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 import FrontendLogo from "../assets/Frontend-Developer.png";
-import FrontendBanner from "../assets/Frontend-Developer.png";
+import FrontendBanner from "../assets/Frontendbanner.png";
 
 const FrontendDeveloper = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 import GameLogo from "../assets/GameDeveloper.png";
-import GameBanner from "../assets/GameDeveloper.png";
+import GameBanner from "../assets/Gamebanner.png";
 
 const GameDeveloper = () => {
   return (

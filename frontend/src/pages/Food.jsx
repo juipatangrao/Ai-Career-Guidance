@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 import FoodLogo from "../assets/FoodInspector.png";
-import FoodBanner from "../assets/FoodInspector.png";
+import FoodBanner from "../assets/Foodbanner.png";
 
 const Food = () => {
   return (

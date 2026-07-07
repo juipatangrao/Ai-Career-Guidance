@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 import DataLogo from "../assets/Data-Anlyst.png";
-import DataBanner from "../assets/Data-Anlyst.png";
+import DataBanner from "../assets/Databanner.png";
 
 const DataAnalyst = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 import WebLogo from "../assets/web-Developer.png";
-import WebBanner from "../assets/web-Developer.png";
+import WebBanner from "../assets/webbanner.png";
 
 const WebDeveloper = () => {
   return (

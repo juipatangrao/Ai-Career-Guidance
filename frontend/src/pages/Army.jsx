@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 import ArmyLogo from "../assets/Army-Officer.png";
-import ArmyBanner from "../assets/Army-Officer.png";
+import ArmyBanner from "../assets/Armybanner.png";
 
 const Army = () => {
   return (
