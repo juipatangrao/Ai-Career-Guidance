@@ -21,7 +21,7 @@ import ProfileSidebar from "../component/ProfileSidebar";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import hero from "../assets/home-hero.jpg";
-import about from "../assets/about.jpg";
+import about from "../assets/about.png";
 
 import engineering from "../assets/engineering.jpg";
 import medical from "../assets/medical.jpg";
