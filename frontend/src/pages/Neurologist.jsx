@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
-import NeurologistLogo from "../assets/neurologist.jpeg";
+import NeurologistLogo from "../assets/Neurologist.jpeg";
 import NeurologistBanner from "../assets/neurologist-banner.jpg";
 
 const Neurologist = () => {

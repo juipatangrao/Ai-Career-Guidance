@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
-import CardiologistLogo from "../assets/cardiologist.jpeg";
+import CardiologistLogo from "../assets/Cardiologist.jpeg";
 import CardiologistBanner from "../assets/cardiologist-banner.jpg";
 
 const Cardiologist = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import CareerTemplate from "../component/CareerTemplate";
 
-import GynecologistLogo from "../assets/gynecologist.jpeg";
+import GynecologistLogo from "../assets/Gynecologist.jpeg";
 import GynecologistBanner from "../assets/gynecologist-banner.jpg";
 
 const Gynecologist = () => {

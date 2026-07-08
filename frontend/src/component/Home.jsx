@@ -25,7 +25,7 @@ import about from "../assets/about.png";
 
 import engineering from "../assets/engineering.jpg";
 import medical from "../assets/medical.jpg";
-import it from "../assets/it.png";
+import it from "../assets/IT.png";
 import government from "../assets/government.png";
 import banking from "../assets/banking-and-finance.png";
 import law from "../assets/law.png";
