@@ -1,11 +1,89 @@
-exports.signup = (req, res) => {
-  res.status(200).json({
-    message: "Signup API - Coming Soon"
-  });
+const User = require("../models/User");
+
+
+// Signup Controller
+exports.signup = async (req, res) => {
+
+  try {
+
+    const { name, email, password } = req.body;
+
+
+    const newUser = new User({
+      name,
+      email,
+      password
+    });
+
+
+    await newUser.save();
+
+
+    res.status(200).json({
+      message: "Signup successful",
+      user: newUser
+    });
+
+
+  } catch (error) {
+
+    res.status(500).json({
+      message: error.message
+    });
+
+  }
+
 };
 
-exports.login = (req, res) => {
-  res.status(200).json({
-    message: "Login API - Coming Soon"
-  });
+
+
+
+// Login Controller
+exports.login = async (req, res) => {
+
+  try {
+
+    const { email, password } = req.body;
+
+
+    // Find user by email
+    const user = await User.findOne({ email });
+
+
+    if (!user) {
+
+      return res.status(400).json({
+        message: "User not found"
+      });
+
+    }
+
+
+    // Check password
+    if (user.password !== password) {
+
+      return res.status(400).json({
+        message: "Invalid password"
+      });
+
+    }
+
+
+    res.status(200).json({
+
+      message: "Login successful",
+
+      user: user
+
+    });
+
+
+  } catch (error) {
+
+    res.status(500).json({
+      message: error.message
+    });
+
+  }
+
 };
