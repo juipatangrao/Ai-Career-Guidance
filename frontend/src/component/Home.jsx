@@ -48,15 +48,14 @@ function Home() {
 const userId = localStorage.getItem("userId");
 
   useEffect(() => {
-    const user = localStorage.getItem("loggedInUser");
+  const user = localStorage.getItem("loggedInUser");
 
-    if (user) {
-      setUsername(user);
-    }
+  if (user) {
+    setUsername(user);
+  }
 
-    // getProfile();
-  }, []);
-
+  getProfile();
+}, []);
   // Get profile image from backend
   const getProfile = async () => {
     try {
@@ -74,30 +73,36 @@ const userId = localStorage.getItem("userId");
     }
   };
 
-  // Upload profile image
-  // const handleImageUpload = async (e) => {
-  //   const file = e.target.files[0];
 
-  //   if (!file) return;
+const handleImageUpload = async (e) => {
 
-  //   const formData = new FormData();
-  //   formData.append("image", file);
-  //   formData.append("userId", userId);
+  const file = e.target.files[0];
 
-  //   try {
-  //     const res = await axios.post(
-  //       "http://localhost:5000/api/profile/upload",
-  //       formData
-  //     );
+  if (!file) return;
 
-  //     setProfileImage(
-  //       `http://localhost:5000${res.data.profileImage}`
-  //     );
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-const handleImageUpload = () => {};
+  const formData = new FormData();
+  formData.append("image", file);
+  formData.append("userId", userId);
+
+  try {
+
+    const res = await axios.post(
+      "http://localhost:5000/api/profile/upload",
+      formData
+    );
+
+    setProfileImage(
+  `http://localhost:5000${res.data.profileImage}`
+);
+
+  } catch (err) {
+
+    console.log(err);
+    alert("Image upload failed");
+
+  }
+
+};
   const categories = [    { to: "/engineering", label: "Engineering", icon: <FaCogs />, bg: "#4A90E2" },
     { to: "/doctor", label: "Doctor", icon: <FaUserDoctor />, bg: "#F5B301" },
     { to: "/law", label: "Lawyer", icon: <FaScaleBalanced />, bg: "#F5A623" },
