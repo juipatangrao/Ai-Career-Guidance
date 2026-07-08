@@ -6,17 +6,17 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-
+const chatRoutes = require("./routes/chatRoutes");
 app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use("/api/auth", require("./routes/authRoutes"));
-app.use("/api/profile", require("./routes/profileRoutes"));
+// app.use("/api/auth", require("./routes/authRoutes"));
+// app.use("/api/profile", require("./routes/profileRoutes"));
 
 // Image folder public
 app.use("/uploads", express.static("uploads"));
-
+app.use("/api/chat", chatRoutes);
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGO_URI)

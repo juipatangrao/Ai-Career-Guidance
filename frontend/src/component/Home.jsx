@@ -54,7 +54,7 @@ const userId = localStorage.getItem("userId");
       setUsername(user);
     }
 
-    getProfile();
+    // getProfile();
   }, []);
 
   // Get profile image from backend
@@ -75,28 +75,28 @@ const userId = localStorage.getItem("userId");
   };
 
   // Upload profile image
-  const handleImageUpload = async (e) => {
-    const file = e.target.files[0];
+  // const handleImageUpload = async (e) => {
+  //   const file = e.target.files[0];
 
-    if (!file) return;
+  //   if (!file) return;
 
-    const formData = new FormData();
-    formData.append("image", file);
-    formData.append("userId", userId);
+  //   const formData = new FormData();
+  //   formData.append("image", file);
+  //   formData.append("userId", userId);
 
-    try {
-      const res = await axios.post(
-        "http://localhost:5000/api/profile/upload",
-        formData
-      );
+  //   try {
+  //     const res = await axios.post(
+  //       "http://localhost:5000/api/profile/upload",
+  //       formData
+  //     );
 
-      setProfileImage(
-        `http://localhost:5000${res.data.profileImage}`
-      );
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  //     setProfileImage(
+  //       `http://localhost:5000${res.data.profileImage}`
+  //     );
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   const categories = [    { to: "/engineering", label: "Engineering", icon: <FaCogs />, bg: "#4A90E2" },
     { to: "/doctor", label: "Doctor", icon: <FaUserDoctor />, bg: "#F5B301" },
