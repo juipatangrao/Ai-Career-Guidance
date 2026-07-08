@@ -122,12 +122,15 @@ import Astronaut from "./pages/Astronaut";
 import SatelliteEngineer from "./pages/SatelliteEngineer";
 
 import "./App.css";
+import ChatBot from "./component/ChatBot/ChatBot";
 import GetStarted from "./component/GetStarted";
 import Mbbs from "./pages/Mbbs";
 
 function App() {
   return (
     <BrowserRouter>
+            <ChatBot />
+
       <Routes>
         <Route path="/" element={<GetStarted />} />
           <Route path="/signup" element={<Signup />} />
