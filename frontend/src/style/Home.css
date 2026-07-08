@@ -309,6 +309,7 @@ margin-left: -400px;
 
 .career-heading h2 {
   font-size: 40px;
+  margin-left: 50px;
   color: #7b1023;
 }
 
@@ -330,14 +331,17 @@ margin-left: -400px;
 .career-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 35px;
+  gap: 49px;
   justify-items: center;
+  margin-left: 120px;
+  
 }
 
 .career-card {
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
+  gap: 10px;
 }
 
 .career-card:hover {

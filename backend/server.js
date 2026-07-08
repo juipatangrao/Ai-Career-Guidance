@@ -13,6 +13,7 @@ app.use(express.json());
 // Routes
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/profile", require("./routes/profileRoutes"));
+app.use("/api/careers", require("./routes/careerRoutes"));
 
 // Image folder public
 app.use("/uploads", express.static("uploads"));
