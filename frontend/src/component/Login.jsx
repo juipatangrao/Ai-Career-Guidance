@@ -44,7 +44,7 @@ const Login = () => {
  "loggedInUser",
  res.data.user.name
 );
-
+localStorage.setItem("userEmail", res.data.user.email);
       alert("Login Successful!");
 
       navigate("/home");

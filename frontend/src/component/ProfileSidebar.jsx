@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import {
   FaTimes,
   FaHome,
@@ -17,6 +17,13 @@ const ProfileSidebar = ({
 }) => {
   const fileInputRef = useRef();
 
+const [userName, setUserName] = useState("");
+const [userEmail, setUserEmail] = useState("");
+
+useEffect(() => {
+  setUserName(localStorage.getItem("loggedInUser") || "");
+  setUserEmail(localStorage.getItem("userEmail") || "");
+}, []);
   if (!open) return null;
 
   return (
@@ -59,8 +66,8 @@ const ProfileSidebar = ({
 
           </div>
 
-          <h3>Saniya</h3>
-          <p>saniya@gmail.com</p>
+          <h3>{userName}</h3>
+<p>{userEmail}</p>
 
         </div>
 

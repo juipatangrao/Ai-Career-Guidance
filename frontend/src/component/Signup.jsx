@@ -80,24 +80,9 @@ const Signup = () => {
 
 
 
-      localStorage.setItem(
-        "userId",
-        res.data.user._id
-      );
-
-
-      localStorage.setItem(
-        "loggedInUser",
-        res.data.user.name
-      );
-
-
-      localStorage.setItem(
-        "email",
-        email
-      );
-
-
+      localStorage.setItem("userId", res.data.user._id);
+localStorage.setItem("loggedInUser", res.data.user.name);
+localStorage.setItem("userEmail", email);
 
       alert("Signup Successful!");
 
