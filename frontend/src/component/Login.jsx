@@ -1,10 +1,8 @@
-
 import React, { useState } from "react";
-
-
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../style/Login.css";
+
 import {
   FaUser,
   FaEnvelope,
@@ -16,8 +14,9 @@ import {
 } from "react-icons/fa";
 
 const Login = () => {
-  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+
+  const [showPassword, setShowPassword] = useState(false);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,11 +26,6 @@ const Login = () => {
 
     if (!email || !password) {
       alert("Please fill in all fields");
-      return;
-    }
-
-    if (password.length !== 5) {
-      alert("Password must be exactly 5 characters");
       return;
     }
 
@@ -45,18 +39,28 @@ const Login = () => {
       );
 
       localStorage.setItem("userId", res.data.user._id);
-      localStorage.setItem("loggedInUser", res.data.user.name);
+
+      localStorage.setItem(
+ "loggedInUser",
+ res.data.user.name
+);
 
       alert("Login Successful!");
 
       navigate("/home");
+
     } catch (err) {
-      alert(err.response?.data?.message || "Login Failed");
+      alert(
+        err.response?.data?.message ||
+        "Login Failed"
+      );
     }
   };
 
+
   return (
     <div className="auth-container">
+
       <div className="auth-card">
 
         <div className="auth-icon">
@@ -64,91 +68,175 @@ const Login = () => {
         </div>
 
         <h1>Welcome Back!</h1>
-        <p>Login to continue your journey</p>
 
-        
+        <p>
+          Login to continue your journey
+        </p>
+
+
         <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            placeholder="Email"
-            className="input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
 
-          <input
-            type="password"
-            placeholder="Password"
-            className="input"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+
+          {/* Email */}
 
           <label>Email Address</label>
+
           <div className="input-box">
+
             <FaEnvelope className="icon" />
+
             <input
               type="email"
               placeholder="Enter your email"
+              value={email}
+              onChange={(e) =>
+                setEmail(e.target.value)
+              }
             />
+
           </div>
 
+
+
+          {/* Password */}
+
           <label>Password</label>
+
           <div className="input-box">
+
             <FaLock className="icon" />
 
+
             <input
-              type={showPassword ? "text" : "password"}
+              type={
+                showPassword
+                  ? "text"
+                  : "password"
+              }
               placeholder="Enter your password"
+              value={password}
+              onChange={(e) =>
+                setPassword(e.target.value)
+              }
             />
+
 
             <span
               className="eye"
-              onClick={() => setShowPassword(!showPassword)}
+              onClick={() =>
+                setShowPassword(!showPassword)
+              }
             >
-              {showPassword ? <FaEyeSlash /> : <FaEye />}
+
+              {
+                showPassword
+                  ? <FaEyeSlash />
+                  : <FaEye />
+              }
+
             </span>
+
+
           </div>
+
+
 
           <div className="login-options">
+
             <label className="remember">
-              <input type="checkbox" />
+
+              <input
+                type="checkbox"
+              />
+
               Remember Me
+
             </label>
 
-            <a href="/" className="forgot">
+
+            <a
+              href="/"
+              className="forgot"
+            >
               Forgot Password?
             </a>
+
+
           </div>
 
-          <button className="main-btn">
+
+
+          <button
+            className="main-btn"
+            type="submit"
+          >
+
             Login
+
           </button>
+
+
+
 
           <div className="divider">
-            <span>OR</span>
+
+            <span>
+              OR
+            </span>
+
           </div>
 
-          <button type="button" className="google-btn">
+
+
+
+          <button
+            type="button"
+            className="google-btn"
+          >
+
             <FaGoogle />
+
             Continue with Google
+
           </button>
 
-          <button type="button" className="github-btn">
+
+
+
+          <button
+            type="button"
+            className="github-btn"
+          >
+
             <FaGithub />
+
             Continue with GitHub
+
           </button>
+
+
+
 
           <div className="bottom-text">
+
             New to CareerXpert?
-            <Link to="/signup"> Sign Up</Link>
+
+            <Link to="/signup">
+              {" "}Sign Up
+            </Link>
+
           </div>
+
+
 
         </form>
 
+
       </div>
+
     </div>
   );
 };
+
 
 export default Login;

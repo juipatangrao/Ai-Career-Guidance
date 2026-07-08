@@ -97,7 +97,7 @@ const userId = localStorage.getItem("userId");
   //     console.log(err);
   //   }
   // };
-
+const handleImageUpload = () => {};
   const categories = [    { to: "/engineering", label: "Engineering", icon: <FaCogs />, bg: "#4A90E2" },
     { to: "/doctor", label: "Doctor", icon: <FaUserDoctor />, bg: "#F5B301" },
     { to: "/law", label: "Lawyer", icon: <FaScaleBalanced />, bg: "#F5A623" },
@@ -387,6 +387,12 @@ Choose your future with confidence.
   </div>
 
 </footer>
+<ProfileSidebar
+  open={open}
+  setOpen={setOpen}
+  profileImage={profileImage}
+  handleImageUpload={handleImageUpload}
+/>
 </div>
   );
 
