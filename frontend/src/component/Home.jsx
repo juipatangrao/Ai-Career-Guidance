@@ -43,11 +43,7 @@ function Home() {
 
   const [open, setOpen] = useState(false);
   const [profileImage, setProfileImage] = useState("");
-<<<<<<< HEAD
-const [username, setUsername] = useState("");
-=======
   const [username,setUsername]=useState("");
->>>>>>> 16d834795d95c573cde3fd53fbf4c7054254e767
   // Temporary User ID
 const userId = localStorage.getItem("userId");
 
@@ -224,7 +220,7 @@ return(
             <div className="nav-links">
               <a href="#career-categories" className="list">Home</a>
               <a href="#career-test" className="list">Career</a>
-              <a href="#roadmap" className="list">About</a>
+              <a href="#about" className="list">About</a>
             </div>
 
             <div className="nav-search">
