@@ -124,6 +124,9 @@ import SatelliteEngineer from "./pages/SatelliteEngineer";
 import "./App.css";
 import ChatBot from "./component/ChatBot/ChatBot";
 import GetStarted from "./component/GetStarted";
+import CareerRecommendation from "./pages/CareerRecommendation";
+import AptitudeTest from "./pages/AptitudeTest";
+import CareerResult from "./pages/CareerResult";
 import Mbbs from "./pages/Mbbs";
 
 function App() {
@@ -283,7 +286,20 @@ function App() {
         <Route path="/Doctor/Urologist" element={<Urologist/>}></Route>
         <Route path="/Doctor/Dentist" element={<Dentist/>}></Route>
         <Route path="/Doctor/Radiologist" element={<Radiologist/>}></Route>
+<Route
+  path="/career-recommendation"
+  element={<CareerRecommendation />}
+/>
 
+<Route
+  path="/aptitude-test"
+  element={<AptitudeTest />}
+/>
+
+<Route
+  path="/career-result"
+  element={<CareerResult />}
+/>
       </Routes>
     </BrowserRouter>
   );

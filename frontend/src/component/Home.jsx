@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-
+import { FaBrain } from "react-icons/fa";
 import "../style/Home.css";
 import { FaSearch, FaBell, FaUserCircle, FaCogs } from "react-icons/fa";
 import axios from "axios";
@@ -37,7 +37,7 @@ import hotel from "../assets/HotelManager.png";
 import space from "../assets/Space-astronomy.png";
 import environment from "../assets/Environmental.png";
 import navy from "../assets/Merchant-navy.png";
-
+// import AIJobRecommendation from "../components/AIJobRecommendation";
 function Home() {
 
 
@@ -46,7 +46,7 @@ function Home() {
   const [username,setUsername]=useState("");
   // Temporary User ID
 const userId = localStorage.getItem("userId");
-
+console.log("User ID:", userId);
   useEffect(() => {
   const user = localStorage.getItem("loggedInUser");
 
@@ -57,21 +57,23 @@ const userId = localStorage.getItem("userId");
   getProfile();
 }, []);
   // Get profile image from backend
-  const getProfile = async () => {
-    try {
-      const res = await axios.get(
-        `http://localhost:5000/api/profile/${userId}`
-      );
+ const getProfile = async () => {
+  try {
+    const res = await axios.get(
+      `http://localhost:5000/api/profile/${userId}`
+    );
 
-      if (res.data.profileImage) {
-        setProfileImage(
-          `http://localhost:5000${res.data.profileImage}`
-        );
-      }
-    } catch (err) {
-      console.log(err);
+    console.log("Profile Response:", res.data);
+
+    if (res.data.profileImage) {
+      setProfileImage(
+        `http://localhost:5000${res.data.profileImage}`
+      );
     }
-  };
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 
 const handleImageUpload = async (e) => {
@@ -251,6 +253,7 @@ return(
             </div>
           </div>
         </nav>
+        {/* <AIJobRecommendation /> */}
 </div>
 </header>
 
@@ -392,6 +395,18 @@ Choose your future with confidence.
   </div>
 
 </footer>
+<div
+className="career-ai-btn"
+onClick={() => navigate("/career-recommendation")}
+>
+
+<FaBrain className="career-ai-icon"/>
+
+<span className="career-tooltip">
+Career Recommendation
+</span>
+
+</div>
 <ProfileSidebar
   open={open}
   setOpen={setOpen}

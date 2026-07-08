@@ -8,6 +8,7 @@ import {
   FaPlus,
 } from "react-icons/fa";
 import "../style/ProfileSidebar.css";
+import { Link } from "react-router-dom";
 
 const ProfileSidebar = ({
   open,
@@ -92,7 +93,8 @@ useEffect(() => {
 
           <div className="menu-item logout">
             <FaSignOutAlt />
-            <span>Logout</span>
+            <Link to="/Login">LogOut</Link>
+            {/* <span>Logout</span> */}
           </div>
 
         </div>
