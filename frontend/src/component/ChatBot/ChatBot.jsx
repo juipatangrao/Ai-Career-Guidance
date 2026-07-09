@@ -3,6 +3,7 @@ import "./ChatBot.css";
 import ChatMessage from "./ChatMessage";
 import ChatInput from "./ChatInput";
 import axios from "axios";
+
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,8 +15,7 @@ const ChatBot = () => {
   ]);
 
   const [input, setInput] = useState("");
-
- const sendMessage = async () => {
+const sendMessage = async () => {
 
   if (input.trim() === "") return;
 
@@ -30,11 +30,18 @@ const ChatBot = () => {
 
   setInput("");
 
+  // Get logged in user
+  const loggedInUser = JSON.parse(
+    localStorage.getItem("loggedInUser")
+  );
+
   try {
+
     const res = await axios.post(
       "http://localhost:5000/api/chat",
       {
         message: question,
+        userId: loggedInUser._id,
       }
     );
 
@@ -46,35 +53,41 @@ const ChatBot = () => {
     setMessages((prev) => [...prev, aiReply]);
 
   } catch (error) {
-  console.error("Axios Error:", error);
 
-  if (error.response) {
-    console.log("Status:", error.response.status);
-    console.log("Data:", error.response.data);
+    console.error("Axios Error:", error);
+
+    if (error.response) {
+      console.log("Status:", error.response.status);
+      console.log("Data:", error.response.data);
+    }
+
+    setMessages((prev) => [
+      ...prev,
+      {
+        sender: "ai",
+        text: "⚠️ Server connection failed.",
+      },
+    ]);
   }
+};
 
-  setMessages((prev) => [
-    ...prev,
-    {
-      sender: "ai",
-      text: "Server connection failed.",
-    },
-
-  ]);
-  }
-}
 const clearChat = () => {
   setMessages([]);
 };
   return (
     <>
-      <button
-        className="chat-toggle"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        💬
-      </button>
+      <div className="chat-toggle-wrapper">
+  <button
+    className="chat-toggle"
+    onClick={() => setIsOpen(!isOpen)}
+  >
+    💬
+  </button>
 
+  <span className="chat-tooltip">
+    AI Chatbot
+  </span>
+</div>
       {isOpen && (
         <div className="chat-window">
 

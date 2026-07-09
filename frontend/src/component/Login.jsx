@@ -40,10 +40,14 @@ const Login = () => {
 
       localStorage.setItem("userId", res.data.user._id);
 
-      localStorage.setItem(
- "loggedInUser",
- res.data.user.name
-)
+//       localStorage.setItem(
+//  "loggedInUser",
+//  res.data.user.name
+// )
+localStorage.setItem(
+  "loggedInUser",
+  JSON.stringify(res.data.user)
+);
 
       alert("Login Successful!");
 

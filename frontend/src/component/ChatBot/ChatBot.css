@@ -1,4 +1,12 @@
 /* Floating AI Button */
+/* Wrapper */
+.chat-toggle-wrapper{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+}
+/* Floating AI Button */
 
 .chat-toggle {
     position: fixed;
@@ -26,13 +34,28 @@
 
     z-index: 999;
 
-    transition: 0.3s;
-}
+    /* Floating Animation */
+    animation: floating 3s ease-in-out infinite;
 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .chat-toggle:hover{
-    transform: scale(1.1);
+    transform: scale(1.15);
+    box-shadow: 0 12px 30px rgba(128,0,32,0.55);
+    animation-play-state: paused; /* Optional */
 }
+
+@keyframes floating{
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(-8px);
+    }
+    
+}
+
 
 
 
@@ -79,6 +102,38 @@
 }
 
 
+/* Tooltip */
+.chat-tooltip{
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%) translateX(15px);
+
+    background: linear-gradient(135deg,#800020,#b91c4a);
+    color: white;
+
+    padding: 12px 20px;
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s ease;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+/* Show on hover */
+.chat-toggle-wrapper:hover .chat-tooltip{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
 
 /* Header */
 
@@ -221,42 +276,28 @@
 
 /* Common Message */
 
+.message{
 
-.message {
+    max-width:80%;
 
+    padding:15px 18px;
 
-    max-width:75%;
+    margin-bottom:18px;
 
-
-    padding:14px 18px;
-
-
-    margin-bottom:15px;
-
-
-    border-radius:18px;
-
+    line-height:1.7;
 
     font-size:15px;
 
-
-    line-height:1.5;
-
-
-    animation:message 0.2s ease;
-
-
+    animation:fadeUp .25s ease;
 }
 
-
-
-@keyframes message{
+@keyframes fadeUp{
 
     from{
 
         opacity:0;
 
-        transform:translateY(10px);
+        transform:translateY(15px);
 
     }
 
@@ -271,31 +312,24 @@
 }
 
 
-
-
 /* AI Message */
 
+.ai-message{
 
-.ai-message {
+    background:#ffffff;
 
+    color:#222;
 
-    background:white;
+    border:1px solid #ececec;
 
-
-    color:#333;
-
-
-    align-self:flex-start;
-
+    border-radius:18px;
 
     border-bottom-left-radius:5px;
 
+    align-self:flex-start;
 
-    box-shadow:0 3px 12px rgba(0,0,0,0.08);
-
-
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
 }
-
 
 
 /* User Message */

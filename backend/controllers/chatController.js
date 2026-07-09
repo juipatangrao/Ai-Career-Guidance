@@ -1,11 +1,30 @@
+const Chat = require("../models/Chat");
 const generateResponse = require("../services/geminiService");
+const User = require("../models/User");
 exports.chat = async (req, res) => {
   try {
-    console.log("Request Body:", req.body);
 
-    const { message } = req.body;
+    const { message, userId } = req.body;
+const user = await User.findById(userId);
+    // Save user message
+    await Chat.create({
+      userId,
+      role: "user",
+      message,
+    });
 
-    const reply = await generateResponse(message);
+    // Get previous chats
+    const history = await Chat.find({ userId })
+      .sort({ createdAt: 1 })
+      .limit(20);
+
+const reply = await generateResponse(message, history, user); 
+    // Save AI reply
+    await Chat.create({
+      userId,
+      role: "assistant",
+      message: reply,
+    });
 
     res.json({
       success: true,
@@ -13,31 +32,13 @@ exports.chat = async (req, res) => {
     });
 
   } catch (err) {
+
     console.error(err);
 
     res.status(500).json({
       success: false,
       message: err.message,
     });
+
   }
 };
-// exports.chat = async (req, res) => {
-//   try {
-//     const { message } = req.body;
-
-//     const reply = await generateResponse(message);
-
-//     res.json({
-//       success: true,
-//       reply,
-//     });
-
-//   } catch (err) {
-//     console.log(err);
-
-//     res.status(500).json({
-//       success: false,
-//       message: "Server Error",
-//     });
-//   }
-// };
