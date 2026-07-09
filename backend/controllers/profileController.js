@@ -12,21 +12,17 @@ exports.uploadProfileImage = async (req, res) => {
       });
     }
 
-    const imagePath = "/uploads/" + req.file.filename;
+    const user = await User.findById(userId);
 
-    const user = await User.findByIdAndUpdate(
-      userId,
-      {
-        profileImage: imagePath
-      },
-      {
-        new: true
-      }
-    );
+    user.profileImage = {
+      data: req.file.buffer,
+      contentType: req.file.mimetype
+    };
+
+    await user.save();
 
     res.status(200).json({
-      message: "Profile image uploaded successfully",
-      profileImage: user.profileImage
+      message: "Profile uploaded successfully"
     });
 
   } catch (error) {
@@ -37,7 +33,6 @@ exports.uploadProfileImage = async (req, res) => {
 
   }
 };
-
 
 // Get Profile
 exports.getProfile = async (req, res) => {

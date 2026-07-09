@@ -22,10 +22,14 @@ const userSchema = new mongoose.Schema({
         required:true
     },
 
-    profileImage:{
-        type:String,
-        default:""
+    profileImage: {
+    data: {
+        type: Buffer
+    },
+    contentType: {
+        type: String
     }
+}
 
 });
 

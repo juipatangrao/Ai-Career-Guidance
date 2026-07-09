@@ -122,7 +122,7 @@ import Astronaut from "./pages/Astronaut";
 import SatelliteEngineer from "./pages/SatelliteEngineer";
 
 import "./App.css";
-import ChatBot from "./component/ChatBot/ChatBot";
+// import ChatBot from "./component/ChatBot/ChatBot";
 import GetStarted from "./component/GetStarted";
 import CareerRecommendation from "./pages/CareerRecommendation";
 import AptitudeTest from "./pages/AptitudeTest";
@@ -132,7 +132,7 @@ import Mbbs from "./pages/Mbbs";
 function App() {
   return (
     <BrowserRouter>
-            <ChatBot />
+            {/* <ChatBot /> */}
 
       <Routes>
         <Route path="/" element={<GetStarted />} />

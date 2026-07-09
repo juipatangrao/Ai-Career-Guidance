@@ -37,6 +37,7 @@ import hotel from "../assets/HotelManager.png";
 import space from "../assets/Space-astronomy.png";
 import environment from "../assets/Environmental.png";
 import navy from "../assets/Merchant-navy.png";
+import ChatBot from "../component/ChatBot/ChatBot";
 // import AIJobRecommendation from "../components/AIJobRecommendation";
 function Home() {
 
@@ -59,17 +60,14 @@ console.log("User ID:", userId);
   // Get profile image from backend
  const getProfile = async () => {
   try {
-    const res = await axios.get(
+    await axios.get(
       `http://localhost:5000/api/profile/${userId}`
     );
 
-    console.log("Profile Response:", res.data);
+    setProfileImage(
+      `http://localhost:5000/api/profile/image/${userId}`
+    );
 
-    if (res.data.profileImage) {
-      setProfileImage(
-        `http://localhost:5000${res.data.profileImage}`
-      );
-    }
   } catch (err) {
     console.log(err);
   }
@@ -94,7 +92,7 @@ const handleImageUpload = async (e) => {
     );
 
     setProfileImage(
-  `http://localhost:5000${res.data.profileImage}`
+  `http://localhost:5000/api/profile/image/${userId}?t=${Date.now()}`
 );
 
   } catch (err) {
@@ -407,6 +405,8 @@ Career Recommendation
 </span>
 
 </div>
+<ChatBot />
+
 <ProfileSidebar
   open={open}
   setOpen={setOpen}
