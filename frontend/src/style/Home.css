@@ -525,6 +525,73 @@ opacity:1;
 visibility:visible;
 
 }
+.college-floating-icon{
+    font-size: 32px;   /* 32px किंवा 34px ठेव */
+    color: white;
+    flex-shrink: 0;
+}
+.college-tooltip{
+    position: absolute;
+    right: 85px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: #800020;
+    color: white;
+
+    padding: 10px 15px;
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+.college-tooltip:hover{
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+.college-floating-btn {
+    position: fixed;
+    right: 28px;
+    bottom: 265px;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    background: linear-gradient(135deg,#800020,#b91c4a);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(128,0,32,.35);
+
+    z-index: 9999;
+
+    transition: .3s;
+
+    animation: careerFloat 2.5s infinite;
+
+    overflow: visible;
+}
+
+.college-floating-btn:hover .college-tooltip{
+    opacity: 1;
+    visibility: visible;
+}
+
 .career-tooltip{
 
 position:absolute;

@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 const chatRoutes = require("./routes/chatRoutes");
 const comparisonRoutes = require("./routes/comparisonRoutes");
-
+const collegeRoutes = require("./routes/collegeRoutes");
 app.use(cors());
 app.use(express.json());
 
@@ -18,7 +18,7 @@ app.use(express.json());
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/profile", require("./routes/profileRoutes"));
 app.use("/api/careers", require("./routes/careerRoutes"));
-
+app.use("/api/college", collegeRoutes);
 // Image folder public
 app.use("/uploads", express.static("uploads"));
 app.use("/api/chat", chatRoutes);

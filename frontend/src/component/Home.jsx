@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaBrain } from "react-icons/fa";
 import { FaBalanceScale } from "react-icons/fa";
+import { FaUniversity } from "react-icons/fa";
 import "../style/Home.css";
 import { FaSearch, FaBell, FaUserCircle, FaCogs } from "react-icons/fa";
 import axios from "axios";
@@ -388,6 +389,16 @@ Choose your future with confidence.
   </div>
 
 </footer>
+<div
+  className="college-floating-btn"
+  onClick={() => navigate("/college-recommendation")}
+>
+  <FaUniversity className="college-floating-icon" />
+
+  <span className="college-tooltip">
+    College Recommendation
+  </span>
+</div>
 <div
   className="comparison-ai-btn"
   onClick={() => navigate("/career-comparison")}

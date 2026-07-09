@@ -4,6 +4,7 @@ import Login from "./component/Login";
 import Home from "./component/Home";
 import EditProfile from "./pages/EditProfile";
 import CareerComparison from "./pages/CareerComparison";
+import CollegeRecommendation from "./pages/CollegeRecommendation";
 import Government from "./component/Government";
 import IT from "./component/IT";
 import BankingANDFinance from "./component/BankingANDFinance";
@@ -308,6 +309,10 @@ function App() {
 <Route
   path="/career-comparison"
   element={<CareerComparison />}
+/>
+<Route
+  path="/college-recommendation"
+  element={<CollegeRecommendation />}
 />
       </Routes>
     </BrowserRouter>
