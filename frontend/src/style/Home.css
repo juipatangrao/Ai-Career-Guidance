@@ -440,6 +440,91 @@ color:white;
 
 }
 
+/* ===============================
+   AI Career Comparison Button
+================================= */
+
+.comparison-ai-btn{
+
+position:fixed;
+
+right:28px;
+
+bottom:185px;
+
+height:70px;
+
+width:70px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#5b0d1b,#9c1b35);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+cursor:pointer;
+
+box-shadow:0 10px 30px rgba(128,0,32,.35);
+
+transition:.3s;
+
+z-index:9999;
+
+animation:careerFloat 2.5s infinite;
+
+}
+
+.comparison-ai-btn:hover{
+
+transform:scale(1.12);
+
+}
+
+.comparison-ai-icon{
+
+font-size:30px;
+
+color:white;
+
+}
+
+.comparison-tooltip{
+
+position:absolute;
+
+right:85px;
+
+background:#800020;
+
+color:white;
+
+padding:10px 15px;
+
+border-radius:8px;
+
+font-size:15px;
+
+white-space:nowrap;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.3s;
+
+}
+
+.comparison-ai-btn:hover .comparison-tooltip{
+
+opacity:1;
+
+visibility:visible;
+
+}
 .career-tooltip{
 
 position:absolute;

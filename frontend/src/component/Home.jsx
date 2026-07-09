@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-
 import { FaBrain } from "react-icons/fa";
+import { FaBalanceScale } from "react-icons/fa";
 import "../style/Home.css";
 import { FaSearch, FaBell, FaUserCircle, FaCogs } from "react-icons/fa";
 import axios from "axios";
@@ -388,6 +388,16 @@ Choose your future with confidence.
   </div>
 
 </footer>
+<div
+  className="comparison-ai-btn"
+  onClick={() => navigate("/career-comparison")}
+>
+  <FaBalanceScale className="comparison-ai-icon" />
+
+  <span className="comparison-tooltip">
+    Career Comparison
+  </span>
+</div>
 <div
 className="career-ai-btn"
 onClick={() => navigate("/career-recommendation")}

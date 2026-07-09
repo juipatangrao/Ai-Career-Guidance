@@ -9,6 +9,7 @@ dotenv.config();
 
 const app = express();
 const chatRoutes = require("./routes/chatRoutes");
+const comparisonRoutes = require("./routes/comparisonRoutes");
 
 app.use(cors());
 app.use(express.json());
@@ -21,6 +22,7 @@ app.use("/api/careers", require("./routes/careerRoutes"));
 // Image folder public
 app.use("/uploads", express.static("uploads"));
 app.use("/api/chat", chatRoutes);
+app.use("/api/career-comparison", comparisonRoutes);
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGO_URI)
