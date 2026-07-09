@@ -6,10 +6,10 @@ import {
   FaCog,
   FaSignOutAlt,
   FaPlus,
+  FaUserEdit,
 } from "react-icons/fa";
 import "../style/ProfileSidebar.css";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 const ProfileSidebar = ({
   open,
   setOpen,
@@ -17,10 +17,10 @@ const ProfileSidebar = ({
   handleImageUpload,
 }) => {
   const fileInputRef = useRef();
+const navigate = useNavigate();
 
 const [userName, setUserName] = useState("");
 const [userEmail, setUserEmail] = useState("");
-
 useEffect(() => {
   setUserName(localStorage.getItem("loggedInUser") || "");
   setUserEmail(localStorage.getItem("userEmail") || "");
@@ -90,7 +90,16 @@ useEffect(() => {
             <FaCog />
             <span>Settings</span>
           </div>
-
+              <div
+      className="menu-item"
+      onClick={() => {
+        setOpen(false);
+        navigate("/edit-profile");
+      }}
+    >
+      <FaUserEdit />
+      <span>Edit Profile</span>
+    </div>
           <div className="menu-item logout">
             <FaSignOutAlt />
             <Link to="/Login">LogOut</Link>

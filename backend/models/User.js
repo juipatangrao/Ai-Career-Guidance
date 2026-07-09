@@ -29,7 +29,77 @@ const userSchema = new mongoose.Schema({
     contentType: {
         type: String
     }
-}
+    },
+    
+    phone: {
+    type: String,
+    default: ""
+    },
+
+    gender: {
+        type: String,
+        default: ""
+    },
+
+    dob: {
+        type: Date,
+        default: null
+    },
+
+    college: {
+        type: String,
+        default: ""
+    },
+
+    course: {
+        type: String,
+        default: ""
+    },
+
+    year: {
+        type: String,
+        default: ""
+    },
+
+    semester: {
+        type: String,
+        default: ""
+    },
+
+    skills: {
+        type: [String],
+        default: []
+    },
+
+    interests: {
+        type: [String],
+        default: []
+    },
+
+    careerGoal: {
+        type: String,
+        default: ""
+    },
+
+    address: {
+        type: String,
+        default: ""
+    },
+
+    city: {
+        type: String,
+        default: ""
+    },
+
+    state: {
+        type: String,
+        default: ""
+    },
+
+    country: {
+        type: String,
+        default: ""
+    }
 
 });
 

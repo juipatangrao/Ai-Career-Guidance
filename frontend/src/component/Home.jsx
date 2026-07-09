@@ -43,19 +43,26 @@ function Home() {
 
 
   const [open, setOpen] = useState(false);
-  const [profileImage, setProfileImage] = useState("");
+const [profileImage, setProfileImage] = useState(
+  localStorage.getItem("profileImage") ||
+    "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+);
   const [username,setUsername]=useState("");
   // Temporary User ID
 const userId = localStorage.getItem("userId");
 console.log("User ID:", userId);
-  useEffect(() => {
+useEffect(() => {
   const user = localStorage.getItem("loggedInUser");
 
   if (user) {
     setUsername(user);
   }
 
-  getProfile();
+  const savedImage = localStorage.getItem("profileImage");
+
+  if (savedImage) {
+    setProfileImage(savedImage);
+  }
 }, []);
   // Get profile image from backend
  const getProfile = async () => {
@@ -73,35 +80,23 @@ console.log("User ID:", userId);
   }
 };
 
-
-const handleImageUpload = async (e) => {
-
+const handleImageUpload = (e) => {
   const file = e.target.files[0];
 
   if (!file) return;
 
-  const formData = new FormData();
-  formData.append("image", file);
-  formData.append("userId", userId);
+  const reader = new FileReader();
 
-  try {
+  reader.onloadend = () => {
+    setProfileImage(reader.result);
 
-    const res = await axios.post(
-      "http://localhost:5000/api/profile/upload",
-      formData
+    localStorage.setItem(
+      "profileImage",
+      reader.result
     );
+  };
 
-    setProfileImage(
-  `http://localhost:5000/api/profile/image/${userId}?t=${Date.now()}`
-);
-
-  } catch (err) {
-
-    console.log(err);
-    alert("Image upload failed");
-
-  }
-
+  reader.readAsDataURL(file);
 };
   const categories = [    { to: "/engineering", label: "Engineering", icon: <FaCogs />, bg: "#4A90E2" },
     { to: "/doctor", label: "Doctor", icon: <FaUserDoctor />, bg: "#F5B301" },
