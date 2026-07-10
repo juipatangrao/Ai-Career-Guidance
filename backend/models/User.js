@@ -23,13 +23,15 @@ const userSchema = new mongoose.Schema({
     },
 
     profileImage: {
-    data: {
-        type: Buffer
-    },
-    contentType: {
-        type: String
-    }
-    },
+  data: {
+    type: Buffer,
+    default: Buffer.alloc(0)
+  },
+  contentType: {
+    type: String,
+    default: ""
+  }
+},
     
     phone: {
     type: String,

@@ -8,7 +8,8 @@ import {
   FaPlus,
   FaUserEdit,
 } from "react-icons/fa";
-import "../style/ProfileSidebar.css";
+import "../style/ProfileSidebar.css"; 
+import defaultProfile from "../assets/default-profile.png";
 import { Link, useNavigate } from "react-router-dom";
 const ProfileSidebar = ({
   open,
@@ -42,14 +43,10 @@ useEffect(() => {
           <div className="profile-image-container">
 
             <img
-              src={
-                profileImage ||
-                "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-              }
-              alt="Profile"
-              className="sidebar-profile-image"
-            />
-
+  src={profileImage || defaultProfile}
+  alt="Profile"
+  className="sidebar-profile-image"
+/>
             <button
               className="upload-btn"
               onClick={() => fileInputRef.current.click()}

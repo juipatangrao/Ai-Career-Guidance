@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../style/EditProfile.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
 function EditProfile() {
 
@@ -21,6 +23,7 @@ function EditProfile() {
   country: ""
 });
 const userId = localStorage.getItem("userId");
+const navigate = useNavigate();
 const [profileImage, setProfileImage] = useState(null);
 const [preview, setPreview] = useState(
   "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
@@ -39,23 +42,58 @@ const [preview, setPreview] = useState(
     setPreview(URL.createObjectURL(file));
   }
 };
+
   const handleSave = async () => {
   try {
+    const data = new FormData();
+
+    data.append("phone", formData.phone);
+    data.append("gender", formData.gender);
+    data.append("dob", formData.dob);
+    data.append("college", formData.college);
+    data.append("course", formData.course);
+    data.append("year", formData.year);
+    data.append("semester", formData.semester);
+    data.append("skills", formData.skills);
+    data.append("interests", formData.interests);
+    data.append("careerGoal", formData.careerGoal);
+    data.append("address", formData.address);
+    data.append("city", formData.city);
+    data.append("state", formData.state);
+    data.append("country", formData.country);
+
+    if (profileImage) {
+      data.append("image", profileImage);
+    }
+
     const res = await axios.put(
       `http://localhost:5000/api/profile/update/${userId}`,
-      formData
+      data,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
     );
 
     alert(res.data.message);
+
+    navigate("/home", {
+      state: {
+        refresh: Date.now(),
+      },
+    });
 
   } catch (error) {
     console.log(error);
     alert(error.response?.data?.message || "Profile update failed");
   }
-};
+  };
+
+
 const filledFields = Object.values(formData).filter(
   value => value !== ""
-).length;
+).length;   
 
 const progress = Math.round(
   (filledFields / Object.keys(formData).length) * 100

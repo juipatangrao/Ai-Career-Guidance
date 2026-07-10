@@ -1,11 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
 import "../style/CollegeRecommendation.css";
-
+import { useNavigate } from "react-router-dom";
 function CollegeRecommendation() {
   const [career, setCareer] = useState("");
   const [state, setState] = useState("");
   const [collegeType, setCollegeType] = useState("Any");
+  const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState("");
@@ -67,6 +68,13 @@ function CollegeRecommendation() {
   };
 
   return (
+    <>
+    <button
+    className="back-btn"
+    onClick={() => navigate("/home")}
+  >
+    ← Back to Home
+  </button>
     <div className="college-page">
 
       <h1>AI College Recommendation</h1>
@@ -130,6 +138,7 @@ function CollegeRecommendation() {
       )}
 
     </div>
+    </>
   );
 }
 

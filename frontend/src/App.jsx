@@ -19,6 +19,7 @@ import ScienceResearch from "./component/ScienceResearch";
 import SpaceAstronomy from "./component/SpaceAstronomy";
 import Environmental from "./component/Environmental";
 import MediaJournalism from "./component/MediaJournalism";
+import AIJobRecommendation from "./pages/AIJobRecommendation";
 import Design from "./component/Design";
 //Government
 import IAS from "./pages/IAS";
@@ -313,6 +314,10 @@ function App() {
 <Route
   path="/college-recommendation"
   element={<CollegeRecommendation />}
+/>
+<Route
+  path="/job-recommendation"
+  element={<AIJobRecommendation />}
 />
       </Routes>
     </BrowserRouter>

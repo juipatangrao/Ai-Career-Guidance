@@ -3,34 +3,34 @@ const User = require("../models/User");
 // Upload Profile Image
 exports.uploadProfileImage = async (req, res) => {
   try {
-
-    const { userId } = req.body;
-
     if (!req.file) {
       return res.status(400).json({
-        message: "No image selected"
+        message: "No image selected",
       });
     }
 
-    const user = await User.findById(userId);
+    const user = await User.findById(req.body.userId);
+
+    if (!user) {
+      return res.status(404).json({
+        message: "User not found",
+      });
+    }
 
     user.profileImage = {
       data: req.file.buffer,
-      contentType: req.file.mimetype
+      contentType: req.file.mimetype,
     };
 
     await user.save();
 
-    res.status(200).json({
-      message: "Profile uploaded successfully"
+    res.json({
+      message: "Image uploaded successfully",
     });
 
-  } catch (error) {
-
-    res.status(500).json({
-      message: error.message
-    });
-
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err.message);
   }
 };
 
@@ -61,7 +61,8 @@ exports.getProfile = async (req, res) => {
 // Update Profile
 exports.updateProfile = async (req, res) => {
   try {
-
+console.log("REQ.FILE =", req.file);
+    console.log("BODY =", req.body);
     const user = await User.findById(req.params.id);
 
     if (!user) {
@@ -70,20 +71,35 @@ exports.updateProfile = async (req, res) => {
       });
     }
 
-    user.phone = req.body.phone;
-    user.gender = req.body.gender;
-    user.dob = req.body.dob;
-    user.college = req.body.college;
-    user.course = req.body.course;
-    user.year = req.body.year;
-    user.semester = req.body.semester;
-    user.skills = req.body.skills;
-    user.interests = req.body.interests;
-    user.careerGoal = req.body.careerGoal;
-    user.address = req.body.address;
-    user.city = req.body.city;
-    user.state = req.body.state;
-    user.country = req.body.country;
+    user.phone = req.body.phone || "";
+    user.gender = req.body.gender || "";
+    user.dob = req.body.dob || null;
+    user.college = req.body.college || "";
+    user.course = req.body.course || "";
+    user.year = req.body.year || "";
+    user.semester = req.body.semester || "";
+
+    user.skills = req.body.skills
+      ? req.body.skills.split(",").map(item => item.trim())
+      : [];
+
+    user.interests = req.body.interests
+      ? req.body.interests.split(",").map(item => item.trim())
+      : [];
+
+    user.careerGoal = req.body.careerGoal || "";
+    user.address = req.body.address || "";
+    user.city = req.body.city || "";
+    user.state = req.body.state || "";
+    user.country = req.body.country || "";
+
+    // Update image if selected
+    if (req.file) {
+      user.profileImage = {
+        data: req.file.buffer,
+        contentType: req.file.mimetype
+      };
+    }
 
     await user.save();
 
@@ -93,6 +109,8 @@ exports.updateProfile = async (req, res) => {
     });
 
   } catch (error) {
+
+    console.log(error);
 
     res.status(500).json({
       message: error.message

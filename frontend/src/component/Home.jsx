@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 import { FaBrain } from "react-icons/fa";
 import { FaBalanceScale } from "react-icons/fa";
 import { FaUniversity } from "react-icons/fa";
+import { GiArtificialIntelligence } from "react-icons/gi";
 import "../style/Home.css";
 import { FaSearch, FaBell, FaUserCircle, FaCogs } from "react-icons/fa";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
+
+import defaultProfile from "../assets/default-profile.png";
 
 import {
   FaUserDoctor,
@@ -18,7 +22,7 @@ import {
 
 import student from "../assets/student.jpeg";
 import ProfileSidebar from "../component/ProfileSidebar";
-
+import AIJobRecommendationSection from "../component/AIJobRecommendationSection";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import hero from "../assets/home-hero.jpg";
@@ -39,15 +43,12 @@ import space from "../assets/Space-astronomy.png";
 import environment from "../assets/Environmental.png";
 import navy from "../assets/Merchant-navy.png";
 import ChatBot from "../component/ChatBot/ChatBot";
-// import AIJobRecommendation from "../components/AIJobRecommendation";
 function Home() {
 
+const location = useLocation();
 
   const [open, setOpen] = useState(false);
-const [profileImage, setProfileImage] = useState(
-  localStorage.getItem("profileImage") ||
-    "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-);
+const [profileImage, setProfileImage] = useState(defaultProfile);
   const [username,setUsername]=useState("");
   // Temporary User ID
 const userId = localStorage.getItem("userId");
@@ -59,45 +60,72 @@ useEffect(() => {
     setUsername(user);
   }
 
-  const savedImage = localStorage.getItem("profileImage");
-
-  if (savedImage) {
-    setProfileImage(savedImage);
-  }
-}, []);
+  getProfile();
+}, [location.state]);
   // Get profile image from backend
- const getProfile = async () => {
+const getProfile = async () => {
   try {
-    await axios.get(
+
+    const res = await axios.get(
       `http://localhost:5000/api/profile/${userId}`
     );
 
-    setProfileImage(
-      `http://localhost:5000/api/profile/image/${userId}`
-    );
+    console.log("PROFILE DATA:", res.data);
 
-  } catch (err) {
-    console.log(err);
+ if (
+  res.data.profileImage &&
+  res.data.profileImage.contentType &&
+  res.data.profileImage.data &&
+  (
+    Array.isArray(res.data.profileImage.data.data)
+      ? res.data.profileImage.data.data.length > 0
+      : res.data.profileImage.data.length > 0
+  )
+) {
+  setProfileImage(
+    `http://localhost:5000/api/profile/image/${userId}?t=${Date.now()}`
+  );
+} else {
+  setProfileImage(defaultProfile);
+}
+  } catch(error) {
+
+    console.log(error);
+
+    setProfileImage(defaultProfile);
+
   }
 };
-
-const handleImageUpload = (e) => {
+const handleImageUpload = async (e) => {
   const file = e.target.files[0];
 
   if (!file) return;
 
-  const reader = new FileReader();
+  const formData = new FormData();
+  formData.append("image", file);
+  formData.append("userId", userId);
 
-  reader.onloadend = () => {
-    setProfileImage(reader.result);
-
-    localStorage.setItem(
-      "profileImage",
-      reader.result
+  try {
+    await axios.post(
+      "http://localhost:5000/api/profile/upload",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
     );
-  };
 
-  reader.readAsDataURL(file);
+    setProfileImage(
+      `http://localhost:5000/api/profile/image/${userId}?t=${Date.now()}`
+    );
+
+    alert("Profile image uploaded successfully!");
+
+  } catch (err) {
+    console.log(err);
+    alert("Image upload failed");
+  }
 };
   const categories = [    { to: "/engineering", label: "Engineering", icon: <FaCogs />, bg: "#4A90E2" },
     { to: "/doctor", label: "Doctor", icon: <FaUserDoctor />, bg: "#F5B301" },
@@ -235,15 +263,11 @@ return(
               className="profile-icon"
               onClick={() => setOpen(true)}
             >
-              {profileImage ? (
-                <img
-                  src={profileImage}
-                  alt="Profile"
-                  className="navbar-profile-image"
-                />
-              ) : (
-                <FaUserCircle className="nav-icon" />
-              )}
+             <img
+  src={profileImage }
+  alt="Profile"
+  className="navbar-profile-image"
+/>
             </div>
           </div>
         </nav>
@@ -389,6 +413,16 @@ Choose your future with confidence.
   </div>
 
 </footer>
+<div
+  className="job-ai-btn"
+  onClick={() => navigate("/job-recommendation")}
+>
+  <GiArtificialIntelligence className="job-ai-icon" />
+
+  <span className="job-tooltip">
+    AI Job Recommendation
+  </span>
+</div>
 <div
   className="college-floating-btn"
   onClick={() => navigate("/college-recommendation")}

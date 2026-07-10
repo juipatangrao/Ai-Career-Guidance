@@ -38,16 +38,14 @@ const Login = () => {
         }
       );
 
-      localStorage.setItem("userId", res.data.user._id);
 
 //       localStorage.setItem(
 //  "loggedInUser",
 //  res.data.user.name
 // )
-localStorage.setItem(
-  "loggedInUser",
-  JSON.stringify(res.data.user)
-);
+localStorage.setItem("loggedInUser", res.data.user.name);
+localStorage.setItem("userEmail", res.data.user.email);
+localStorage.setItem("userId", res.data.user._id);
 
       alert("Login Successful!");
 

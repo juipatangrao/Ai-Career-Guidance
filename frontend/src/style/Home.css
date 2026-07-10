@@ -751,3 +751,91 @@ height:120px;
 }
 
 }
+.job-ai-btn{
+    position: fixed;
+    right: 30px;
+    bottom:345px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#7b1023,#b10d42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 10px 25px rgba(123,16,35,.35);
+
+    animation: aiFloat 2.5s ease-in-out infinite,
+               aiPulse 2s infinite;
+
+    transition: all .3s ease;
+}
+
+.job-ai-btn:hover{
+    transform: scale(1.12) rotate(8deg);
+    box-shadow: 0 15px 35px rgba(123,16,35,.5);
+}
+
+.job-ai-icon{
+    font-size:32px;
+    color:white;
+    animation: iconRotate 5s linear infinite;
+}
+
+.job-tooltip{
+    position:absolute;
+    right:80px;
+    background:#7b1023;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:8px;
+    white-space:nowrap;
+    opacity:0;
+    transform:translateX(10px);
+    transition:.3s;
+}
+
+.job-ai-btn:hover .job-tooltip{
+    opacity:1;
+    transform:translateX(0);
+}
+
+@keyframes aiFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+@keyframes aiPulse{
+    0%{
+        box-shadow:0 0 0 0 rgba(177,13,66,.5);
+    }
+    70%{
+        box-shadow:0 0 0 15px rgba(177,13,66,0);
+    }
+    100%{
+        box-shadow:0 0 0 0 rgba(177,13,66,0);
+    }
+}
+
+@keyframes iconRotate{
+    0%{
+        transform:rotate(0deg);
+    }
+    10%{
+        transform:rotate(-12deg);
+    }
+    20%{
+        transform:rotate(12deg);
+    }
+    30%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}
