@@ -5,15 +5,14 @@ const ai = new GoogleGenAI({
 });
 
 const generateResponse = async (message, history = [], user = null) => {
-    try {
-
+  try {
     // Convert previous chats into text
     const previousConversation = history
       .map((chat) => {
         return `${chat.role === "user" ? "User" : "Assistant"}: ${chat.message}`;
       })
       .join("\n");
-const userProfile = user
+    const userProfile = user
       ? `
 Student Profile
 
@@ -28,7 +27,7 @@ Career Goal: ${user.careerGoal}
 `
       : "";
 
-const prompt = `
+    const prompt = `
 You are CareerXpert AI, the official AI assistant of the CareerXpert platform.
 
 Your goal is to help students, professionals, and learners with career guidance and general knowledge.
@@ -157,9 +156,7 @@ ${message}
     });
 
     return response.text;
-
   } catch (error) {
-
     console.error(error);
 
     if (error.status === 429) {

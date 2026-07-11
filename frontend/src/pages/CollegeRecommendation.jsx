@@ -120,11 +120,15 @@ function CollegeRecommendation() {
 
       </div>
 
-      {loading && (
-        <h3 className="loading">
-          AI is finding best colleges...
-        </h3>
-      )}
+    {loading && (
+<div className="loading-box">
+
+<div className="spinner"></div>
+
+<p>AI is analyzing colleges...</p>
+
+</div>
+)}
 
       {result && (
 
