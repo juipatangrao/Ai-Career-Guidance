@@ -43,6 +43,7 @@ import space from "../assets/Space-astronomy.png";
 import environment from "../assets/Environmental.png";
 import navy from "../assets/Merchant-navy.png";
 import ChatBot from "../component/ChatBot/ChatBot";
+import Notification from "../component/Notification/Notification";
 function Home() {
 
 const location = useLocation();
@@ -50,10 +51,10 @@ const location = useLocation();
   const [open, setOpen] = useState(false);
 const [profileImage, setProfileImage] = useState(defaultProfile);
   const [username,setUsername]=useState("");
-  // Temporary User ID
-const userId = localStorage.getItem("userId");
-console.log("User ID:", userId);
-useEffect(() => {
+    // Temporary User ID
+  const userId = localStorage.getItem("userId");
+  console.log("User ID:", userId);
+  useEffect(() => {
   const user = localStorage.getItem("loggedInUser");
 
   if (user) {
@@ -65,33 +66,28 @@ useEffect(() => {
   // Get profile image from backend
 const getProfile = async () => {
   try {
-
     const res = await axios.get(
       `http://localhost:5000/api/profile/${userId}`
     );
 
-    console.log("PROFILE DATA:", res.data);
+    console.log(res.data);
+    console.log("profileImage =", res.data.profileImage);
 
- if (
-  res.data.profileImage &&
-  res.data.profileImage.contentType &&
-  res.data.profileImage.data &&
-  (
-    Array.isArray(res.data.profileImage.data.data)
-      ? res.data.profileImage.data.data.length > 0
-      : res.data.profileImage.data.length > 0
-  )
-) {
-  setProfileImage(
-    `http://localhost:5000/api/profile/image/${userId}?t=${Date.now()}`
-  );
-} else {
-  setProfileImage(defaultProfile);
-}
-  } catch(error) {
+    if (res.data.profileImage) {
+
+      setProfileImage(
+        `http://localhost:5000${res.data.profileImage}?t=${Date.now()}`
+      );
+
+    } else {
+
+      setProfileImage(defaultProfile);
+
+    }
+
+  } catch (error) {
 
     console.log(error);
-
     setProfileImage(defaultProfile);
 
   }
@@ -152,6 +148,10 @@ const handleImageUpload = async (e) => {
   //         </div>
 
 const [showMore,setShowMore]=useState(false);
+
+const [showNotification, setShowNotification] = useState(false);
+const [unreadCount, setUnreadCount] = useState(1);
+
 const navigate = useNavigate();
 const careers = [
   {
@@ -257,8 +257,38 @@ return(
               <input type="text" placeholder="Search..." />
             </div>
 
-            <FaBell className="nav-icon" />
+          <div className="notification-wrapper">
 
+          <FaBell
+          className="nav-icon"
+          onClick={()=>{
+          setShowNotification(!showNotification);
+          setUnreadCount(0);
+          }}
+          />
+
+          {
+          unreadCount>0 &&
+
+          <span className="notification-badge">
+
+          {unreadCount}
+
+          </span>
+
+          }
+
+          </div>
+          {
+          showNotification &&
+
+          <Notification
+
+          setUnreadCount={setUnreadCount}
+
+          />
+
+          }
             <div
               className="profile-icon"
               onClick={() => setOpen(true)}

@@ -12,6 +12,8 @@ const chatRoutes = require("./routes/chatRoutes");
 const comparisonRoutes = require("./routes/comparisonRoutes");
 const collegeRoutes = require("./routes/collegeRoutes");
 const jobRecommendationRoutes = require("./routes/jobRecommendationRoutes");
+const newsRoutes = require("./routes/newsRoutes");
+
 
 app.use(cors());
 app.use(express.json());
@@ -26,6 +28,8 @@ app.use("/api/college", collegeRoutes);
 app.use("/uploads", express.static("uploads"));
 app.use("/api/chat", chatRoutes);
 app.use("/api/career-comparison", comparisonRoutes);
+app.use("/api/news", newsRoutes);
+
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGO_URI)

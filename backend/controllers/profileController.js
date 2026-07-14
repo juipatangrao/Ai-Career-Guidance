@@ -34,29 +34,69 @@ exports.uploadProfileImage = async (req, res) => {
   }
 };
 
-// Get Profile
-exports.getProfile = async (req, res) => {
+// Get Profile Image
+exports.getProfileImage = async (req, res) => {
 
+  try {
+
+    const user = await User.findById(req.params.id);
+
+    if (!user || !user.profileImage || !user.profileImage.data) {
+      return res.status(404).send("Image not found");
+    }
+
+    res.set("Content-Type", user.profileImage.contentType);
+
+    res.send(user.profileImage.data);
+
+  } catch (err) {
+
+    res.status(500).json({
+      message: err.message,
+    });
+
+  }
+
+};// Get Profile
+exports.getProfile = async (req, res) => {
   try {
 
     const user = await User.findById(req.params.id);
 
     if (!user) {
       return res.status(404).json({
-        message: "User not found"
+        message: "User not found",
       });
     }
 
-    res.status(200).json(user);
+    res.status(200).json({
+      phone: user.phone,
+      gender: user.gender,
+      dob: user.dob,
+      college: user.college,
+      course: user.course,
+      year: user.year,
+      semester: user.semester,
+      skills: user.skills,
+      interests: user.interests,
+      careerGoal: user.careerGoal,
+      address: user.address,
+      city: user.city,
+      state: user.state,
+      country: user.country,
+profileImage:
+  user.profileImage && user.profileImage.data
+    ? `/api/profile/image/${user._id}`
+    : null,
+    });
 
   } catch (error) {
 
     res.status(500).json({
-      message: error.message
+      message: error.message,
     });
 
   }
-
 };
 // Update Profile
 exports.updateProfile = async (req, res) => {
@@ -104,9 +144,10 @@ console.log("REQ.FILE =", req.file);
     await user.save();
 
     res.status(200).json({
-      message: "Profile updated successfully",
-      user
-    });
+  success: true,
+  message: "Profile updated successfully",
+  user,
+});
 
   } catch (error) {
 
