@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
+import axios from "axios";
+
 import {
   FaTimes,
   FaHome,
@@ -14,15 +16,51 @@ import { Link, useNavigate } from "react-router-dom";
 const ProfileSidebar = ({ open, setOpen, profileImage, handleImageUpload }) => {
   const fileInputRef = useRef();
   const navigate = useNavigate();
-
+const userId = localStorage.getItem("userId");
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   useEffect(() => {
-    setUserName(localStorage.getItem("loggedInUser") || "");
-    setUserEmail(localStorage.getItem("userEmail") || "");
-  }, []);
-  if (!open) return null;
+  setUserName(localStorage.getItem("loggedInUser") || "");
+  setUserEmail(localStorage.getItem("userEmail") || "");
+}, []);
 
+
+const handleDelete = async () => {
+  console.log("User ID:", userId);
+
+  const confirmDelete = window.confirm(
+    "Are you sure you want to delete your profile?"
+  );
+
+  if (!confirmDelete) return;
+
+  try {
+
+    await axios.delete(
+      `http://localhost:5000/api/profile/delete/${userId}`
+    );
+
+    alert("Profile deleted successfully.");
+
+    localStorage.removeItem("userId");
+    localStorage.removeItem("loggedInUser");
+    localStorage.removeItem("token");
+
+    navigate("/login");
+
+  } catch(error) {
+
+    console.log(error);
+
+    alert(
+      error.response?.data?.message ||
+      "Failed to delete profile."
+    );
+  }
+};
+
+
+if (!open) return null;
   return (
     <div className="sidebar-overlay">
       <div className="profile-sidebar">
@@ -88,6 +126,16 @@ const ProfileSidebar = ({ open, setOpen, profileImage, handleImageUpload }) => {
             <FaUserEdit />
             <span>Edit Profile</span>
           </div>
+          <div className="button-group">
+
+  <button
+    type="button"
+    className="delete-btn"
+    onClick={handleDelete}
+  >
+    🗑 Delete Profile
+  </button>
+</div>
           <div className="menu-item logout">
             <FaSignOutAlt />
             <Link to="/Login">LogOut</Link>

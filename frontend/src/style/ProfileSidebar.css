@@ -44,7 +44,21 @@ font-size:25px;
 cursor:pointer;
 
 }
+.delete-btn{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
 
+.delete-btn:hover{
+    background:#b02a37;
+}
 .profile-section {
   display: flex;
   flex-direction: column;

@@ -91,10 +91,9 @@ setResult(res.data.comparison);
    
       <div className="comparison-card">
     
-        <h1>🤖 AI Career Comparison</h1>
-
+<h1>Career Comparison Dashboard</h1>
         <p>
-          Compare two careers using AI and discover which one suits you better.
+          Compare two careers and discover which one suits you better.
         </p>
 
         <div className="dropdown-group">
@@ -150,8 +149,7 @@ setResult(res.data.comparison);
 
 {loading && (
   <div className="loading">
-    Generating AI Comparison...
-  </div>
+Generating Career Comparison Report  </div>
 )}
 
 {result && (
