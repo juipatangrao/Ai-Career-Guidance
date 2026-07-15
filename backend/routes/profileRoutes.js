@@ -62,13 +62,14 @@ const express = require("express");
 const router = express.Router();
 
 const upload = require("../middleware/upload");
-
 const {
   uploadProfileImage,
   getProfile,
   updateProfile,
   getProfileImage,
+  deleteProfile,
 } = require("../controllers/profileController");
+
 
 // Upload Profile Image
 router.post(
@@ -77,7 +78,7 @@ router.post(
   uploadProfileImage
 );
 
-// Get Profile Image (FIRST)
+// Get Profile Image
 router.get("/image/:id", getProfileImage);
 
 // Get Profile
@@ -89,5 +90,9 @@ router.put(
   upload.single("image"),
   updateProfile
 );
+
+// Delete Profile
+router.delete("/delete/:id", deleteProfile);
+
 
 module.exports = router;
