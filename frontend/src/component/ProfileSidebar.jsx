@@ -11,56 +11,46 @@ import {
   FaUserEdit,
 } from "react-icons/fa";
 import "../style/ProfileSidebar.css";
-import defaultProfile from "../assets/default-profile.png";
+import defaultProfile from "../assets/defaultProfile.png";
 import { Link, useNavigate } from "react-router-dom";
 const ProfileSidebar = ({ open, setOpen, profileImage, handleImageUpload }) => {
   const fileInputRef = useRef();
   const navigate = useNavigate();
-const userId = localStorage.getItem("userId");
+  const userId = localStorage.getItem("userId");
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   useEffect(() => {
-  setUserName(localStorage.getItem("loggedInUser") || "");
-  setUserEmail(localStorage.getItem("userEmail") || "");
-}, []);
+    setUserName(localStorage.getItem("loggedInUser") || "");
+    setUserEmail(localStorage.getItem("userEmail") || "");
+  }, []);
 
+  const handleDelete = async () => {
+    console.log("User ID:", userId);
 
-const handleDelete = async () => {
-  console.log("User ID:", userId);
-
-  const confirmDelete = window.confirm(
-    "Are you sure you want to delete your profile?"
-  );
-
-  if (!confirmDelete) return;
-
-  try {
-
-    await axios.delete(
-      `http://localhost:5000/api/profile/delete/${userId}`
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete your profile?",
     );
 
-    alert("Profile deleted successfully.");
+    if (!confirmDelete) return;
 
-    localStorage.removeItem("userId");
-    localStorage.removeItem("loggedInUser");
-    localStorage.removeItem("token");
+    try {
+      await axios.delete(`http://localhost:5000/api/profile/delete/${userId}`);
 
-    navigate("/login");
+      alert("Profile deleted successfully.");
 
-  } catch(error) {
+      localStorage.removeItem("userId");
+      localStorage.removeItem("loggedInUser");
+      localStorage.removeItem("token");
 
-    console.log(error);
+      navigate("/login");
+    } catch (error) {
+      console.log(error);
 
-    alert(
-      error.response?.data?.message ||
-      "Failed to delete profile."
-    );
-  }
-};
+      alert(error.response?.data?.message || "Failed to delete profile.");
+    }
+  };
 
-
-if (!open) return null;
+  if (!open) return null;
   return (
     <div className="sidebar-overlay">
       <div className="profile-sidebar">
@@ -76,6 +66,10 @@ if (!open) return null;
               src={profileImage || defaultProfile}
               alt="Profile"
               className="sidebar-profile-image"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = defaultProfile;
+              }}
             />
             <button
               className="upload-btn"
@@ -127,15 +121,10 @@ if (!open) return null;
             <span>Edit Profile</span>
           </div>
           <div className="button-group">
-
-  <button
-    type="button"
-    className="delete-btn"
-    onClick={handleDelete}
-  >
-    🗑 Delete Profile
-  </button>
-</div>
+            <button type="button" className="delete-btn" onClick={handleDelete}>
+              🗑 Delete Profile
+            </button>
+          </div>
           <div className="menu-item logout">
             <FaSignOutAlt />
             <Link to="/Login">LogOut</Link>

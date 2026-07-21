@@ -132,6 +132,8 @@ import AptitudeTest from "./pages/AptitudeTest";
 import CareerResult from "./pages/CareerResult";
 import Mbbs from "./pages/Mbbs";
 
+import Settings from "./pages/Settings";
+
 function App() {
   return (
     <BrowserRouter>
@@ -319,6 +321,7 @@ function App() {
   path="/job-recommendation"
   element={<AIJobRecommendation />}
 />
+<Route path="/settings" element={<Settings/>}/>
       </Routes>
     </BrowserRouter>
   );

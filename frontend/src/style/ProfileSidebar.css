@@ -139,7 +139,10 @@ transition:.3s;
 color: black;
 
 }
-
+.menu-item a{
+  color: black;
+  text-decoration: none;
+}
 .menu-item:hover{
 
 background:#ffffff;
